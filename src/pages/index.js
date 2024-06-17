@@ -10,15 +10,14 @@ const IndexPage = () => {
     <Layout pageTitle="Home Page">
       <div className='flex flex-col w-full relative'>
         <StaticImage
-          className='w-full max-h-80'
+          className='w-full max-h-60 md:max-h-80'
           alt=""
           src="../images/Me.jpg"
           object-position="50% 10%"
         />
-        <div className='absolute bottom-0 p-3 flex flex-grow w-full text-lg flex-shrink bg-gradient-to-t from-zinc-900'>
-          Welcome to the Wanderers Nook. Here I, Nathaniel, have compiled the best walks, hikes and adventures in the Greater Manchester area. 
-          I've also done a few longer, multi-day hikes and even been abroad.
-          Below you'll find some of the best hikes around Greater Manchester.
+        <div className='absolute bottom-0 p-3 flex flex-grow w-full text-xs md:text-base lg:text-lg flex-shrink bg-gradient-to-t from-zinc-900'>
+          Welcome to the Wanderers Nook. Here you'll find many walks and adventures around Greater Manchester. 
+          I hope exploring my site will help you explore the outdoors.
         </div>
       </div>
       
