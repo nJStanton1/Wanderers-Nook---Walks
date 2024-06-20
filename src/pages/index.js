@@ -21,12 +21,11 @@ const IndexPage = () => {
         </div>
       </div>
       
-      
     </Layout>
   )
 }
 
-export const Head = () => <Seo title="Home Page" />
+export const Head = () => <Seo title="Home Page" pageURL="/" />
  
 // Export component
 export default IndexPage
