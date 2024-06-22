@@ -31,4 +31,4 @@ const BlogPage = ({data}) => {
 // Export component
 
 export default BlogPage
-export const Head = () => <Seo title="Blogs" />
+export const Head = () => <Seo pageTitle="Blogs" />

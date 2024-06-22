@@ -15,4 +15,4 @@ const AboutPage = () => {
 // Export component
 
 export default AboutPage
-export const Head = () => <Seo title="About Me" />
+export const Head = () => <Seo pageTitle="About Me" />

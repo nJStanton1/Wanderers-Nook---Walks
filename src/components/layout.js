@@ -1,10 +1,9 @@
 // Imports
 import * as React from 'react'
-import { useStaticQuery, graphql } from 'gatsby'
 import Navbar from './navbar'
 
 // Define components
-const Layout = ({ pageTitle, children }) => {
+const Layout = ({ children }) => {
 
     
     //Return final layout here

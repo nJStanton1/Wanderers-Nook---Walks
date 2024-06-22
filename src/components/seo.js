@@ -21,15 +21,15 @@ const Seo = ({ pageTitle, pageDescription, pageURL, pageImage }) => {
   const metaTitle = pageTitle ? `${pageTitle} | ${data.site.siteMetadata.title}` : `${data.site.siteMetadata.title}`
   const metaDescription = pageDescription ? `${pageDescription}` : `${data.site.siteMetadata.description}`
   const metaImageAbsoluteURL = pageImage ? `${data.site.siteMetadata.siteUrl}/${pageImage}` : `${data.site.siteMetadata.siteUrl}/${data.site.siteMetadata.image}`
-  const metaPageUrl = `${data.site.siteMetadata.siteURL}${pageURL}`
+  const metaPageUrl = pageURL ? `${data.site.siteMetadata.siteURL}${pageURL}` : ``
 
   return (
     <>
       {/* General tags for all */}
-      <meta charset="UTF-8" />
+      <meta charSet="utf-8" />
       <meta name="robots" content="index, follow" />
       <meta name="author" content={data.site.siteMetadata.author}/>
-      <meta http-equiv="Content-Language" content="en"/> 
+      <meta httpEquiv="Content-Language" content="en"/> 
       <meta name="google" content={data.site.siteMetadata.siteSearch}/>
 
       {/* Page specidic tags */}
@@ -58,7 +58,7 @@ Seo.propTypes = {
   pageTitle: PropTypes.string.isRequired,
   pageDescription: PropTypes.string,
   pageImage: PropTypes.string,
-  pageURL: PropTypes.string.isRequired,
+  pageURL: PropTypes.string,
 }
 
 export default Seo

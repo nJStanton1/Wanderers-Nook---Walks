@@ -71,4 +71,10 @@
     html {
         @apply text-white
     }
+
+    @layer base {
+        p {
+            @apply text-sm md:text-base pt-2;
+        }
+    }
 }
