@@ -1,5 +1,6 @@
 import * as React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
+import * as PropTypes from 'prop-types'
 
 const Seo = ({ pageTitle, pageDescription, pageURL, pageImage }) => {
   const data = useStaticQuery(graphql`
@@ -11,7 +12,7 @@ const Seo = ({ pageTitle, pageDescription, pageURL, pageImage }) => {
           author
           image
           siteSearch
-          siteURL
+          siteUrl
         }
       }
     }
@@ -47,7 +48,7 @@ const Seo = ({ pageTitle, pageDescription, pageURL, pageImage }) => {
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={metaTitle}/>
       <meta name="twitter:description" content={metaDescription}/>
-      {metaImageAbsoluteURL && <meta name="twitter:image" content={metaImage}/>}
+      {metaImageAbsoluteURL && <meta name="twitter:image" content={metaImageAbsoluteURL}/>}
 
     </>
   )
