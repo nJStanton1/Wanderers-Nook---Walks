@@ -29,7 +29,7 @@ collections:
       - { label: 'Time Allowed (Hrs)', name: 'timeAllowed', widget: 'datetime', time_format: 'HH:mm' }
       - { label: 'OS Map', name: 'osMapLink', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
-      - { label: 'Start Point', name: 'startPoint', widget: 'relation', collection: 'locations', value_field: 'title', search_fields: 'title'}
+      - { label: 'Start Point', name: 'startPoint', widget: 'relation', collection: 'locations', value_field: 'title', search_fields: ['title']}
 
   - name: 'locations'
     label: 'Locations'
@@ -63,7 +63,7 @@ collections:
     path: '{{slug}}/index'
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Route', name: 'route', widget: 'relation', collection: 'routes', value_field: 'title', search_fields: 'title'}
+      - { label: 'Route', name: 'route', widget: 'relation', collection: 'routes', value_field: 'title', search_fields: ['title']}
 
   - name: 'upcoming'
     label: 'Planned Routes'
@@ -78,57 +78,57 @@ collections:
     path: '{{slug}}/index'
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Route', name: 'route', widget: 'relation', collection: 'routes', value_field: 'title', search_fields: 'title'}
+      - { label: 'Route', name: 'route', widget: 'relation', collection: 'routes', value_field: 'title', search_fields: ['title']}
       - { label: 'Meet time', name: 'meetTime', widget: 'datetime', time_format: 'HH:mm' }
       - { label: 'Meet location', name: 'meetLocation', widget: 'string' }
       - { label: 'Meet date', name: 'meetDate', widget: 'datetime', time_format: 'DD.MM.YYYY', default: ''}
 
-    - name: 'upcomingNoDate'
-    label: 'Unplanned Routes'
-    label_singular: 'Unplanned Route'
-    folder: 'content/upcomingRoutes'
+    # - name: 'upcomingNoDate'
+    # label: 'Unplanned Routes'
+    # label_singular: 'Unplanned Route'
+    # folder: 'content/upcomingRoutes'
+    # create: true
+    # delete: true
+    # description: 'Upcoming route with no date'
+    # slug: "{{slug}}"
+    # media_folder: ''
+    # public_folder: ''
+    # path: '{{slug}}/index'
+    # filter: {field: "meetDate", value: ""}
+    # fields:
+    #   - { label: 'Title', name: 'title', widget: 'string' }
+    #   - { label: 'Route', name: 'route', widget: 'relation', collection: 'routes', value_field: 'title', search_fields: ['title']}
+    #   - { label: 'Meet time', name: 'meetTime', widget: 'datetime', time_format: 'HH:mm' }
+    #   - { label: 'Meet location', name: 'meetLocation', widget: 'string' }
+    #   - { label: 'Meet date', name: 'meetDate', widget: 'datetime', time_format: 'DD.MM.YYYY', default: ''}
+  
+  - name: 'articles'
+    label: 'Articles'
+    label_singular: 'Article'
+    folder: 'content/articles'
     create: true
     delete: true
-    description: 'Upcoming route with no date'
+    description: 'Database of all articles in the website.'
     slug: "{{slug}}"
     media_folder: ''
     public_folder: ''
     path: '{{slug}}/index'
-    filter: {field: "meetDate", value: ""}
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Route', name: 'route', widget: 'relation', collection: 'routes', value_field: 'title', search_fields: 'title'}
-      - { label: 'Meet time', name: 'meetTime', widget: 'datetime', time_format: 'HH:mm' }
-      - { label: 'Meet location', name: 'meetLocation', widget: 'string' }
-      - { label: 'Meet date', name: 'meetDate', widget: 'datetime', time_format: 'DD.MM.YYYY', default: ''}
-  
-    - name: 'articles'
-      label: 'Articles'
-      label_singular: 'Article'
-      folder: 'content/articles'
-      create: true
-      delete: true
-      description: 'Database of all articles in the website.'
-      slug: "{{slug}}"
-      media_folder: ''
-      public_folder: ''
-      path: '{{slug}}/index'
-      fields:
-        - { label: 'Title', name: 'title', widget: 'string' }
-        - { label: 'Hero Image', name: 'heroImage', widget: 'image' }
-        - { label: 'Body', name: 'body', widget: 'markdown' }
+      - { label: 'Hero Image', name: 'heroImage', widget: 'image' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
 
-    - name: 'highlightedArticles'
-      label: 'Highlighted Articles'
-      label_singular: 'Highlighted Article'
-      folder: 'content/highlightedArticle'
-      create: true
-      delete: true
-      description: 'List of the highlighted articles to display on first page.'
-      slug: "{{slug}}"
-      media_folder: ''
-      public_folder: ''
-      path: '{{slug}}/index'
-      fields:
-        - { label: 'Title', name: 'title', widget: 'string' }
-        - { label: 'Article', name: 'article', widget: 'relation', collection: 'articles', value_field: 'title', search_fields: 'title'}
+  - name: 'highlightedArticles'
+    label: 'Highlighted Articles'
+    label_singular: 'Highlighted Article'
+    folder: 'content/highlightedArticle'
+    create: true
+    delete: true
+    description: 'List of the highlighted articles to display on first page.'
+    slug: "{{slug}}"
+    media_folder: ''
+    public_folder: ''
+    path: '{{slug}}/index'
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Article', name: 'article', widget: 'relation', collection: 'articles', value_field: 'title', search_fields: ['title']}
