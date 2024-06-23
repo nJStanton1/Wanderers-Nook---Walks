@@ -16,6 +16,7 @@ module.exports = {
     "gatsby-plugin-mdx",
     "gatsby-plugin-postcss",
     "gatsby-transformer-sharp",
+    "gatsby-plugin-decap-cms",
     {
       resolve: "gatsby-source-filesystem",
       options: {

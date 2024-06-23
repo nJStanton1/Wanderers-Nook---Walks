@@ -1,0 +1,134 @@
+local_backend: true
+
+backend:
+  name: git-gateway
+  branch: test-decapCMS # Branch to update (optional; defaults to master)
+
+media_folder: static/img
+public_folder: /img
+
+collections:
+  - name: 'routes'
+    label: 'Routes'
+    label_singular: 'Route'
+    folder: 'content/routes'
+    create: true
+    delete: true
+    description: 'Database of all the routes available on the website.'
+    slug: "{{slug}}-{{distance}}km"
+    media_folder: ''
+    public_folder: ''
+    path: '{{slug}}/index'
+    editor:
+      preview: true
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Hero Image', name: 'heroImage', widget: 'image' }
+      - { label: 'Length (km)', name: 'length', widget: 'number', pattern: ['^([\d]([\d]){0,2})(\.[0-9]{1,2})?$', "Must be betwween 0 and 999. You can have up to 2 decimal places."] }
+      - { label: 'Excerpt', name: 'excerpt', widget: 'string', pattern: ['.{10,160}', "Must have between 10 and 160 characters"]}
+      - { label: 'Time Allowed (Hrs)', name: 'timeAllowed', widget: 'datetime', time_format: 'HH:mm' }
+      - { label: 'OS Map', name: 'osMapLink', widget: 'string' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - { label: 'Start Point', name: 'startPoint', widget: 'relation', collection: 'locations', value_field: 'title', search_fields: 'title'}
+
+  - name: 'locations'
+    label: 'Locations'
+    label_singular: 'Location'
+    folder: 'content/locations'
+    create: true
+    delete: true
+    description: 'Database of all route start points. Should be the point of public transport.'
+    slug: "{{slug}}"
+    media_folder: ''
+    public_folder: ''
+    path: '{{slug}}/index'
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Hero Image', name: 'heroImage', widget: 'image' }
+      - { label: 'Travel time (Hrs)', name: 'travelTime', widget: 'datetime', time_format: 'HH:mm' }
+      - { label: 'Excerpt', name: 'excerpt', widget: 'string', pattern: ['.{10,160}', "Must have between 10 and 160 characters"]}
+      - { label: 'Reachable by', name: 'type', widget: 'select', options: ["Train", "Metrolink", "Bus", "Car"]}
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+
+  - name: 'highlightedRoutes'
+    label: 'Highlighted Routes'
+    label_singular: 'Highlighted Route'
+    folder: 'content/highlightedRoute'
+    create: true
+    delete: true
+    description: 'List of the highlighted routes to display on first page.'
+    slug: "{{slug}}"
+    media_folder: ''
+    public_folder: ''
+    path: '{{slug}}/index'
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Route', name: 'route', widget: 'relation', collection: 'routes', value_field: 'title', search_fields: 'title'}
+
+  - name: 'upcoming'
+    label: 'Planned Routes'
+    label_singular: 'Upcoming Route'
+    folder: 'content/upcomingRoutes'
+    create: true
+    delete: true
+    description: 'Upcoming route with date'
+    slug: "{{slug}}"
+    media_folder: ''
+    public_folder: ''
+    path: '{{slug}}/index'
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Route', name: 'route', widget: 'relation', collection: 'routes', value_field: 'title', search_fields: 'title'}
+      - { label: 'Meet time', name: 'meetTime', widget: 'datetime', time_format: 'HH:mm' }
+      - { label: 'Meet location', name: 'meetLocation', widget: 'string' }
+      - { label: 'Meet date', name: 'meetDate', widget: 'datetime', time_format: 'DD.MM.YYYY', default: ''}
+
+    - name: 'upcomingNoDate'
+    label: 'Unplanned Routes'
+    label_singular: 'Unplanned Route'
+    folder: 'content/upcomingRoutes'
+    create: true
+    delete: true
+    description: 'Upcoming route with no date'
+    slug: "{{slug}}"
+    media_folder: ''
+    public_folder: ''
+    path: '{{slug}}/index'
+    filter: {field: "meetDate", value: ""}
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Route', name: 'route', widget: 'relation', collection: 'routes', value_field: 'title', search_fields: 'title'}
+      - { label: 'Meet time', name: 'meetTime', widget: 'datetime', time_format: 'HH:mm' }
+      - { label: 'Meet location', name: 'meetLocation', widget: 'string' }
+      - { label: 'Meet date', name: 'meetDate', widget: 'datetime', time_format: 'DD.MM.YYYY', default: ''}
+  
+    - name: 'articles'
+      label: 'Articles'
+      label_singular: 'Article'
+      folder: 'content/articles'
+      create: true
+      delete: true
+      description: 'Database of all articles in the website.'
+      slug: "{{slug}}"
+      media_folder: ''
+      public_folder: ''
+      path: '{{slug}}/index'
+      fields:
+        - { label: 'Title', name: 'title', widget: 'string' }
+        - { label: 'Hero Image', name: 'heroImage', widget: 'image' }
+        - { label: 'Body', name: 'body', widget: 'markdown' }
+
+    - name: 'highlightedArticles'
+      label: 'Highlighted Articles'
+      label_singular: 'Highlighted Article'
+      folder: 'content/highlightedArticle'
+      create: true
+      delete: true
+      description: 'List of the highlighted articles to display on first page.'
+      slug: "{{slug}}"
+      media_folder: ''
+      public_folder: ''
+      path: '{{slug}}/index'
+      fields:
+        - { label: 'Title', name: 'title', widget: 'string' }
+        - { label: 'Article', name: 'article', widget: 'relation', collection: 'articles', value_field: 'title', search_fields: 'title'}
