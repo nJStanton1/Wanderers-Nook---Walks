@@ -58,12 +58,12 @@ export default class Navbar extends React.Component {
         return (
         <div className="self-start lg:self-end">
             <nav
-            className="flex flex-wrap lg:flex-row lg:max-w-6xl flex-shrink-0 flex-grow text-white mx-auto  items-end justify-between"
+            className="flex flex-wrap lg:flex-row lg:max-w-6xl flex-shrink-0 flex-grow text-white mx-auto items-end justify-between"
             role="navigation"
             aria-label="main-navigation"
             >
                 <StaticImage 
-                  className='w-auto max-h-16 md:max-h-24 px-8'
+                  className='max-w-12 md:max-w-none max-h-12 md:max-h-24 m-2 md:m-0 md:ml-2'
                   alt=""
                   src="../images/WNLogo.png">
                 </StaticImage>
