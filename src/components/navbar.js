@@ -1,6 +1,7 @@
 import React from 'react'
 import * as PropTypes from 'prop-types'
 import { Link } from 'gatsby'
+import { StaticImage } from 'gatsby-plugin-image'
 
 const NavbarLink = ({ title, to }) => (
     <Link
@@ -57,15 +58,19 @@ export default class Navbar extends React.Component {
         return (
         <div className="self-start lg:self-end">
             <nav
-            className="flex flex-wrap lg:flex-row lg:max-w-6xl flex-shrink-0 flex-grow text-white mx-auto mb-1 items-end justify-between"
+            className="flex flex-wrap lg:flex-row lg:max-w-6xl flex-shrink-0 flex-grow text-white mx-auto items-end justify-between"
             role="navigation"
             aria-label="main-navigation"
             >
-                <h1 className="w-auto px-8 py-2 text-xl max-w-fit md:text-3xl lg:text-5xl text-white font-medium">Wanderers Nook</h1>
+                <StaticImage 
+                  className='max-w-12 md:max-w-none max-h-12 md:max-h-24 m-2 md:m-0 md:ml-2'
+                  alt=""
+                  src="../images/WNLogo.png">
+                </StaticImage>
                 <div className="flex">
                     <NavbarToggle isOpen={this.state.menuOpen} callback={this.toggle} />
                 </div>
-                <div className={'flex-shrink-0 lg:py-2 w-full md:w-auto flex-wrap items-center ' + this.state.menuOpenClassName}>
+                <div className={'flex-shrink-0 mb-1 lg:py-2 w-full md:w-auto flex-wrap items-center ' + this.state.menuOpenClassName}>
                     <NavbarLink to={'/'} title={'Home'} />
                     <NavbarLink to={'/'} title={'Routes'} />
                     <NavbarLink to={'/'} title={'Adventures'} />
