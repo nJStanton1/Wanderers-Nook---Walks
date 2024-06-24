@@ -26,7 +26,7 @@ collections:
       - { label: 'Hero Image', name: 'heroImage', widget: 'image' }
       - { label: 'Length (km)', name: 'length', widget: 'number', pattern: ['^([\d]([\d]){0,2})(\.[0-9]{1,2})?$', "Must be betwween 0 and 999. You can have up to 2 decimal places."] }
       - { label: 'Excerpt', name: 'excerpt', widget: 'string', pattern: ['.{10,160}', "Must have between 10 and 160 characters"]}
-      - { label: 'Time Allowed (Hrs)', name: 'timeAllowed', widget: 'datetime', time_format: 'HH:mm' }
+      - { label: 'Time Allowed (Hrs)', name: 'timeAllowed', hint: 'Given hours:minutes format.', widget: 'string', pattern: ['^([\d]{1,2})([:][0-5][0-9]){1}$', Must be H:mm or HH:mm format.] }
       - { label: 'OS Map', name: 'osMapLink', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
       - { label: 'Start Point', name: 'startPoint', widget: 'relation', collection: 'locations', value_field: 'title', search_fields: ['title']}
@@ -45,9 +45,9 @@ collections:
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Hero Image', name: 'heroImage', widget: 'image' }
-      - { label: 'Travel time (Hrs)', name: 'travelTime', widget: 'datetime', time_format: 'HH:mm' }
+      - { label: 'Travel time', name: 'travelTime', hint: 'Given in minutes, or hours:minutes format.', widget: 'string', pattern: ['^([\d]{1,2})([:][0-5][0-9])?$', Must be minutes up to 99 or HH:mm format.] }
       - { label: 'Excerpt', name: 'excerpt', widget: 'string', pattern: ['.{10,160}', "Must have between 10 and 160 characters"]}
-      - { label: 'Reachable by', name: 'type', widget: 'select', options: ["Train", "Metrolink", "Bus", "Car"]}
+      - { label: 'Reachable by', name: 'type', widget: 'select', options: ["Train", "Metrolink", "Bus", "Car"], multiple: true, min: 1}
       - { label: 'Body', name: 'body', widget: 'markdown' }
 
   - name: 'highlightedRoutes'
@@ -79,7 +79,7 @@ collections:
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Route', name: 'route', widget: 'relation', collection: 'routes', value_field: 'title', search_fields: ['title']}
-      - { label: 'Meet time', name: 'meetTime', widget: 'datetime', time_format: 'HH:mm' }
+      - { label: 'Meet time', name: 'meetTime', hint: 'Must be HH:mm format in 24hr time', widget: 'string', pattern: ['^([\d]{1,2})([:][0-5][0-9]){1}$', Must be HH:mm format in 24hr time.] }
       - { label: 'Meet location', name: 'meetLocation', widget: 'string' }
       - { label: 'Meet date', name: 'meetDate', widget: 'datetime', time_format: 'DD.MM.YYYY', default: ''}
 
