@@ -1,7 +1,7 @@
 ---
 template: location-template
 title: Reddish Vale
-heroImage: nya.jpg
+heroImage: reddish-vale-hero.jpg
 travelTime: "30"
 excerpt: A gorgeous country park within Stockport. Explore wide meadows, ponds
   and vast meadows along the River Tame.

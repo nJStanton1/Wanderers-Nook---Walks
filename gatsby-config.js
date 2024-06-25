@@ -35,5 +35,13 @@ module.exports = {
       resolve: `gatsby-transformer-remark`,
       options: {},
     },
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /static/ // See below to configure properly
+        }
+      }
+    }
   ],
 }
