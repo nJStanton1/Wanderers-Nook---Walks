@@ -5,6 +5,8 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import Seo from '../../components/seo'
 import { graphql } from 'gatsby'
 import TransportIcon from '../../components/transport-icon'
+import { Link } from 'gatsby'
+const getSlug =require('../../components/helperFunctions')
 
 // Define components
 const LocationPage = ({data}) =>{
@@ -13,10 +15,11 @@ const LocationPage = ({data}) =>{
         <Layout>
             <h1 className='pt-3 mt-8 w-full text-xl md:text-2xl lg:text-5xl'>Locations to explore</h1>
             <p>Explore the various areas of Greater Manchester you can visit easily. Sleect whichever looks interesting for you to view the routes I have found nearby.</p>
-            <div className='w-full flex flex-wrap justify-between'>
+            <div className='w-full flex flex-wrap justify-around'>
             {
                 nodes.map(location => (
                     <article key={location.id} className='w-full pb-2 my-2 max-w-72 border-2 border-red'>
+                      <Link to={"/locations/"+getSlug(location.fileAbsolutePath)} className='w-full'>
                         <GatsbyImage className='' image={getImage(location.frontmatter.heroImage)} alt=''/>
                         <h2 className='mx-2 text-3xl'>{location.frontmatter.title}</h2>
                         <div className='px-2 w-full inline-flex'>
@@ -29,6 +32,7 @@ const LocationPage = ({data}) =>{
                         </div>
                         <p className='mx-2'>Travel time: {location.frontmatter.travelTime} mins</p>
                         <p className='mx-2 text-base'>{location.frontmatter.excerpt}</p>
+                        </Link>
                     </article>
                 ))
             }
@@ -58,6 +62,7 @@ export const query = graphql`
           }
         }
         id
+        fileAbsolutePath
       }
     }
   }

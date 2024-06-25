@@ -73,8 +73,24 @@
     }
 
     @layer base {
+        h1 {
+            @apply text-xl md:text-2xl lg:text-6xl py-2
+        }
+        h2 {
+            @apply text-base md:text-lg lg:text-3xl font-medium py-2
+        }
+        h3 {
+            @apply text-sm md:text-base lg:text-2xl font-medium py-2
+        }
+        ul {
+            @apply pl-5
+        }
+        li {
+            @apply py-1 text-sm md:text-lg
+        }
         p {
             @apply text-sm md:text-lg pt-2;
         }
+
     }
 }
