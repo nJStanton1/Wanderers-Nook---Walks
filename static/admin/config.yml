@@ -22,6 +22,7 @@ collections:
     editor:
       preview: true
     fields:
+      - { label: 'Template', name: 'template', widget: 'hidden', default: 'route-template'}
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Hero Image', name: 'heroImage', widget: 'image' }
       - { label: 'Length (km)', name: 'length', widget: 'number', pattern: ['^([\d]([\d]){0,2})(\.[0-9]{1,2})?$', "Must be betwween 0 and 999. You can have up to 2 decimal places."] }
@@ -43,6 +44,7 @@ collections:
     public_folder: ''
     path: '{{slug}}/index'
     fields:
+      - { label: 'Template', name: 'template', widget: 'hidden', default: 'location-template'}
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Hero Image', name: 'heroImage', widget: 'image' }
       - { label: 'Travel time', name: 'travelTime', hint: 'Given in minutes, or hours:minutes format.', widget: 'string', pattern: ['^([\d]{1,2})([:][0-5][0-9])?$', Must be minutes up to 99 or HH:mm format.] }
@@ -77,6 +79,7 @@ collections:
     public_folder: ''
     path: '{{slug}}/index'
     fields:
+      - { label: 'Template', name: 'template', widget: 'hidden', default: 'upcoming-template'}
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Route', name: 'route', widget: 'relation', collection: 'routes', value_field: 'title', search_fields: ['title']}
       - { label: 'Meet time', name: 'meetTime', hint: 'Must be HH:mm format in 24hr time', widget: 'string', pattern: ['^([\d]{1,2})([:][0-5][0-9]){1}$', Must be HH:mm format in 24hr time.] }
@@ -114,6 +117,7 @@ collections:
     public_folder: ''
     path: '{{slug}}/index'
     fields:
+      - { label: 'Template', name: 'template', widget: 'hidden', default: 'article-template'}
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Hero Image', name: 'heroImage', widget: 'image' }
       - { label: 'Body', name: 'body', widget: 'markdown' }

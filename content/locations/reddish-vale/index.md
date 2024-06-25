@@ -1,4 +1,5 @@
 ---
+template: location-template
 title: Reddish Vale
 heroImage: nya.jpg
 travelTime: "30"
@@ -9,7 +10,7 @@ type:
   - Bus
   - Car
 ---
-## Reddish Vale
+## Overview
 
 Reddish Vale Country Park, located in Manchester, is a tranquil retreat offering visitors a chance to escape the urban hustle and immerse themselves in nature. Spanning over 161 hectares, this picturesque park boasts a variety of landscapes including woodlands, wetlands, meadows, and the serene River Tame. It’s an ideal destination for outdoor enthusiasts, bird watchers, and families looking for a peaceful day out.
 
