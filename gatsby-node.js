@@ -10,6 +10,7 @@ exports.createPages = async function ({ actions, graphql }) {
                 fileAbsolutePath
                 frontmatter {
                     template
+                    title
               }
             }
           }
@@ -18,13 +19,12 @@ exports.createPages = async function ({ actions, graphql }) {
     `)
 
     data.allMarkdownRemark.edges.forEach(({node}) => {
-      console.log(node.frontmatter.template)
       if (node.frontmatter.template == 'location-template') {
           let slug = "/locations/"+getSlug(node.fileAbsolutePath)
           actions.createPage({
               path: slug,
               component: require.resolve(`./src/templates/location-template.js`),
-              context: { slug: slug, id: node.id },
+              context: { slug: slug, id: node.id, location: node.frontmatter.title },
           })
       } else if (node.frontmatter.template == 'route-template') {
         let slug = "/routes/"+getSlug(node.fileAbsolutePath)

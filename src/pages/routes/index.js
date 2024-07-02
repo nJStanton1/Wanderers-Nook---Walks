@@ -1,11 +1,11 @@
 // Imports
 import * as React from 'react'
 import Layout from '../../components/layout'
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import Seo from '../../components/seo'
 import { graphql } from 'gatsby'
-import { Link } from 'gatsby'
+import { RouteCard } from '../../components/route-card'
 const getSlug =require('../../components/helperFunctions')
+
 
 // Define components
 const RoutePage = ({data}) =>{
@@ -17,15 +17,14 @@ const RoutePage = ({data}) =>{
             <div className='w-full flex flex-wrap justify-around'>
             {
                 nodes.map(route => (
-                    <article key={route.id} className='w-full pb-2 my-2 max-w-72 border-2 border-red'>
-                      <Link to={"/routes/"+getSlug(route.fileAbsolutePath)} className='w-full'>
-                        <GatsbyImage className='' image={getImage(route.frontmatter.heroImage)} alt=''/>
-                        <h2 className='mx-2 text-3xl'>{route.frontmatter.title}</h2>
-                        <p className='mx-2 pt-0'>Distance: {route.frontmatter.length}km</p>
-                        <p className='mx-2 pt-0'>Starting at: {route.frontmatter.startPoint}</p>
-                        <p className='mx-2 text-base'>{route.frontmatter.excerpt}</p>
-                        </Link>
-                    </article>
+                    <RouteCard 
+                        key={route.id} 
+                        linkTo={"/routes/"+getSlug(route.fileAbsolutePath)} 
+                        heroImage={route.frontmatter.heroImage}
+                        title={route.frontmatter.title}
+                        length={route.frontmatter.length}
+                        startPoint={route.frontmatter.startPoint}
+                        excerpt={route.frontmatter.excerpt}/>
                 ))
             }
             </div>

@@ -3,10 +3,13 @@ import { graphql } from "gatsby"
 import * as React from 'react'
 import Seo from '../components/seo'
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import { RouteCard } from "../components/route-card";
+import getSlug from "../components/helperFunctions";
 
 function LocationPage ({ data }) {
     console.log("Hello world!");
     const location = data.markdownRemark
+    const routes = data.allMarkdownRemark.nodes;
     
     return (
       <Layout>
@@ -16,9 +19,19 @@ function LocationPage ({ data }) {
                 <h1>{location.frontmatter.title}</h1>
             </div>
             <div dangerouslySetInnerHTML={{ __html: location.html }} />
-            <div className="w-full">
-                <h2>Routes around {location.frontmatter.title}</h2>
-                <p>At some point I'll add the routes here.</p>
+            <h2>Routes around {location.frontmatter.title}</h2>
+            <div className='w-full flex flex-wrap justify-around'>
+            {
+                routes.map(route => (
+                    <RouteCard 
+                        key={route.id} 
+                        linkTo={"/routes/"+getSlug(route.fileAbsolutePath)} 
+                        heroImage={route.frontmatter.heroImage}
+                        title={route.frontmatter.title}
+                        length={route.frontmatter.length}
+                        excerpt={route.frontmatter.excerpt}/>
+                ))
+            }
             </div>
         </div>
       </Layout>
@@ -30,7 +43,7 @@ export default LocationPage
 export const Head = () => <Seo pageTitle="Locations" pageURL="/locations/" />
 
 export const query = graphql`
-  query($id: String!) {
+  query($id: String!, $location: String!) {
     markdownRemark(id: {eq: $id}) {
       frontmatter {
         title
@@ -44,6 +57,22 @@ export const query = graphql`
         excerpt
         }
       html
+    }
+    allMarkdownRemark(filter: {frontmatter: {startPoint: {eq: $location}}}) {
+      nodes {
+        frontmatter {
+          title
+          length
+          timeAllowed
+          excerpt
+          heroImage {
+            childImageSharp {
+                gatsbyImageData(aspectRatio: 1.778, placeholder: DOMINANT_COLOR, width: 300)
+            }
+          }
+        }
+        fileAbsolutePath
+      }
     }
   }
 `
