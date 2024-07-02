@@ -16,6 +16,7 @@ const Layout = ({ children }) => {
         <main className='max-w-4xl'>
           {children}
         </main>
+        
       </div>
     )
   }
