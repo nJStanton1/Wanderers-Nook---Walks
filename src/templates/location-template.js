@@ -6,11 +6,12 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { RouteCard } from "../components/route-card";
 import getSlug from "../components/helperFunctions";
 
-function LocationPage ({ data }) {
-    console.log("Hello world!");
+function LocationPage ({ data, pageContext }) {
     const location = data.markdownRemark
-    const routes = data.allMarkdownRemark.nodes;
+    const routes = data.allMarkdownRemark.nodes
+    const {slug} = pageContext
     
+    console.log(slug)
     return (
       <Layout>
         <div className="w-full flex-col">
@@ -40,7 +41,17 @@ function LocationPage ({ data }) {
 
 export default LocationPage
 
-export const Head = () => <Seo pageTitle="Locations" pageURL="/locations/" />
+export const Head = ({ data, pageContext }) => {
+  const location = data.markdownRemark.frontmatter
+  return(
+      <Seo 
+      pageTitle={location.title} 
+      pageDescription={location.excerpt}
+      pageURL={pageContext.slug}
+      pageImage={location.heroImage.relativePath}
+    />
+  )
+}
 
 export const query = graphql`
   query($id: String!, $location: String!) {
@@ -48,9 +59,10 @@ export const query = graphql`
       frontmatter {
         title
         heroImage {
-            childImageSharp {
-                gatsbyImageData(placeholder: DOMINANT_COLOR, layout: CONSTRAINED)
-            }
+          relativePath
+          childImageSharp {
+              gatsbyImageData(placeholder: DOMINANT_COLOR, layout: CONSTRAINED)
+          }
         }
         travelTime
         type

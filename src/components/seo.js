@@ -21,7 +21,7 @@ const Seo = ({ pageTitle, pageDescription, pageURL, pageImage }) => {
   const metaTitle = pageTitle ? `${pageTitle} | ${data.site.siteMetadata.title}` : `${data.site.siteMetadata.title}`
   const metaDescription = pageDescription ? `${pageDescription}` : `${data.site.siteMetadata.description}`
   const metaImageAbsoluteURL = pageImage ? `${data.site.siteMetadata.siteUrl}/${pageImage}` : `${data.site.siteMetadata.siteUrl}/${data.site.siteMetadata.image}`
-  const metaPageUrl = pageURL ? `${data.site.siteMetadata.siteURL}${pageURL}` : ``
+  const metaPageUrl = pageURL ? `${data.site.siteMetadata.siteUrl}${pageURL}` : ``
 
   return (
     <>
@@ -42,7 +42,7 @@ const Seo = ({ pageTitle, pageDescription, pageURL, pageImage }) => {
       <meta property="og:title" content={metaTitle} />
       <meta property="og:description" content={metaDescription} />
       {metaImageAbsoluteURL && <meta property="og:image" content={metaImageAbsoluteURL} />}
-      <meta property="og:url" content={pageURL} />
+      <meta property="og:url" content={metaPageUrl} />
 
       {/* Twitter Card Tags */}
       <meta name="twitter:card" content="summary_large_image" />

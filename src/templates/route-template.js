@@ -4,9 +4,10 @@ import * as React from 'react'
 import Seo from '../components/seo'
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
-function RoutePage ({ data }) {
+function RoutePage ({ data, pageContext }) {
 
     const route = data.markdownRemark
+    
     
     return (
       <Layout>
@@ -14,7 +15,7 @@ function RoutePage ({ data }) {
             <GatsbyImage image={getImage(route.frontmatter.heroImage)}/>
             <h1>{route.frontmatter.title}</h1>
         </div>
-        
+        <p>{route.heroImage}</p>
         <div className="">Distance: {route.frontmatter.length}km</div>
         <div className="">Time: {route.frontmatter.timeAllowed}hrs</div>
         <div className="">Starting point: {route.frontmatter.startPoint}</div>
@@ -29,7 +30,17 @@ function RoutePage ({ data }) {
 
 export default RoutePage
 
-export const Head = () => <Seo pageTitle={"Routes"} pageURL={"/routes/"} />
+export const Head = ({ data, pageContext }) => {
+  const route = data.markdownRemark.frontmatter
+  return(
+      <Seo 
+      pageTitle={route.title} 
+      pageDescription={route.excerpt}
+      pageURL={pageContext.slug}
+      pageImage={route.heroImage.relativePath}
+    />
+  )
+}
 
 export const query = graphql`
   query($id: String!) {
@@ -37,9 +48,10 @@ export const query = graphql`
       frontmatter {
         title
         heroImage {
-            childImageSharp {
-                gatsbyImageData(placeholder: DOMINANT_COLOR, layout: CONSTRAINED)
-            }
+          relativePath
+          childImageSharp {
+              gatsbyImageData(placeholder: DOMINANT_COLOR, layout: CONSTRAINED)
+          }
         }
         length
         timeAllowed

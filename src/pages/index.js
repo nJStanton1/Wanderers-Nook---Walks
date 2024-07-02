@@ -8,7 +8,7 @@ import { Link } from 'gatsby'
 // Define components
 const IndexPage = () => {
   return(
-    <Layout pageTitle="Home Page">
+    <Layout>
       <div className='flex flex-col w-full relative'>
         <StaticImage
           className='w-full max-h-60 md:max-h-80'
@@ -68,7 +68,14 @@ const IndexPage = () => {
   )
 }
 
-export const Head = () => <Seo pageTitle="Home Page" pageURL="/" />
+export const Head = () => {
+  
+  return(
+      <Seo 
+      pageURL="/"
+    />
+  )
+}
  
 // Export component
 export default IndexPage

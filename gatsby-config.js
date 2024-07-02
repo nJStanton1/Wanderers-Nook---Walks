@@ -3,11 +3,11 @@
  */
 module.exports = {
   siteMetadata: {
-    siteUrl: `https://www.yourdomain.tld`,
-    title: 'Wanderers Nook',
+    siteUrl: 'https://www.yourdomain.tld',
+    title: 'The Wanderer\'s Nook',
     author: 'Nathaniel J Stanton',
     description: 'Discover adventure in and around Manchester. Newcomers and veterans alike can find guides on exploring nature, history, and the great outdoors—all by public transport.',
-    image: './src/images.Me.pg', 
+    image: './src/images/Me.jpg', 
     siteSearch: 'nositelinkssearchbox',
   },
   plugins: [

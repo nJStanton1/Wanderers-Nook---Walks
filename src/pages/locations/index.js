@@ -45,6 +45,19 @@ const LocationPage = ({data}) =>{
  
 // Export component
 
+export default LocationPage
+
+export const Head = () => {
+  
+  return(
+      <Seo 
+      pageTitle="Locations" 
+      pageDescription="Explore the areas around Manchester that easily reached, and with best access to nature. See how to get there, how long it takes, and what you can find."
+      pageURL="/locations"
+    />
+  )
+}
+
 // Query
 export const query = graphql`
   query {
@@ -67,7 +80,3 @@ export const query = graphql`
     }
   }
 `
-
-export default LocationPage
-
-export const Head = () => <Seo pageTitle="Locations" pageURL="/locations/" />
