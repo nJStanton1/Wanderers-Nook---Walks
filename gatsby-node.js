@@ -17,14 +17,22 @@ exports.createPages = async function ({ actions, graphql }) {
       }
     `)
 
-    data.allMarkdownRemark.edges.forEach(edge => {
-        if (edge.node.frontmatter.template = 'location-template') {
-            let slug = "/locations/"+getSlug(edge.node.fileAbsolutePath)
-            actions.createPage({
-                path: slug,
-                component: require.resolve(`./src/templates/location-template.js`),
-                context: { slug: slug, id: edge.node.id },
-            })
-        } else {}
+    data.allMarkdownRemark.edges.forEach(({node}) => {
+      console.log(node.frontmatter.template)
+      if (node.frontmatter.template == 'location-template') {
+          let slug = "/locations/"+getSlug(node.fileAbsolutePath)
+          actions.createPage({
+              path: slug,
+              component: require.resolve(`./src/templates/location-template.js`),
+              context: { slug: slug, id: node.id },
+          })
+      } else if (node.frontmatter.template == 'route-template') {
+        let slug = "/routes/"+getSlug(node.fileAbsolutePath)
+          actions.createPage({
+              path: slug,
+              component: require.resolve(`./src/templates/route-template.js`),
+              context: { slug: slug, id: node.id },
+          })
+      } else {}
     })
 }

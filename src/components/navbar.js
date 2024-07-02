@@ -72,7 +72,7 @@ export default class Navbar extends React.Component {
                 </div>
                 <div className={'flex-shrink-0 mb-1 lg:py-2 w-full md:w-auto flex-wrap items-center ' + this.state.menuOpenClassName}>
                     <NavbarLink to={'/'} title={'Home'} />
-                    <NavbarLink to={'/'} title={'Routes'} />
+                    <NavbarLink to={'/routes'} title={'Routes'} />
                     <NavbarLink to={'/'} title={'Adventures'} />
                     <NavbarLink to={'/'} title={'Foreign Escapades'} />
                     <NavbarLink to={'/about'} title={'About Me'} />

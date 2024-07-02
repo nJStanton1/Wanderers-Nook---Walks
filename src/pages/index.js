@@ -30,12 +30,12 @@ const IndexPage = () => {
         <p className='w-full'>All my walks are accessible by public transport, and some start in the centre. This way, you can always have a drink or two at the end. After all, what is a hike, but a nice walk to a good pub?</p>
         <p className='w-full'>I recommend searching by area. You can choose something close or far and see what scenery you might see.</p>
         <div className='inline-flex w-full justify-around md:justify-end py-4'>
-          <button className='inline-flex px-2 py-1 md:mr-4 items-center rounded-full bg-red'>
+          <Link to='/routes' className='inline-flex px-2 py-1 md:mr-4 items-center rounded-full bg-red'>
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" className="flex size-6 stroke-white">
               <path strokeLinecap="round" strokeLinejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
             </svg>
             <span className='flex text-left ml-2 mr-1 text-white text-base md:text-lg'>Explore all hikes</span>
-          </button>
+          </Link>
           <Link to='/locations' className='inline-flex px-2 py-1 items-center rounded-full bg-red'>
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" className="flex size-6 stroke-white">
               <path strokeLinecap="round" strokeLinejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
