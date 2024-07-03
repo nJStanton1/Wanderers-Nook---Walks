@@ -5,7 +5,7 @@ import { StaticImage } from 'gatsby-plugin-image'
 
 const NavbarLink = ({ title, to }) => (
     <Link
-      className="w-full lg:w-auto text-lg lg:text-base text-center my-1 lg:my-0 lg:mx-2 lg:px-1 flex-shrink-0 flex-grow-0 border-b-2 hover:font-medium hover:bg-gray-600/15 duration:300"
+      className="w-full lg:w-auto text-lg lg:text-base text-center my-1 lg:my-0 lg:mx-2 lg:px-2 flex-shrink-0 flex-grow-0 border-b-2 hover:font-medium hover:bg-gray-600/15 transition duration:300"
       to={to}
     >
       {title}
@@ -41,40 +41,39 @@ export default class Navbar extends React.Component {
     }    
 
     toggle = () => {
-        this.setState(
-          {
-            menuOpen: !this.state.menuOpen,
-          },
-          () => {
-            this.setState({
-              menuOpenClassName: this.state.menuOpen ? 'flex flex-grow' : 'hidden lg:flex',
-            })
-          }
-        )
-      }
+      this.setState(
+        {
+          menuOpen: !this.state.menuOpen,
+        },
+        () => {
+          this.setState({
+            menuOpenClassName: this.state.menuOpen ? 'flex flex-grow w-screen' : 'hidden lg:flex',
+          })
+        }
+      )
+    }
 
     render() {
 
         return (
         <div className="self-start lg:self-end">
             <nav
-            className="flex flex-wrap lg:flex-row lg:max-w-6xl flex-shrink-0 flex-grow text-white mx-auto items-end justify-between"
+            className="flex flex-wrap lg:max-w-6xl flex-shrink-0 flex-grow text-white mx-auto items-end justify-between"
             role="navigation"
             aria-label="main-navigation"
             >
                 <StaticImage 
-                  className='max-w-12 md:max-w-none max-h-12 md:max-h-24 m-2 md:m-0 md:ml-2'
+                  className='max-w-12 md:max-w-none max-h-12 md:max-h-24 m-2 md:m-0 md:ml-3'
                   alt=""
                   src="../images/WNLogo.png">
                 </StaticImage>
-                <div className="flex">
+                <div className="flex flex-grow justify-end">
                     <NavbarToggle isOpen={this.state.menuOpen} callback={this.toggle} />
                 </div>
-                <div className={'flex-shrink-0 mb-1 lg:py-2 w-full md:w-auto flex-wrap items-center ' + this.state.menuOpenClassName}>
+                <div className={'flex-shrink-0 mb-1 lg:py-2 mr-0 md:mr-3 lg:w-auto flex-wrap items-center ' + this.state.menuOpenClassName}>
                     <NavbarLink to={'/'} title={'Home'} />
                     <NavbarLink to={'/routes'} title={'Routes'} />
-                    <NavbarLink to={'/'} title={'Adventures'} />
-                    <NavbarLink to={'/'} title={'Foreign Escapades'} />
+                    <NavbarLink to={'/locations'} title={'Locations'} />
                     <NavbarLink to={'/about'} title={'About Me'} />
                     <NavbarLink to={'/blog'} title={'Blog'} />
                 </div>

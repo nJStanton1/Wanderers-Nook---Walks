@@ -3,6 +3,11 @@ import { graphql } from "gatsby"
 import * as React from 'react'
 import Seo from '../components/seo'
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import { floor } from "mathjs";
+import DistanceIcon from "../../static/icons/distance-icon.svg"
+import ClockIcon from "../../static/icons/clock-icon.svg"
+import PinIcon from "../../static/icons/pin-icon.svg"
+import MapIcon from "../../static/icons/map-icon.svg"
 
 function RoutePage ({ data, pageContext }) {
 
@@ -11,18 +16,44 @@ function RoutePage ({ data, pageContext }) {
     
     return (
       <Layout>
-        <div className="flex flex-col max-h-60 md:max-h-80 w-full relative">
+        <div className="flex flex-col max-h-60 md:max-h-72 w-full relative">
             <GatsbyImage image={getImage(route.frontmatter.heroImage)}/>
-            <h1>{route.frontmatter.title}</h1>
         </div>
-        <p>{route.heroImage}</p>
-        <div className="">Distance: {route.frontmatter.length}km</div>
-        <div className="">Time: {route.frontmatter.timeAllowed}hrs</div>
-        <div className="">Starting point: {route.frontmatter.startPoint}</div>
-        <a href={route.frontmatter.osMapLink} className='inline-flex px-2 py-1 items-center rounded-full bg-red'>
-                <span className='flex text-left ml-2 mr-1 text-white text-base md:text-lg'>See the OS map here</span>
-        </a>
-        <div dangerouslySetInnerHTML={{ __html: route.html }} />
+        <div className="mx-4 lg:mx-0">
+          <h1>{route.frontmatter.title}</h1>
+          <div className="grid grid-cols-1 md:grid-cols-2 md:gap-2 mb-2">
+            <div className="inline-flex items-center">
+              <DistanceIcon className='size-20 mr-4 stroke-red flex'/>
+              <div className="flex flex-col">
+                <h3 className="p-0 text-xl">Distance</h3>
+                <p className="p-0">{route.frontmatter.length}km</p>
+              </div>
+            </div>
+            <div className="inline-flex items-center">
+              <ClockIcon className='size-20 mr-4 stroke-red flex'/>
+              <div className="flex flex-col">
+                <h3 className="p-0 text-xl">Time</h3>
+                <p className="p-0">{floor(route.frontmatter.timeAllowed / 60)}:{route.frontmatter.timeAllowed % 60} hrs</p>
+              </div>
+            </div>
+            <div className="inline-flex items-center">
+              <PinIcon className='size-20 mr-4 stroke-red flex'/>
+              <div className="flex flex-col">
+                <h3 className="p-0 text-xl">Starting point</h3>
+                <p className="p-0">{route.frontmatter.startPoint}</p>
+              </div>
+            </div>
+            <div className="inline-flex items-center">
+              <MapIcon className='size-20 mr-4 stroke-red flex'/>
+              <div className="flex flex-col ">
+                <h3 className="p-0 text-xl">OS Map</h3>
+                <a href={route.frontmatter.osMapLink} className='underline'>View map here</a>
+              </div>
+            </div>
+          </div>
+          <div dangerouslySetInnerHTML={{ __html: route.html }} />
+        </div>
+        
     
       </Layout>
     )
