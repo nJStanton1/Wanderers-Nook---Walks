@@ -9,7 +9,7 @@ import ClockIcon from "../../static/icons/clock-icon.svg"
 import PinIcon from "../../static/icons/pin-icon.svg"
 import MapIcon from "../../static/icons/map-icon.svg"
 
-function RoutePage ({ data, pageContext }) {
+function RoutePage ({ data }) {
 
     const route = data.markdownRemark
     
