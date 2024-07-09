@@ -14,16 +14,21 @@ const TransportIcon = ({type, size}) => {
     };
 
     const AltMapper = {
-        'Train': 'Reachable by train',
-        'Metrolink': 'Reachable by metrolink',
-        'Bus': 'Reachable by bus',
-        'Car': 'Reachable by car',
+        'Train': "Reachable by train",
+        'Metrolink': "Reachable by metrolink",
+        'Bus': "Reachable by bus",
+        'Car': "Reachable by car",
     };
 
     let SVGComponent = SVGMapper[type];
     let AltComponent = AltMapper[type];
       
-    return <SVGComponent alt={AltComponent} width={size} height={size} className='stroke-red fill-red'/>;
+    return (
+        <div className="relative flex justify-center">
+            <SVGComponent alt={AltComponent} width={size} height={size} className='stroke-red fill-red peer'/>
+            <span className="absolute whitespace-nowrap text-center opacity-0 transition-opacity duration-500 rounded z-10 bg-grey p-1 text-sm text-white peer-hover:opacity-100">{AltComponent}</span>
+        </div>
+    )
 }
 
 TransportIcon.propTypes = {

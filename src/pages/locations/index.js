@@ -30,7 +30,7 @@ const LocationPage = ({data}) =>{
                                 ))
                             }
                         </div>
-                        <p className='mx-2'>Travel time: {location.frontmatter.travelTime} mins</p>
+                        <p className='mx-2 pt-0'>Travel time: {location.frontmatter.travelTime} mins</p>
                         <p className='mx-2 text-base'>{location.frontmatter.excerpt}</p>
                         </Link>
                     </article>

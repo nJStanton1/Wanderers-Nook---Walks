@@ -5,6 +5,7 @@ import Seo from '../components/seo'
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { RouteCard } from "../components/route-card";
 import getSlug from "../components/helperFunctions";
+import TransportIcon from "../components/transport-icon";
 
 function LocationPage ({ data, pageContext }) {
     const location = data.markdownRemark
@@ -18,6 +19,13 @@ function LocationPage ({ data, pageContext }) {
             <div className="flex flex-col max-h-60 md:max-h-80 w-full relative">
                 <GatsbyImage image={getImage(location.frontmatter.heroImage)}/>
                 <h1>{location.frontmatter.title}</h1>
+            </div>
+            <div className='px-2 w-full inline-flex'>
+              {
+                location.frontmatter.type.map(type => (
+                  <TransportIcon type={type} size={60}/>
+                ))
+              }
             </div>
             <div dangerouslySetInnerHTML={{ __html: location.html }} />
             <h2>Routes around {location.frontmatter.title}</h2>
