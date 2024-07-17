@@ -1,6 +1,8 @@
+local_backend: true # Comment out when not in use
+
 backend:
   name: git-gateway
-  branch: main # Branch to update (optional; defaults to master)
+  branch: routes-update # original: main
 
 media_folder: static/img
 public_folder: /img
@@ -22,14 +24,21 @@ collections:
     fields:
       - { label: 'Template', name: 'template', widget: 'hidden', default: 'route-template'}
       - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Hero Image', name: 'heroImage', widget: 'image', required: false}
+      - { label: 'Hero Image', name: 'heroImage', widget: 'image', required: false, allow_multiple: false}
       - { label: 'Length (km)', name: 'length', widget: 'number', value_type: 'float', step: 0.01 }
-      - { label: 'Time Allowed (Hrs)', name: 'timeAllowed', hint: 'Given hours:minutes format.', widget: 'string', pattern: ['^([\d]{1,2})([:][0-5][0-9]){1}$', Must be H:mm or HH:mm format.] }
+      - { label: 'Elevation (m)', name: 'elevation', widget: 'number', value_type: 'float', step: 1, required: false }
+      - { label: 'Time Allowed (Hrs)', name: 'timeAllowed', hint: 'Given hours:minutes format.', widget: 'string', pattern: ['^([\d]{1,2})([:][0-5][0-9]){1}$', Must be H:mm or HH:mm format.], required: false }
       - { label: 'OS Map', name: 'osMapLink', widget: 'string', required: false }
       - { label: 'Start Point', name: 'startPoint', widget: 'relation', collection: 'locations', value_field: 'title', search_fields: ['title']}
       - { label: 'End Point', name: 'endPoint', widget: 'relation', collection: 'locations', value_field: 'title', search_fields: ['title'], hint: 'Not required. Use only for point to point walks.', required: false}
-      - { label: 'Brief description', name: 'excerpt', widget: 'string', pattern: ['.{10,160}', "Must have between 10 and 160 characters"]}
+      - { label: 'Brief description', name: 'excerpt', widget: 'string', pattern: ['.{10,160}', "Must have between 10 and 160 characters"], required: false}
       - { label: 'Body', name: 'body', widget: 'markdown' }
+      - label: "Gallery"
+        name: "galleryImages"
+        widget: "list"
+        fields:
+          - { label: "Image", name: "image", widget: "image", allow_multiple: false }
+          - { label: "Caption", name: "caption", widget: "string", required: false}
 
   - name: 'locations'
     label: 'Locations'
@@ -45,7 +54,7 @@ collections:
     fields:
       - { label: 'Template', name: 'template', widget: 'hidden', default: 'location-template'}
       - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Hero Image', name: 'heroImage', widget: 'image' }
+      - { label: 'Hero Image', name: 'heroImage', widget: 'image', allow_multiple: false }
       - { label: 'Travel time', name: 'travelTime', hint: 'Given in minutes, or hours:minutes format.', widget: 'string', pattern: ['^([\d]{1,2})([:][0-5][0-9])?$', Must be minutes up to 99 or HH:mm format.] }
       - { label: 'Excerpt', name: 'excerpt', widget: 'string', pattern: ['.{10,160}', "Must have between 10 and 160 characters"]}
       - { label: 'Reachable by', name: 'type', widget: 'select', options: ["Train", "Metrolink", "Bus", "Car"], multiple: true, min: 1}
@@ -118,7 +127,7 @@ collections:
     fields:
       - { label: 'Template', name: 'template', widget: 'hidden', default: 'article-template'}
       - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Hero Image', name: 'heroImage', widget: 'image' }
+      - { label: 'Hero Image', name: 'heroImage', widget: 'image', allow_multiple: false }
       - { label: 'Body', name: 'body', widget: 'markdown' }
 
   - name: 'highlightedArticles'

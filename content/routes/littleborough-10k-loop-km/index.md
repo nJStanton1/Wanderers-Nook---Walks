@@ -2,13 +2,23 @@
 template: route-template
 title: Littleborough 10K Loop
 heroImage: littleborough-10k-loop.jpg
-length: "10.72"
-timeAllowed: 3:15
+length: 10.72
+elevation: 195
+timeAllowed: ""
 osMapLink: https://explore.osmaps.com/route/22284181/wn-littleborough-10k-loop?lat=53.637978&lon=-2.095931&zoom=13.2268&style=Standard&type=2d
 startPoint: Littleborough
 excerpt: A lovely 10K route taking you past Hollingworth Reservoir, through
   valleys and up onto the hills. With views over Rochdale and into Manchester,
   lakes and wildflowers, there's a bit of everything here.
+galleryImages:
+  - image: img20240620115858.jpg
+    caption: A peaceful valley
+  - image: img20240620121135.jpg
+    caption: The greenest view
+  - image: img20240620121605.jpg
+    caption: The long path to wander
+  - image: img_20200531_123605.jpg
+    caption: Test tree
 ---
 ## Overview:
 
@@ -18,7 +28,7 @@ A lovely 10K route taking you past Hollingworth Reservoir, through valleys and u
 
 This route starts and at Littleborough Train Station. Here there are cafes, shops and amenities.
 
-### Heading out:
+### Heading Out:
 
 Immediately from the station you head down a short stretch of the canal. Cross an old lock, with cobbled pavement and down a very green footpath. A flat gentle intro to the route that lets you warm up.
 
@@ -58,7 +68,7 @@ Follow this under the pylons and head down towards the road.
 
 Now, you'll turn back down the road and you're heading back into the town. It's a short section, and you'll be heading to the canal soon.
 
-### The canal:
+### The Canal:
 
 Descending down a lane past some large houses, you'll come out on the canal. From here, you follow the canal into Littleborough, where you started.
 
