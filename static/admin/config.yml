@@ -23,7 +23,7 @@ collections:
       - { label: 'Template', name: 'template', widget: 'hidden', default: 'route-template'}
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Hero Image', name: 'heroImage', widget: 'image', required: false}
-      - { label: 'Length (km)', name: 'length', widget: 'string', pattern: ['^([\d]([\d]){0,2})(\.[0-9]{1,2})?$', "Must be betwween 0 and 999. You can have up to 2 decimal places."] }
+      - { label: 'Length (km)', name: 'length', widget: 'number', value_type: 'float', step: 0.01 }
       - { label: 'Time Allowed (Hrs)', name: 'timeAllowed', hint: 'Given hours:minutes format.', widget: 'string', pattern: ['^([\d]{1,2})([:][0-5][0-9]){1}$', Must be H:mm or HH:mm format.] }
       - { label: 'OS Map', name: 'osMapLink', widget: 'string', required: false }
       - { label: 'Start Point', name: 'startPoint', widget: 'relation', collection: 'locations', value_field: 'title', search_fields: ['title']}
