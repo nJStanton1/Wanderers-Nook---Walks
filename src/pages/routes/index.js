@@ -4,8 +4,7 @@ import Layout from '../../components/layout'
 import Seo from '../../components/seo'
 import { graphql } from 'gatsby'
 import { RouteCard } from '../../components/route-card'
-const getSlug =require('../../components/helperFunctions')
-
+const {getSlug} = require('../../components/helperFunctions')
 
 // Define components
 const RoutePage = ({data}) =>{
@@ -19,7 +18,7 @@ const RoutePage = ({data}) =>{
                 nodes.map(route => (
                     <RouteCard 
                         key={route.id} 
-                        linkTo={"/routes/"+getSlug(route.fileAbsolutePath)} 
+                        linkTo={"/routes/" + getSlug(route.fileAbsolutePath)} 
                         heroImage={route.frontmatter.heroImage}
                         title={route.frontmatter.title}
                         length={route.frontmatter.length}

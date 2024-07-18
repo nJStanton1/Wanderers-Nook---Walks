@@ -4,8 +4,8 @@ import * as React from 'react'
 import Seo from '../components/seo'
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { RouteCard } from "../components/route-card";
-import getSlug from "../components/helperFunctions";
 import TransportIcon from "../components/transport-icon";
+const getSlug = require('../components/helperFunctions')
 
 function LocationPage ({ data, pageContext }) {
     const location = data.markdownRemark

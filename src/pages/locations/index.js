@@ -6,7 +6,7 @@ import Seo from '../../components/seo'
 import { graphql } from 'gatsby'
 import TransportIcon from '../../components/transport-icon'
 import { Link } from 'gatsby'
-const getSlug =require('../../components/helperFunctions')
+const {getSlug} = require('../../components/helperFunctions')
 
 // Define components
 const LocationPage = ({data}) =>{

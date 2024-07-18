@@ -1,4 +1,4 @@
-const getSlug = require('./src/components/helperFunctions')
+const {getSlug} = require('./src/components/helperFunctions')
 
 exports.createPages = async function ({ actions, graphql }) {
     const { data } = await graphql(`

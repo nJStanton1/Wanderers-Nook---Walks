@@ -17,13 +17,7 @@ galleryImages:
     caption: The greenest view
   - image: img20240620121605.jpg
     caption: The long path to wander
-  - image: img_20200531_123605.jpg
-    caption: Test tree
 ---
-## Overview:
-
-A lovely 10K route taking you past Hollingworth Reservoir, through valleys and up onto the hills. With views over Rochdale and into Manchester, lakes and wildflowers, there's a bit of everything here.
-
 ## Route:
 
 This route starts and at Littleborough Train Station. Here there are cafes, shops and amenities.
