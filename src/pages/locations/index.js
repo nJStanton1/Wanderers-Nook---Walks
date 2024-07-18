@@ -13,7 +13,8 @@ const LocationPage = ({data}) =>{
     const {nodes} = data.allMarkdownRemark;
     return (
         <Layout>
-            <h1 className='pt-3 mt-8 w-full text-xl md:text-2xl lg:text-5xl'>Locations to explore</h1>
+          <div className='w-full px-3 md:px-5 lg:px-3'>
+            <h1 className='mt-8 w-full'>Locations to explore</h1>
             <p>Explore the various areas of Greater Manchester you can visit easily. Sleect whichever looks interesting for you to view the routes I have found nearby.</p>
             <div className='w-full flex flex-wrap justify-around'>
             {
@@ -30,13 +31,14 @@ const LocationPage = ({data}) =>{
                                 ))
                             }
                         </div>
-                        <p className='mx-2 pt-0'>Travel time: {location.frontmatter.travelTime} mins</p>
+                        <p className='mx-2 pt-0'><span className='font-medium'>Travel time:</span> {location.frontmatter.travelTime} mins</p>
                         <p className='mx-2 text-base'>{location.frontmatter.excerpt}</p>
                         </Link>
                     </article>
                 ))
             }
             </div>
+          </div>
         </Layout>
     )
 }
