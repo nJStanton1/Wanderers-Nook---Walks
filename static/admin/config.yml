@@ -1,8 +1,8 @@
-local_backend: true # Comment out when not in use
+# local_backend: true # Comment out when not in use
 
 backend:
   name: git-gateway
-  branch: routes-update # original: main
+  branch: main # original: main
 
 media_folder: static/img
 public_folder: /img
@@ -36,6 +36,7 @@ collections:
       - label: "Gallery"
         name: "galleryImages"
         widget: "list"
+        required: false
         fields:
           - { label: "Image", name: "image", widget: "image", allow_multiple: false }
           - { label: "Caption", name: "caption", widget: "string", required: false}
