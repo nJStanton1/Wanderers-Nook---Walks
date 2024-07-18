@@ -8,10 +8,10 @@ export const RouteCard = ({key, linkTo, heroImage, title, length, startPoint, ex
         <article key={key} className='w-full pb-2 my-2 max-w-72 border-2 border-red'>
             <Link to={linkTo} className='w-full'>
                 {heroImage && <GatsbyImage className='' image={getImage(heroImage)} alt=''/> }
-                <h2 className='mx-2 text-3xl'>{title}</h2>
+                <h2 className='mx-2'>{title}</h2>
                 {length && <p className='mx-2 pt-0'>Distance: {length}km</p>}
                 {startPoint && <p className='mx-2 pt-0'>Starting at: {startPoint}</p>}
-                {excerpt && <p className='mx-2 text-base'>{excerpt}</p>}
+                {excerpt && <p className='mx-2'>{excerpt}</p>}
             </Link>
         </article>
     )

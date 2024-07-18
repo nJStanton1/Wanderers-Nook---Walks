@@ -11,7 +11,8 @@ const RoutePage = ({data}) =>{
     const {nodes} = data.allMarkdownRemark;
     return (
         <Layout>
-            <h1 className='pt-3 mt-8 w-full text-xl md:text-2xl lg:text-5xl'>Routes</h1>
+          <div className='px-3 md:px-5 lg:px-3'>
+            <h1 className='pt-3 mt-8 w-full'>Routes</h1>
             <p>Here you will find all my routes around Manchester. You can see the distances and locations. Unfortunately, I haven't yet built in filtering, I'm working on it.</p>
             <div className='w-full flex flex-wrap justify-around'>
             {
@@ -27,6 +28,7 @@ const RoutePage = ({data}) =>{
                 ))
             }
             </div>
+          </div>
         </Layout>
     )
 }
