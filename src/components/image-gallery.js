@@ -11,6 +11,7 @@ const ImageGalleryCaptions = ({ images }) => {
     let imagesColumn2;
     let imagesColumn3;
     const imageCount = Object.keys(images).length
+    
     if (imageCount < 3) {
         // Todo - return single column
     } else {

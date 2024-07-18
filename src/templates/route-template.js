@@ -83,10 +83,11 @@ function RoutePage ({ data }) {
 
           <div dangerouslySetInnerHTML={{ __html: route.html }} />
 
+          {route.frontmatter.galleryImages &&
           <div>
             <h2 className="mt-4 mb-6">Image Gallery</h2>
             <ImageGalleryCaptions images={route.frontmatter.galleryImages}/>
-          </div>
+          </div>}
         </div>
             
       </Layout>
