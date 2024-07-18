@@ -5,7 +5,7 @@ import Seo from '../components/seo'
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { RouteCard } from "../components/route-card";
 import TransportIcon from "../components/transport-icon";
-const getSlug = require('../components/helperFunctions')
+const {getSlug} = require('../components/helperFunctions')
 
 function LocationPage ({ data, pageContext }) {
     const location = data.markdownRemark
@@ -16,11 +16,13 @@ function LocationPage ({ data, pageContext }) {
     return (
       <Layout>
         <div className="w-full flex-col">
-            <div className="flex flex-col max-h-60 md:max-h-80 w-full relative">
-                <GatsbyImage image={getImage(location.frontmatter.heroImage)}/>
-                <h1>{location.frontmatter.title}</h1>
-            </div>
-            <div className='px-2 w-full inline-flex'>
+          <div className="flex flex-col max-h-60 md:max-h-80 w-full relative">
+            <GatsbyImage image={getImage(location.frontmatter.heroImage)}/>
+            
+          </div>
+          <div className="w-full px-3 md:px-5 lg:px-3">
+          <h1>{location.frontmatter.title}</h1>
+            <div className='w-full inline-flex justify-center md:justify-start'>
               {
                 location.frontmatter.type.map(type => (
                   <TransportIcon type={type} size={60}/>
@@ -31,17 +33,18 @@ function LocationPage ({ data, pageContext }) {
             <h2>Routes around {location.frontmatter.title}</h2>
             <div className='w-full flex flex-wrap justify-around'>
             {
-                routes.map(route => (
-                    <RouteCard 
-                        key={route.id} 
-                        linkTo={"/routes/"+getSlug(route.fileAbsolutePath)} 
-                        heroImage={route.frontmatter.heroImage}
-                        title={route.frontmatter.title}
-                        length={route.frontmatter.length}
-                        excerpt={route.frontmatter.excerpt}/>
-                ))
+              routes.map(route => (
+                <RouteCard 
+                  key={route.id} 
+                  linkTo={"/routes/"+getSlug(route.fileAbsolutePath)} 
+                  heroImage={route.frontmatter.heroImage}
+                  title={route.frontmatter.title}
+                  length={route.frontmatter.length}
+                  excerpt={route.frontmatter.excerpt}/>
+              ))
             }
             </div>
+          </div>
         </div>
       </Layout>
     )
