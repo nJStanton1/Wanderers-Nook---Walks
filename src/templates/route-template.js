@@ -27,19 +27,19 @@ function RoutePage ({ data }) {
           {route.frontmatter.heroImage && <GatsbyImage image={getImage(route.frontmatter.heroImage)}/>} 
         </div>
 
-        <div className="mx-4 lg:mx-0">
+        <div className="w-full px-3 md:px-5 lg:px-3">
 
           <h1>{route.frontmatter.title}</h1>
 
           <h2 className="mt-5">Overview</h2>
-          {route.frontmatter.excerpt && <p className="w-full text-xl">{route.frontmatter.excerpt}</p>}
+          {route.frontmatter.excerpt && <p className="w-full">{route.frontmatter.excerpt}</p>}
 
           <div className="grid grid-cols-1 md:grid-cols-3 md:gap-2 my-9">
             <div className="inline-flex items-center">
               <DistanceIcon className='size-20 mr-4 stroke-red flex'/>
-              <div className="flex flex-col">
-                <h3 className="p-0 text-xl">Distance</h3>
-                <p className="p-0">{route.frontmatter.length}km</p>
+              <div className="flex flex-col items-start">
+                <h3 className="p-0 text-start">Distance</h3>
+                <p className="p-0 text-start">{route.frontmatter.length}km</p>
               </div>
             </div>
 
@@ -47,8 +47,8 @@ function RoutePage ({ data }) {
               <div className="inline-flex items-center">
                 <ElevationIcon className='size-20 mr-4 stroke-red flex'/>
                 <div className="flex flex-col">
-                  <h3 className="p-0 text-xl">Elevation</h3>
-                  <p className="p-0">{elevation}m</p>
+                  <h3 className="p-0 text-start">Elevation</h3>
+                  <p className="p-0 text-start">{elevation}m</p>
                 </div>
               </div>
             }
@@ -56,16 +56,16 @@ function RoutePage ({ data }) {
             <div className="inline-flex items-center">
               <ClockIcon className='size-20 mr-4 stroke-red flex'/>
               <div className="flex flex-col">
-                <h3 className="p-0 text-xl">Time</h3>
-                <p className="p-0">{timeAllowed} hrs</p>
+                <h3 className="p-0 text-start">Time</h3>
+                <p className="p-0 text-start">{timeAllowed} hrs</p>
               </div>
             </div>
 
             <div className="inline-flex items-center">
               <PinIcon className='size-20 mr-4 stroke-red flex'/>
               <div className="flex flex-col">
-                <h3 className="p-0 text-xl">Starting point</h3>
-                <p className="p-0">{route.frontmatter.startPoint}</p>
+                <h3 className="p-0 text-start">Starting point</h3>
+                <p className="p-0 text-start">{route.frontmatter.startPoint}</p>
               </div>
             </div>
 
@@ -73,8 +73,8 @@ function RoutePage ({ data }) {
               <div className="inline-flex items-center">
                 <MapIcon className='size-20 mr-4 stroke-red flex'/>
                 <div className="flex flex-col ">
-                  <h3 className="p-0 text-xl">OS Map</h3>
-                  <a href={route.frontmatter.osMapLink} className='underline'>View map here</a>
+                  <h3 className="p-0 text-start">OS Map</h3>
+                  <a href={route.frontmatter.osMapLink} className='underline text-start'>View map here</a>
                 </div>
               </div>
             }
