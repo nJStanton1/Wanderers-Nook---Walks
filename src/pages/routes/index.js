@@ -13,9 +13,19 @@ const RoutePage = ({data}) =>{
         <Layout>
           <div className='px-3 md:px-5 lg:px-3'>
             <h1 className='pt-3 mt-8 w-full'>Routes</h1>
-            <p>Here you will find all my routes around Manchester. You can see the distances and locations. Unfortunately, I haven't yet built in filtering, I'm working on it.</p>
+            <p>Here you are welcome to explore all the walks I have ever found.</p>
+
+            <div className='w-full'>
+              <h2>Route of the Week</h2>
+              <p>I'll at some point figure this out. Sorry.</p>
+            </div>
+
+            <div>
+              <h2>All Routes</h2>
+              <p>Here is every route I have ever done.  Unfortunately, I haven't yet built in filtering, I'm working on it.</p>
+            </div>
             <div className='w-full flex flex-wrap justify-around'>
-            {
+              {
                 nodes.map(route => (
                     <RouteCard 
                         key={route.id} 
@@ -26,7 +36,7 @@ const RoutePage = ({data}) =>{
                         startPoint={route.frontmatter.startPoint}
                         excerpt={route.frontmatter.excerpt}/>
                 ))
-            }
+              }
             </div>
           </div>
         </Layout>

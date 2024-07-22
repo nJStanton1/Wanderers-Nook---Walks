@@ -4,9 +4,15 @@ import Layout from '../components/layout'
 import { StaticImage } from 'gatsby-plugin-image'
 import Seo from '../components/seo'
 import { Link } from 'gatsby'
+import HighlightedRoutesGallery from '../components/highlighted-routes-gallery'
 
 // Define components
 const IndexPage = () => {
+
+  // Calculate highlighted routes
+  
+
+
   return(
     <Layout>
       <div className='flex flex-col w-full relative'>
@@ -45,6 +51,7 @@ const IndexPage = () => {
         </div>
         <div className='w-full mt-1'>
           <h3 className=''>Highlighted hikes</h3>
+          <HighlightedRoutesGallery />
         </div>
       </div>
       <div className='w-full px-3 md:px-5 lg:px-3'>
