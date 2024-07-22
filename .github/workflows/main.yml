@@ -1,0 +1,10 @@
+name: rebuild
+on:
+  schedule:
+    - cron: '17 01 * * 0-6'
+jobs:
+  trigger-netlify-rebuild:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Post to webhook
+        run: curl -X POST -d {} https://api.netlify.com/build_hooks/669e31d1308b9b159294805c

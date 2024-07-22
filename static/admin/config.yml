@@ -1,4 +1,4 @@
-# local_backend: true # Comment out when not in use
+local_backend: true # Comment out when not in use
 
 backend:
   name: git-gateway
@@ -73,8 +73,8 @@ collections:
     public_folder: ''
     path: '{{slug}}/index'
     fields:
-      - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Route', name: 'route', widget: 'relation', collection: 'routes', value_field: 'title', search_fields: ['title']}
+      - { label: 'typeID', name: 'typeid', widget: 'hidden', default: 'highlighted-route'}
 
   - name: 'upcoming'
     label: 'Planned Routes'
