@@ -17,10 +17,11 @@ module.exports = {
     },
     extend: {
       colors: {
-        'main-green':'#5E5C3B',
+        'main-green':'#5e5c3b',
         'second-green':'#868254',
         'third-green':'#B2A769',
-        'red':'#AF6246',
+        'accent-red':'#AF6246',
+        'accent-purple' : '#762D6A',
         'grey':'#75786A',
       }
     },

@@ -5,7 +5,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 export const RouteCard = ({key, linkTo, heroImage, title, length, startPoint, excerpt}) => {
     return(
-        <article key={key} className='w-full pb-2 my-2 max-w-72 border-2 border-red'>
+        <article key={key} className='w-full pb-2 my-2 max-w-72 border-2 border-accent-red'>
             <Link to={linkTo} className='w-full'>
                 {heroImage && <GatsbyImage className='' image={getImage(heroImage)} alt=''/> }
                 <h2 className='mx-2'>{title}</h2>

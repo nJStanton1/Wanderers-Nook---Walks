@@ -9,7 +9,7 @@ const Layout = ({ children }) => {
     //Return final layout here
     return (
       <div className="flex flex-col items-center pb-52 w-screen min-h-screen bg-main-green">
-        <div className='w-full items-center bg-second-green border-b-4 border-red'>
+        <div className='w-full items-center bg-second-green border-b-4 border-accent-red'>
           <Navbar />
         </div>
         

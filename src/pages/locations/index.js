@@ -19,7 +19,7 @@ const LocationPage = ({data}) =>{
             <div className='w-full flex flex-wrap justify-around'>
             {
                 nodes.map(location => (
-                    <article key={location.id} className='w-full pb-2 my-2 max-w-72 border-2 border-red'>
+                    <article key={location.id} className='w-full pb-2 my-2 max-w-72 border-2 border-accent-red'>
                       <Link to={"/locations/"+getSlug(location.fileAbsolutePath)} className='w-full'>
                         <GatsbyImage className='' image={getImage(location.frontmatter.heroImage)} alt=''/>
                         <h2 className='mx-2 text-3xl'>{location.frontmatter.title}</h2>

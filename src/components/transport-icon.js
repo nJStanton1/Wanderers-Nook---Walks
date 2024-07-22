@@ -22,11 +22,13 @@ const TransportIcon = ({type, size}) => {
 
     let SVGComponent = SVGMapper[type];
     let AltComponent = AltMapper[type];
+
+    const pixelSize = size + 'px'
       
     return (
         <div className="relative flex justify-center">
-            <SVGComponent alt={AltComponent} width={size} height={size} className='stroke-red fill-red peer'/>
-            <span className="absolute -top-3.5 whitespace-nowrap text-center rounded z-10 bg-grey p-1 text-sm text-white scale-0 transition-transform duration-500 peer-hover:scale-100">{AltComponent}</span>
+            <SVGComponent alt={AltComponent} width={pixelSize} height={pixelSize} className='stroke-accent-red fill-accent-red peer'/>
+            <span className="absolute -top-5 whitespace-nowrap text-center rounded z-10 bg-grey p-1 text-sm text-white scale-0 transition-transform duration-500 peer-hover:scale-100">{AltComponent}</span>
         </div>
     )
 }

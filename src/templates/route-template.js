@@ -36,7 +36,7 @@ function RoutePage ({ data }) {
 
           <div className="grid grid-cols-1 md:grid-cols-3 md:gap-2 my-9">
             <div className="inline-flex items-center">
-              <DistanceIcon className='size-20 mr-4 stroke-red flex'/>
+              <DistanceIcon className='size-20 mr-4 stroke-accent-red flex'/>
               <div className="flex flex-col items-start">
                 <h3 className="p-0 text-start">Distance</h3>
                 <p className="p-0 text-start">{route.frontmatter.length}km</p>
@@ -45,7 +45,7 @@ function RoutePage ({ data }) {
 
             {elevation !== 0 && 
               <div className="inline-flex items-center">
-                <ElevationIcon className='size-20 mr-4 stroke-red flex'/>
+                <ElevationIcon className='size-20 mr-4 stroke-accent-red flex'/>
                 <div className="flex flex-col">
                   <h3 className="p-0 text-start">Elevation</h3>
                   <p className="p-0 text-start">{elevation}m</p>
@@ -54,7 +54,7 @@ function RoutePage ({ data }) {
             }
 
             <div className="inline-flex items-center">
-              <ClockIcon className='size-20 mr-4 stroke-red flex'/>
+              <ClockIcon className='size-20 mr-4 stroke-accent-red flex'/>
               <div className="flex flex-col">
                 <h3 className="p-0 text-start">Time</h3>
                 <p className="p-0 text-start">{timeAllowed} hrs</p>
@@ -62,7 +62,7 @@ function RoutePage ({ data }) {
             </div>
 
             <div className="inline-flex items-center">
-              <PinIcon className='size-20 mr-4 stroke-red flex'/>
+              <PinIcon className='size-20 mr-4 stroke-accent-red flex'/>
               <div className="flex flex-col">
                 <h3 className="p-0 text-start">Starting point</h3>
                 <p className="p-0 text-start">{route.frontmatter.startPoint}</p>
@@ -71,7 +71,7 @@ function RoutePage ({ data }) {
 
             {route.frontmatter.osMapLink && 
               <div className="inline-flex items-center">
-                <MapIcon className='size-20 mr-4 stroke-red flex'/>
+                <MapIcon className='size-20 mr-4 stroke-accent-red flex'/>
                 <div className="flex flex-col ">
                   <h3 className="p-0 text-start">OS Map</h3>
                   <a href={route.frontmatter.osMapLink} className='underline text-start'>View map here</a>
