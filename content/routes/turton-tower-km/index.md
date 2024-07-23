@@ -4,6 +4,7 @@ title: Turton Tower
 heroImage: turton-tower-hero.jpg
 length: 9.7
 elevation: 246
+timeAllowed: ""
 osMapLink: https://explore.osmaps.com/route/22019512/wn-jumbles?lat=53.626168&lon=-2.427775&zoom=13.7257&style=Standard&type=2d
 startPoint: Bromley Cross
 excerpt: Whether it's the reservoir used by the local boating club, the tudor

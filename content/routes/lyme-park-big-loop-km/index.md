@@ -4,6 +4,7 @@ title: Lyme Park Big Loop
 heroImage: img20240519150123.jpg
 length: 11.79
 elevation: 350
+timeAllowed: ""
 osMapLink: https://explore.osmaps.com/route/21037021/disley-hike?lat=53.347513&lon=-2.054054&zoom=13.7507&style=Standard&type=2d
 startPoint: Disley
 excerpt: A long wander into the moors, taking in the reservoir and views over

@@ -18,7 +18,7 @@ function RoutePage ({ data }) {
 
     const route = data.markdownRemark
     const elevation = route.frontmatter.elevation ? route.frontmatter.elevation : 0
-    const timeAllowed = route.frontmatter.timeAllowed ? `${floor(route.frontmatter.timeAllowed / 60)}:${route.frontmatter.timeAllowed % 60}` : timeAllowedCalculation(route.frontmatter.length, elevation )
+    const timeAllowed = route.frontmatter.timeAllowed ? route.frontmatter.timeAllowed : timeAllowedCalculation(route.frontmatter.length, elevation )
     
 
     return (
@@ -100,14 +100,25 @@ export const Head = ({ data, pageContext }) => {
   const route = data.markdownRemark.frontmatter
   const excerptToUse = route.excerpt ? route.excerpt : data.markdownRemark.excerpt
 
-  return(
+  if (route.heroImage != null) {
+    return(
       <Seo 
       pageTitle={route.title} 
       pageDescription={excerptToUse}
       pageURL={pageContext.slug}
       pageImage={route.heroImage.relativePath}
-    />
-  )
+      />
+    )
+  } else {
+    return(
+      <Seo 
+      pageTitle={route.title} 
+      pageDescription={excerptToUse}
+      pageURL={pageContext.slug}
+      />
+    )
+  }
+  
 }
 
 export const query = graphql`
