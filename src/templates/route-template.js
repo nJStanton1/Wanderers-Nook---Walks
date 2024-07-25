@@ -3,23 +3,14 @@ import { graphql, Link } from "gatsby"
 import * as React from 'react'
 import Seo from '../components/seo'
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import DistanceIcon from "../../static/icons/distance-icon.svg"
-import ClockIcon from "../../static/icons/clock-icon.svg"
-import PinIcon from "../../static/icons/pin-icon.svg"
-import MapIcon from "../../static/icons/map-icon.svg"
-import ElevationIcon from "../../static/icons/elevation-icon.svg"
 import ImageGalleryCaptions from "../components/image-gallery";
-import { GetLocationSlug } from "../components/graphql-static-hooks/useLocationLinkHook";
-const {timeAllowedCalculation} = require('../components/helperFunctions')
+import RouteOverviewGallery from "../components/route-overview-gallery";
+
 
 // {cond && <A />}
 
 function RoutePage ({ data }) {
-
     const route = data.markdownRemark
-    const elevation = route.frontmatter.elevation ? route.frontmatter.elevation : 0
-    const timeAllowed = route.frontmatter.timeAllowed ? route.frontmatter.timeAllowed : timeAllowedCalculation(route.frontmatter.length, elevation )
-    
 
     return (
       <Layout>
@@ -34,52 +25,13 @@ function RoutePage ({ data }) {
           <h2 className="mt-5">Overview</h2>
           {route.frontmatter.excerpt && <p className="w-full">{route.frontmatter.excerpt}</p>}
 
-          <div className="grid grid-cols-1 md:grid-cols-3 md:gap-2 my-9">
-            <div className="inline-flex items-center">
-              <DistanceIcon className='size-20 mr-4 stroke-accent-red flex'/>
-              <div className="flex flex-col items-start">
-                <h3 className="p-0 text-start">Distance</h3>
-                <p className="p-0 text-start">{route.frontmatter.length}km</p>
-              </div>
-            </div>
-
-            {elevation !== 0 && 
-              <div className="inline-flex items-center">
-                <ElevationIcon className='size-20 mr-4 stroke-accent-red flex'/>
-                <div className="flex flex-col">
-                  <h3 className="p-0 text-start">Elevation</h3>
-                  <p className="p-0 text-start">{elevation}m</p>
-                </div>
-              </div>
-            }
-
-            <div className="inline-flex items-center">
-              <ClockIcon className='size-20 mr-4 stroke-accent-red flex'/>
-              <div className="flex flex-col">
-                <h3 className="p-0 text-start">Time</h3>
-                <p className="p-0 text-start">{timeAllowed} hrs</p>
-              </div>
-            </div>
-
-            <div className="inline-flex items-center">
-              <PinIcon className='size-20 mr-4 stroke-accent-red flex'/>
-              <Link to={GetLocationSlug(route.frontmatter.startPoint)} className="flex flex-col">
-                <h3 className="p-0 text-start">Starting point</h3>
-                <p className="p-0 text-start">{route.frontmatter.startPoint}</p>
-              </Link>
-            </div>
-
-            {route.frontmatter.osMapLink && 
-              <div className="inline-flex items-center">
-                <MapIcon className='size-20 mr-4 stroke-accent-red flex'/>
-                <div className="flex flex-col ">
-                  <h3 className="p-0 text-start">OS Map</h3>
-                  <a href={route.frontmatter.osMapLink} className='underline text-start'>View map here</a>
-                </div>
-              </div>
-            }
-
-          </div>
+          <RouteOverviewGallery 
+            distance={route.frontmatter.length}
+            elevation={route.frontmatter.elevation}
+            time={route.frontmatter.timeAllowed}
+            startingPoint={route.frontmatter.startPoint}
+            osMap={route.frontmatter.osMapLink}
+          />
 
           <div dangerouslySetInnerHTML={{ __html: route.html }} />
 
