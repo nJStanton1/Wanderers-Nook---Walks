@@ -1,36 +1,24 @@
 import * as React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import * as PropTypes from 'prop-types'
+import { useSiteMetadataHook } from './graphql-static-hooks/useSiteMetadataHook'
 
 const Seo = ({ pageTitle, pageDescription, pageURL, pageImage }) => {
-  const data = useStaticQuery(graphql`
-    query {
-      site {
-        siteMetadata {
-          title
-          description
-          author
-          image
-          siteSearch
-          siteUrl
-        }
-      }
-    }
-  `)
+  const siteMetadata = useSiteMetadataHook()
 
-  const metaTitle = pageTitle ? `${pageTitle} | ${data.site.siteMetadata.title}` : `${data.site.siteMetadata.title}`
-  const metaDescription = pageDescription ? `${pageDescription}` : `${data.site.siteMetadata.description}`
-  const metaImageAbsoluteURL = pageImage ? `${data.site.siteMetadata.siteUrl}/${pageImage}` : `${data.site.siteMetadata.siteUrl}/${data.site.siteMetadata.image}`
-  const metaPageUrl = pageURL ? `${data.site.siteMetadata.siteUrl}${pageURL}` : ``
+  const metaTitle = pageTitle ? `${pageTitle} | ${siteMetadata.title}` : `${siteMetadata.title}`
+  const metaDescription = pageDescription ? `${pageDescription}` : `${siteMetadata.description}`
+  const metaImageAbsoluteURL = pageImage ? `${siteMetadata.siteUrl}/${pageImage}` : `${siteMetadata.siteUrl}/${siteMetadata.image}`
+  const metaPageUrl = pageURL ? `${siteMetadata.siteUrl}${pageURL}` : ``
 
   return (
     <>
       {/* General tags for all */}
       <meta charSet="utf-8" />
       <meta name="robots" content="index, follow" />
-      <meta name="author" content={data.site.siteMetadata.author}/>
+      <meta name="author" content={siteMetadata.author}/>
       <meta httpEquiv="Content-Language" content="en"/> 
-      <meta name="google" content={data.site.siteMetadata.siteSearch}/>
+      <meta name="google" content={siteMetadata.siteSearch}/>
 
       {/* Page specidic tags */}
       <title>{metaTitle}</title>
