@@ -25,7 +25,7 @@ export function GetLocationSlug(locationTitle) {
     var result = locations.find(location => {
         return location.frontmatter.title === locationTitle
       })
-    if (result != undefined) {
+    if (result !== undefined) {
         return("/locations/"+getSlug(result.fileAbsolutePath))
     } else {
         return ("/locations/")

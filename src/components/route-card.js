@@ -2,15 +2,13 @@ import React from 'react'
 import * as PropTypes from 'prop-types'
 import { Link } from 'gatsby'
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import { useSiteMetadataHook } from './graphql-static-hooks/useSiteMetadataHook'
 import { StaticImage } from 'gatsby-plugin-image'
 
 export const RouteCard = ({key, linkTo, heroImage, title, length, startPoint, excerpt}) => {
-    const siteMetadata = useSiteMetadataHook()
     return(
         <article key={key} className='w-full pb-2 my-2 max-w-72 border-2 border-accent-red'>
             <Link to={linkTo} className='w-full'>
-                {heroImage ? <GatsbyImage className='' image={getImage(heroImage)} alt=''/> : <StaticImage width='300' height='169' className='max-h-72' src="../images/WNLogo.png"/>}
+                {heroImage ? <GatsbyImage className='' image={getImage(heroImage)} alt=''/> : <StaticImage width='300' height='169' className='max-h-72' src={"../images/WNLogo.png"}/>}
                 <h2 className='mx-2'>{title}</h2>
                 {length && <p className='mx-2 pt-0'><span className='font-medium'>Distance:</span> {length}km</p>}
                 {startPoint && <p className='mx-2 pt-0'><span className='font-medium'>Starting at:</span> {startPoint}</p>}

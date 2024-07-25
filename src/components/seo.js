@@ -1,5 +1,4 @@
 import * as React from 'react'
-import { graphql, useStaticQuery } from 'gatsby'
 import * as PropTypes from 'prop-types'
 import { useSiteMetadataHook } from './graphql-static-hooks/useSiteMetadataHook'
 
