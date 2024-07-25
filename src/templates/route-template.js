@@ -1,15 +1,15 @@
 import Layout from "../components/layout"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import * as React from 'react'
 import Seo from '../components/seo'
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import { floor } from "mathjs";
 import DistanceIcon from "../../static/icons/distance-icon.svg"
 import ClockIcon from "../../static/icons/clock-icon.svg"
 import PinIcon from "../../static/icons/pin-icon.svg"
 import MapIcon from "../../static/icons/map-icon.svg"
 import ElevationIcon from "../../static/icons/elevation-icon.svg"
 import ImageGalleryCaptions from "../components/image-gallery";
+import { GetLocationSlug } from "../components/graphql-static-hooks/useLocationLinkHook";
 const {timeAllowedCalculation} = require('../components/helperFunctions')
 
 // {cond && <A />}
@@ -63,10 +63,10 @@ function RoutePage ({ data }) {
 
             <div className="inline-flex items-center">
               <PinIcon className='size-20 mr-4 stroke-accent-red flex'/>
-              <div className="flex flex-col">
+              <Link to={GetLocationSlug(route.frontmatter.startPoint)} className="flex flex-col">
                 <h3 className="p-0 text-start">Starting point</h3>
                 <p className="p-0 text-start">{route.frontmatter.startPoint}</p>
-              </div>
+              </Link>
             </div>
 
             {route.frontmatter.osMapLink && 

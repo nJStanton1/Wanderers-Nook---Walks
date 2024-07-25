@@ -2,16 +2,6 @@ const {getSlug} = require('./src/components/helperFunctions')
 
 exports.createSchemaCustomization= ({ actions }) => {
   actions.printTypeDefinitions({path: './typeDefs.txt'})
-  const { createTypes } = actions
-  const typeDefs = `
-    type MarkdownRemark implements Node {
-      frontmatter: Frontmatter
-    }
-    type Frontmatter {
-      timeAllowed: String!
-    }
-  `
-  createTypes(typeDefs)
 }
 
 exports.createPages = async function ({ actions, graphql }) {
