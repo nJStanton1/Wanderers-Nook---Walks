@@ -63,7 +63,8 @@ export default class Navbar extends React.Component {
             aria-label="main-navigation"
             >
                 <StaticImage 
-                  className='max-w-12 md:max-w-none max-h-12 md:max-h-24 m-2 md:m-0 md:ml-3'
+                  className='max-w-12 md:max-w-none max-h-12 md:max-h-24 m-1'
+                  objectFit='contain'
                   alt=""
                   src="../images/WNLogo.png">
                 </StaticImage>

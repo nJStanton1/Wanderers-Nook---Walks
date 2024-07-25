@@ -1,5 +1,9 @@
 const {getSlug} = require('./src/components/helperFunctions')
 
+exports.createSchemaCustomization= ({ actions }) => {
+  actions.printTypeDefinitions({path: './typeDefs.txt'})
+}
+
 exports.createPages = async function ({ actions, graphql }) {
     const { data } = await graphql(`
       query {

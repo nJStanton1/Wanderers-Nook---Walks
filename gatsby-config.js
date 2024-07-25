@@ -1,13 +1,15 @@
 /**
  * @type {import('gatsby').GatsbyConfig}
  */
+const yaml = require('js-yaml');
+
 module.exports = {
   siteMetadata: {
     siteUrl: 'https://www.wanderersnook.co.uk/',
     title: 'The Wanderer\'s Nook',
     author: 'Nathaniel J Stanton',
     description: 'Discover adventure in and around Manchester. Newcomers and veterans alike can find guides on exploring nature, history, and the great outdoors—all by public transport.',
-    image: './src/images/Me.jpg', 
+    image: './src/images/WNLogo.png', 
     siteSearch: 'nositelinkssearchbox',
   },
   plugins: [
@@ -33,7 +35,14 @@ module.exports = {
     },
     {
       resolve: `gatsby-transformer-remark`,
-      options: {},
+      options: {
+        engines: {
+          yaml: {
+            parse: yaml.load.bind(yaml),
+            stringify: yaml.dump.bind(yaml)
+          }
+        }
+      },
     },
     {
       resolve: "gatsby-plugin-react-svg",
