@@ -7,9 +7,7 @@ elevation: 350
 timeAllowed: ""
 osMapLink: https://explore.osmaps.com/route/21037021/disley-hike?lat=53.347513&lon=-2.054054&zoom=13.7507&style=Standard&type=2d
 startPoint: Disley
-excerpt: A long wander into the moors, taking in the reservoir and views over
-  rolling landscapes. Descend towards Lyme Park, tucked behind a hill. Wander
-  back through the woods to the station.
+excerpt: A long wander into the moors, through woods, and past a reservoir. Take in views of rolling landscapes, try to spot deer and see the majestic Lyme Hall.
 galleryImages:
   - image: img20240604134754.jpg
   - image: img20240708180243.jpg

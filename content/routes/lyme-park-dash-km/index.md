@@ -7,9 +7,7 @@ elevation: 140
 timeAllowed: 01:30
 osMapLink: https://explore.osmaps.com/route/20433192/wn-lyme-park-dash?lat=53.349785&lon=-2.059471&zoom=13.8948&style=Standard&type=2d
 startPoint: Disley
-excerpt: The quickest walk to Lyme Park from Disley. A walk for those who just
-  want to get to Lyme Park withoutusing the roads. An easy path with a chance of
-  seeing deer.
+excerpt: The quick saunter to Lyme Park. For those who just want to get to Lyme Park without using the roads. An easy path with a chance of seeing deer near The Cage.
 ---
 ## The Route:
 
