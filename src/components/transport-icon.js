@@ -1,6 +1,6 @@
 import React from 'react'
 import * as PropTypes from 'prop-types'
-import MetrolinkIcon from "../../static/icons/tram-icon.svg"
+import MetrolinkIcon from "../../static/icons/metrolink-icon.svg"
 import TrainIcon from "../../static/icons/train-icon.svg"
 import BusIcon from "../../static/icons/bus-icon.svg"
 import CarIcon from "../../static/icons/car-icon.svg"
@@ -27,7 +27,7 @@ const TransportIcon = ({type, size}) => {
       
     return (
         <div className="relative flex justify-center">
-            <SVGComponent alt={AltComponent} width={pixelSize} height={pixelSize} className='stroke-second-green fill-third-green peer'/>
+            <SVGComponent alt={AltComponent} width={pixelSize} height={pixelSize} className='peer fill-second-green'/>
             <span className="absolute -top-5 whitespace-nowrap text-center rounded z-10 bg-grey p-1 text-sm text-white scale-0 transition-transform duration-500 peer-hover:scale-100">{AltComponent}</span>
         </div>
     )

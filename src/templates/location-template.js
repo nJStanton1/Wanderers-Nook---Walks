@@ -22,7 +22,7 @@ function LocationPage ({ data, pageContext }) {
           </div>
           <div className="w-full px-3 md:px-5 lg:px-3">
           <h1>{location.frontmatter.title}</h1>
-            <div className='w-full inline-flex justify-center md:justify-start'>
+            <div className='w-full inline-flex my-2 gap-x-3 justify-center md:justify-start'>
               {
                 location.frontmatter.type.map(type => (
                   <TransportIcon type={type} size={60}/>
