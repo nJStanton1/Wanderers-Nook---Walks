@@ -18,9 +18,9 @@ Reddish Vale Country Park, located in Manchester, is a tranquil retreat offering
 
 * **The Viaduct:** An iconic railway viaduct that provides a stunning backdrop against the natural scenery of the park. It’s a perfect spot for photography and river dipping.
 * **River Tame:** Meandering through the park, the river offers numerous picturesque viewpoints, especially during sunrise and sunset, when the light plays beautifully on the water.
-* **Unity Mill:** A vast abandoned mill provides an ominous backdrop for photos and an imposing prescence over the area. The perfect setting for a horror film.
+* **Unity Mill:** A vast abandoned mill provides an ominous backdrop for photos and an imposing presence over the area. The perfect setting for a horror film.
 * **Butterfly Garden:** A delightful area often filled with colorful butterflies and a variety of flowers.
-* **The Perched Oak:** Anold oak tree overhanging the Tame with a waterfall nearby. A great backdrop for a rest and a flask of tea.
+* **The Perched Oak:** An old oak tree overhanging the Tame with a waterfall nearby. A great backdrop for a rest and a flask of tea.
 
 ### Amenities:
 
@@ -30,4 +30,4 @@ Reddish Vale Country Park, located in Manchester, is a tranquil retreat offering
 * **Walking and Cycling Paths:** Well-maintained paths suitable for walking, running, and cycling.
 * **Bird Watching Areas:** Dedicated spots to observe a variety of species.
 * **Restrooms:** Clean and accessible restrooms
-* **Parking Facilities:** You can aprk here. Not sure what else to say for this one.
+* **Parking Facilities:** You can park here. Not sure what else to say for this one.

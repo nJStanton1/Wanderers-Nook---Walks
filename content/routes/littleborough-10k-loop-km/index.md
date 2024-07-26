@@ -30,9 +30,9 @@ You will then head down a long track past a stables. Interestingly, this stables
 
 From here you will head down a small stream. This stream is one of an uncountable group that feed into the huge lake. Crossing the bridge further down, you'll dip back into the woodland.  Keep an eye out for water fowl in this area!
 
-Heading down the road you will come accross the Hollingworth Visitor Area. This includes toilets, and a cafe. I recommend a stop here as these are the last toilets on the route.
+Heading down the road you will come across the Hollingworth Visitor Area. This includes toilets, and a cafe. I recommend a stop here as these are the last toilets on the route.
 
-Further down the road, you come out at Hollingworth. When you turn left, you'll have a great panorama around you. With the lake, with people enjoying watersports to your right, and rolling hills and meadows to your left. Follow this road for a couple kilometers and feel yourself entering the countryside as people become rarer, and the area greener.
+Further down the road, you come out at Hollingworth. When you turn left, you'll have a great panorama around you. With the lake, with people enjoying water sports to your right, and rolling hills and meadows to your left. Follow this road for a couple kilometers and feel yourself entering the countryside as people become rarer, and the area greener.
 
 ### Schofield Hall Hill:
 
@@ -44,15 +44,15 @@ You will take a track that climbs steeply up the hill in this valley. This is th
 
 ### The Track:
 
-At the top of the hill, head over the bridge to cross the M62. I find this moment is surreal, to be deep in the countryside, with an ultimately thin streak of civilasation cutting through it like a scar.
+At the top of the hill, head over the bridge to cross the M62. I find this moment is surreal, to be deep in the countryside, with an ultimately thin streak of civilization cutting through it like a scar.
 
 On the other side, you enter the track. You'll follow this farm track for several kilometers, loping through the moorland, with views over the cities and towns below, and the moors stretching off into the distance. 
 
-Enjoy this stretch, it's peaceful and generally easy going. Keep an eye out for groundnesting birds and small game, like rabbits and hares.
+Enjoy this stretch, it's peaceful and generally easy going. Keep an eye out for ground nesting birds and small game, like rabbits and hares.
 
 ### The Bridleway:
 
-After the track, you follow a road a short way and at the junction find a bridlepath. This heads up the second hill of the journey. Though steep, it's short and manageable.
+After the track, you follow a road a short way and at the junction find a bridleway. This heads up the second hill of the journey. Though steep, it's short and manageable.
 
 Follow this under the pylons and head down towards the road.
 

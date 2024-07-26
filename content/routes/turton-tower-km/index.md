@@ -27,11 +27,11 @@ Jumbles reservoir will expand to the left. I find this reservoir is a great exam
 
 Heading over a bridge, you'll climb up into the hills. As you crest the top, you'll find an old pillbox from WW2.
 
-Built in 1940,  this concrete bunker pill box was used by the Lancashire Home Guard to delay a German invasion. I enjoyed this area of the walk. I first explored this route with my Dad. We spent time discussing what it must have been like, manning these pillboxes, thinking you were about to fight off German paratroopers. A thought that juxtaposes with it's abondoned state at the time.
+Built in 1940,  this concrete bunker pill box was used by the Lancashire Home Guard to delay a German invasion. I enjoyed this area of the walk. I first explored this route with my Dad. We spent time discussing what it must have been like, manning these pillboxes, thinking you were about to fight off German paratroopers. A thought that juxtaposes with it's abandoned state at the time.
 
 ### Turton Tower:
 
-Over the road and along a lane. You'll see signs to Turton Tower.  It's a huge Tudor mansion, run by volunteers, with a lovely cafe. It's a great stop for coffee and homemade cakes. I can't really do it justice in my short blog, so if you're interested, you cna view it at this link: <https://turtontower.com/>
+Over the road and along a lane. You'll see signs to Turton Tower. It's a huge Tudor mansion, run by volunteers, with a lovely cafe. It's a great stop for coffee and homemade cakes. I can't really do it justice in my short blog, so if you're interested, you can view it at this link: [<ins>Turton Tower</ins>](https://turtontower.com/)
 
 ### Heading into the Moors:
 
@@ -43,7 +43,7 @@ At the top of the hill, you'll be on the moors with views down over Bolton, and 
 
 ### The Golf Club:
 
-Head down the hill towards a road and turn left. You'll turn left again. Don't worry, you're not going back up. The route through the golf course undulates, but isn't steep at any point. It's well marked. For any golfers amongt you, you'll find a brutal course, that's impressive to see people play. For the non-golfers, the footpath follows the lusher areas of the valley and passes the old golf club. A remarkable example of old stone houses built to last. 
+Head down the hill towards a road and turn left. You'll turn left again. Don't worry, you're not going back up. The route through the golf course undulates, but isn't steep at any point. It's well marked. For any golfers amongst you, you'll find a brutal course, that's impressive to see people play. For the non-golfers, the footpath follows the lusher areas of the valley and passes the old golf club. A remarkable example of old stone houses built to last. 
 
 You'll pass the golf course into Hazlehurst Wood. Follow the river down to the reservoir. You're on the final stretch back now.
 
@@ -51,4 +51,4 @@ You'll pass the golf course into Hazlehurst Wood. Follow the river down to the r
 
 The section back leaves the side of Jumbles for a stretch. You'll walk along a series of large mansions. It's always worth seeing how the other half lives. Speculating on who does what to earn such money will pass time in company. An old training stables on your right will see horses grazing. They are generally friendly, and wander up to anyone who pauses in the hopes of an apple, or more likely sugar.
 
-And with that, you're backinto Bromley Cross. ENjoy the local pub, or get the train back. The choice is yours.
+And with that, you're back into Bromley Cross. ENjoy the local pub, or get the train back. The choice is yours.

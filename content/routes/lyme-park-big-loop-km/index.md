@@ -48,6 +48,6 @@ On the map you'll notice this loop brings you back to the house. It's a lovely w
 
 ### The Walk Back:
 
-Heading back towards Disley you'll descend most of the way. My route takes you through Crow Wood. It's a beautiful bit of nature, and shadows the driveway. On my journey, I saw a Mandarin Duck, and other surprisingly uncommon birds. Following the brook down, you'll have a pleseant walk along a leaf covered floor and climbing a couple styles. 
+Heading back towards Disley you'll descend most of the way. My route takes you through Crow Wood. It's a beautiful bit of nature, and shadows the driveway. On my journey, I saw a Mandarin Duck, and other surprisingly uncommon birds. Following the brook down, you'll have a pleasant walk along a leaf covered floor and climbing a couple styles. 
 
 For an easier path, you can walk alongside the drive. There is a footpath in the grass at the side of the road.

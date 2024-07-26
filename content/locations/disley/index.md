@@ -25,4 +25,4 @@ type:
 * **Parking:** Parking is available in the town and at the station, but is largely pay and display.
 * **Toilets:** Many cafes/pubs have easy access toilets. There are public toilets by the station, but these are only open at restricted times. Lyme Park has public toilets as well.
 * **Eating:** There are plenty of cafes and pubs you can visit within the town, and most tourist spots like the lake have their own cafe.
-* **Play Area:** Lyme Park has a dedicted outdoor play area that is very popular with families.
+* **Play Area:** Lyme Park has a dedicated outdoor play area that is very popular with families.

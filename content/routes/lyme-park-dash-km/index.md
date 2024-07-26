@@ -25,4 +25,4 @@ Heading up the drive I suggest you head to the left. A footpath skirts the drive
 
 You will come out of the footpath about a hundred metres down from the Main House. From here you spend the day exploring the estate, which includes the house, gardens and deer sanctuary. The site has free toilets, and a couple different cafes.
 
-If you want more specifics, here is a link to the National Trust [website for Lyme Park.](https://www.nationaltrust.org.uk/visit/cheshire-greater-manchester/lyme "Takes you out of Wanderers Nook")
+If you want more specifics, here is a link to the National Trust [<ins>website for Lyme Park.</ins>](https://www.nationaltrust.org.uk/visit/cheshire-greater-manchester/lyme)

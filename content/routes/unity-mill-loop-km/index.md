@@ -16,13 +16,13 @@ galleryImages:
 ---
 ## The Route
 
-This route will start near a tearooms and cafe. It is located at the nearby Roeddish Vale Stables. Considering the Park's location, surrounded by the cities of the Stockport and Manchester, this route doesn't pass much in the way of cafes or toilets. So use the ones at the start before setting off.
+This route will start near a tearooms and cafe. It is located at the nearby Reddish Vale Stables. Considering the Park's location, surrounded by the cities of the Stockport and Manchester, this route doesn't pass much in the way of cafes or toilets. So use the ones at the start before setting off.
 
 ### The Viaduct:
 
 The first stretch of the route takes you straight past the fishing ponds, where you'll spot herons, coots, moorhens and other waterfowl. You'll see in the distance the viaduct. Head towards this and you'll find the river and pass underneath it. This area is popular amongst locals as a swimming spot. 
 
-The viaduct is a behemoth when you are stood under it. It's a landmark for a large part of the walk, both at the beginnign and end.
+The viaduct is a behemoth when you are stood under it. It's a landmark for a large part of the walk, both at the beginning and end.
 
 From under the viaduct, you pass into meadows, shadowing the River Tame. Here you may find horses. They are a friendly bunch and may come over for a pet.
 
