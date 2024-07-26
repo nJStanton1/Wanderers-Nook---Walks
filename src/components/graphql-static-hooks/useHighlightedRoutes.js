@@ -26,14 +26,11 @@ export const useHighlightedRoutes = () => {
   
     let checkList = useHighlightedRoutesHook()
     let highlightedRoutes = []
-    allMarkdownRemark.nodes.map(route => 
-        {
-            if (checkList.includes(route.frontmatter.title)) {
-                highlightedRoutes.push(route)
-            } else {
+    allMarkdownRemark.nodes.forEach(route => {
+      if (checkList.includes(route.frontmatter.title)) {
+        highlightedRoutes.push(route)
+      } 
+    });
 
-            }
-        }
-    )
     return highlightedRoutes
 }

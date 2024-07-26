@@ -8,7 +8,7 @@ import { StaticImage } from 'gatsby-plugin-image'
 const AboutPage = () => {
     return (
         <Layout>
-            <h1>About</h1>
+            <h1 className='mt-8 w-full'>About</h1>
 
             <h2>Wanderers Nook</h2>
             <p>Wanderers Nook was started in Manchester to encourage people to get outdoors. Manchester as a city is a great place to live, but it is defined by its status as the first industrial city, when it raced to cover any and all green space in concrete, brick and factories. However, it's status is also it's saviour. The railway that powered Manchester built dozens of local lines running into in the surrounding countryside. So it's easy for people to get out and about. But where to go? That's where the Nook comes in. Here are all the best spots to go, how to get there, and what to check out. All without a car. </p>
