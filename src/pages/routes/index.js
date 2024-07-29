@@ -1,6 +1,6 @@
 // Imports
 import * as React from 'react'
-import Layout from '../../components/layout'
+import {Layout, Padding} from '../../components/layout'
 import Seo from '../../components/seo'
 import { graphql } from 'gatsby'
 import { RouteCard } from '../../components/route-card'
@@ -10,36 +10,36 @@ const {getSlug} = require('../../components/helperFunctions')
 const RoutePage = ({data}) =>{
     const {nodes} = data.allMarkdownRemark;
     return (
-        <Layout>
-          <div className='px-3 md:px-5 lg:px-3'>
-            <h1 className='pt-3 mt-8 w-full'>Routes</h1>
-            <p>Here you are welcome to explore all the walks I have ever found.</p>
+      <Layout>
+      <Padding>
+        <h1 className='pt-3 mt-8 w-full'>Routes</h1>
+        <p>Here you are welcome to explore all the walks I have ever found.</p>
 
-            <div className='w-full'>
-              <h2>Route of the Week</h2>
-              <p>I'll at some point figure this out. Sorry.</p>
-            </div>
+        <div className='w-full'>
+          <h2>Route of the Week</h2>
+          <p>I'll at some point figure this out. Sorry.</p>
+        </div>
 
-            <div>
-              <h2>All Routes</h2>
-              <p>Here is every route I have ever done.  Unfortunately, I haven't yet built in filtering, I'm working on it.</p>
-            </div>
-            <div className='w-full flex flex-wrap justify-around'>
-              {
-                nodes.map(route => (
-                    <RouteCard 
-                        key={route.id} 
-                        linkTo={"/routes/" + getSlug(route.fileAbsolutePath)} 
-                        heroImage={route.frontmatter.heroImage}
-                        title={route.frontmatter.title}
-                        length={route.frontmatter.length}
-                        startPoint={route.frontmatter.startPoint}
-                        excerpt={route.frontmatter.excerpt}/>
-                ))
-              }
-            </div>
-          </div>
-        </Layout>
+        <div>
+          <h2>All Routes</h2>
+          <p>Here is every route I have ever done.  Unfortunately, I haven't yet built in filtering, I'm working on it.</p>
+        </div>
+        <div className='w-full flex flex-wrap justify-around lg:justify-between'>
+          {
+            nodes.map(route => (
+              <RouteCard 
+                key={route.id} 
+                linkTo={"/routes/" + getSlug(route.fileAbsolutePath)} 
+                heroImage={route.frontmatter.heroImage}
+                title={route.frontmatter.title}
+                length={route.frontmatter.length}
+                startPoint={route.frontmatter.startPoint}
+                excerpt={route.frontmatter.excerpt}/>
+            ))
+          }
+        </div>
+      </Padding>
+      </Layout>
     )
 }
  

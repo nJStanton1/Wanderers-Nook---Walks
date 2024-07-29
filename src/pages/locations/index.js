@@ -1,6 +1,6 @@
 // Imports
 import * as React from 'react'
-import Layout from '../../components/layout'
+import {Layout, Padding} from '../../components/layout'
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import Seo from '../../components/seo'
 import { graphql } from 'gatsby'
@@ -13,7 +13,8 @@ const LocationPage = ({data}) =>{
     const {nodes} = data.allMarkdownRemark;
     return (
         <Layout>
-          <div className='w-full px-3 md:px-5 lg:px-3'>
+        <Padding>
+          <div className='w-full'>
             <h1 className='mt-8 w-full'>Locations to explore</h1>
             <p>Explore the various areas of Greater Manchester you can visit easily. Sleect whichever looks interesting for you to view the routes I have found nearby.</p>
             <div className='w-full flex flex-wrap justify-around'>
@@ -24,12 +25,12 @@ const LocationPage = ({data}) =>{
                         <GatsbyImage className='' image={getImage(location.frontmatter.heroImage)} alt=''/>
                         <h2 className='mx-2 text-3xl'>{location.frontmatter.title}</h2>
                         <div className='px-2 w-full inline-flex'>
-                            {
-                                location.frontmatter.type.map(type => (
+                          {
+                            location.frontmatter.type.map(type => (
 
-                                    <TransportIcon type={type} size={30}/>
-                                ))
-                            }
+                              <TransportIcon type={type} size={30}/>
+                            ))
+                          }
                         </div>
                         <p className='mx-2 pt-0'><span className='font-medium'>Travel time:</span> {location.frontmatter.travelTime} mins</p>
                         <p className='mx-2 text-base'>{location.frontmatter.excerpt}</p>
@@ -39,6 +40,7 @@ const LocationPage = ({data}) =>{
             }
             </div>
           </div>
+        </Padding>
         </Layout>
     )
 }

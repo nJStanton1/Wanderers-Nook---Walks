@@ -1,4 +1,4 @@
-import Layout from "../components/layout"
+import {Layout, Padding} from "../components/layout"
 import { graphql } from "gatsby"
 import * as React from 'react'
 import Seo from '../components/seo'
@@ -18,33 +18,32 @@ function LocationPage ({ data, pageContext }) {
         <div className="w-full flex-col">
           <div className="flex flex-col max-h-60 md:max-h-80 w-full relative">
             <GatsbyImage image={getImage(location.frontmatter.heroImage)}/>
-            
           </div>
-          <div className="w-full px-3 md:px-5 lg:px-3">
-          <h1>{location.frontmatter.title}</h1>
-            <div className='w-full inline-flex my-2 gap-x-3 justify-center md:justify-start'>
+          <Padding>
+            <h1>{location.frontmatter.title}</h1>
+              <div className='w-full inline-flex my-2 gap-x-3 justify-center md:justify-start'>
+                {
+                  location.frontmatter.type.map(type => (
+                    <TransportIcon type={type} size={60}/>
+                  ))
+                }
+              </div>
+              <div dangerouslySetInnerHTML={{ __html: location.html }} />
+              <h2>Routes around {location.frontmatter.title}</h2>
+              <div className='w-full flex flex-wrap justify-around'>
               {
-                location.frontmatter.type.map(type => (
-                  <TransportIcon type={type} size={60}/>
+                routes.map(route => (
+                  <RouteCard 
+                    key={route.id} 
+                    linkTo={"/routes/"+getSlug(route.fileAbsolutePath)} 
+                    heroImage={route.frontmatter.heroImage}
+                    title={route.frontmatter.title}
+                    length={route.frontmatter.length}
+                    excerpt={route.frontmatter.excerpt}/>
                 ))
               }
-            </div>
-            <div dangerouslySetInnerHTML={{ __html: location.html }} />
-            <h2>Routes around {location.frontmatter.title}</h2>
-            <div className='w-full flex flex-wrap justify-around'>
-            {
-              routes.map(route => (
-                <RouteCard 
-                  key={route.id} 
-                  linkTo={"/routes/"+getSlug(route.fileAbsolutePath)} 
-                  heroImage={route.frontmatter.heroImage}
-                  title={route.frontmatter.title}
-                  length={route.frontmatter.length}
-                  excerpt={route.frontmatter.excerpt}/>
-              ))
-            }
-            </div>
-          </div>
+              </div>
+            </Padding>
         </div>
       </Layout>
     )

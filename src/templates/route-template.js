@@ -1,4 +1,4 @@
-import Layout from "../components/layout"
+import { Layout, Padding } from "../components/layout"
 import { graphql } from "gatsby"
 import * as React from 'react'
 import Seo from '../components/seo'
@@ -18,8 +18,7 @@ function RoutePage ({ data }) {
           {route.frontmatter.heroImage && <GatsbyImage image={getImage(route.frontmatter.heroImage)}/>} 
         </div>
 
-        <div className="w-full px-3 md:px-5 lg:px-3">
-
+        <Padding>
           <h1>{route.frontmatter.title}</h1>
 
           <h2 className="mt-5">Overview</h2>
@@ -40,8 +39,8 @@ function RoutePage ({ data }) {
             <h2 className="mt-4 mb-6">Image Gallery</h2>
             <ImageGalleryCaptions images={route.frontmatter.galleryImages}/>
           </div>}
-        </div>
-            
+        
+        </Padding>
       </Layout>
     )
 }
