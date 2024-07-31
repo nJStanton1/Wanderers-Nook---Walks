@@ -1,0 +1,34 @@
+---
+template: route-template
+title: Ancoats Loop
+length: 2.1
+elevation: 0
+timeAllowed: ""
+osMapLink: https://explore.osmaps.com/route/22696518/wn-ancoats-loop?lat=53.481655&lon=-2.229534&zoom=15.7954&style=Standard&type=2d
+startPoint: Manchester City Centre
+excerpt: A short walk round the new developments along the canals. Very nice on
+  a sunny day.
+---
+## The Route:
+
+Starting near Piccadilly, you join the Rochdale Canal, then cros over to the Ashton Canal to come back. It's not long, and very easily walked with no preperation. It may make a nice saunter for lunch should you work in a nearby office.
+
+### Finding the Rochdale Canal:
+
+You can find the canal by heading up Ducie Street, and towards the GoOutdoors. There are blue signposts pointing you in the right direction as well.
+
+### Rochdale Canal:
+
+Head along the canal, enjoying the peace and quiet. The canal here I found to be surprisingly clean and pleasant. The area is well developed, having been improved recently. 
+
+### New Islington Marina:
+
+You will turn right at the Marina. Crossing the "Cast No Shadow Bridge" (*look down*), you will go down the Marina. There's half a dozen cafes and bars here and it is a very lively area. You can also cross over where you'll find a small park to wander round. Continue down to Ashton Canal and turn right.
+
+### Ashton Canal:
+
+Heading back towards the centre now. It passes one of the oldest locks on the canal, which is guarded by the Lock Keeper's Cottage. This building is being restored currently. And it is a beautiful spot for artists and photographers. Heading further along you cross a canal aqueduct. 
+
+### Returnign to Piccadilly:
+
+You'll end up on the same road you walked down. Head down the road to Piccadilly and you are there.
