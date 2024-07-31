@@ -22,7 +22,8 @@ module.exports = {
         'third-green':'#B2A769',
         'accent-red':'#AF6246',
         'accent-purple' : '#762D6A',
-        'grey':'#75BBFF',
+        'blue':'#75BBFF',
+        'grey':'#75786A'
       }
     },
   },

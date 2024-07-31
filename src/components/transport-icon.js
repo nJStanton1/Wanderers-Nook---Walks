@@ -28,7 +28,7 @@ const TransportIcon = ({type, size}) => {
     return (
         <div className="relative flex justify-center">
             <SVGComponent alt={AltComponent} width={pixelSize} height={pixelSize} className='peer fill-second-green'/>
-            <span className="absolute -top-5 whitespace-nowrap text-center rounded z-10 bg-grey border border-white p-1 text-sm text-white scale-0 transition-transform duration-500 peer-hover:scale-100">{AltComponent}</span>
+            <span className="absolute -top-5 whitespace-nowrap text-center rounded z-10 bg-blue border border-white p-1 text-sm text-white scale-0 transition-transform duration-500 peer-hover:scale-100">{AltComponent}</span>
         </div>
     )
 }
