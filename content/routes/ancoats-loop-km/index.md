@@ -1,6 +1,7 @@
 ---
 template: route-template
 title: Ancoats Loop
+heroImage: geograph-4029451-by-gerald-england.jpg
 length: 2.1
 elevation: 0
 timeAllowed: ""
