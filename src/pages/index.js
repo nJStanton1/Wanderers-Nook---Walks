@@ -12,7 +12,7 @@ const IndexPage = () => {
   // Calculate highlighted routes
   return(
     <Layout>
-      <div className='flex flex-col w-full relative'>
+      <div className='flex flex-col relative'>
         <StaticImage
           className='w-full max-h-60 md:max-h-80'
           alt=""

@@ -7,12 +7,12 @@ export const Layout = ({ children }) => {
 
   //Return final layout here
   return (
-    <div className="flex flex-col items-center pb-52 w-screen min-h-screen bg-main-green">
+    <div className="flex flex-col items-center pb-52 w-full min-h-screen bg-main-green">
       <div className='w-full items-center bg-second-green border-b-4 border-accent-red'>
         <Navbar />
       </div>
       
-      <main className='max-w-4xl'>
+      <main className='w-screen max-w-4xl'>
         {children}
       </main>
     </div>
