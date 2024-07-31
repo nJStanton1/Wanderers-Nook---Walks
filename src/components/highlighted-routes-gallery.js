@@ -44,7 +44,7 @@ HighlightedRoutesGallery.propTypes = {
 const HighlightRouteCard = ({ linkTo, heroImage, title, length }) => {
     return(
         <Link to={linkTo} className='overflow-hidden max-w-xs md:max-w-none m-3 w-96 relative h-64 border-2 border-accent-red'>
-            {heroImage && <GatsbyImage className='absolute object-cover inset-0' image={getImage(heroImage)} alt=''/> }
+            {heroImage && <GatsbyImage className='absolute min-h-full min-w-full inset-0' image={getImage(heroImage)} alt=''/> }
             <h3 className='absolute bottom-0 left-0 px-2 py-0'>{title}</h3>
             {length && <p className='absolute bottom-0 right-0 px-2 py-0'>{length}km</p>}
         </Link>
