@@ -13,7 +13,7 @@ export const useHighlightedRoutes = () => {
             startPoint
             heroImage {
               childImageSharp {
-                  gatsbyImageData(placeholder: DOMINANT_COLOR, width: 384, height:256)
+                  gatsbyImageData(placeholder: DOMINANT_COLOR, width: 384, height:256, transformOptions: {fit: COVER})
               }
             }
           }
