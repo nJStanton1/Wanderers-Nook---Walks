@@ -7,14 +7,27 @@ elevation: 350
 timeAllowed: ""
 osMapLink: https://explore.osmaps.com/route/21037021/disley-hike?lat=53.347513&lon=-2.054054&zoom=13.7507&style=Standard&type=2d
 startPoint: Disley
-excerpt: A long wander into the moors, through woods, and past a reservoir. Take in views of rolling landscapes, try to spot deer and see the majestic Lyme Hall.
+excerpt: A long wander into the moors, through woods, and past a reservoir. Take
+  in views of rolling landscapes, try to spot deer and see the majestic Lyme
+  Hall.
 galleryImages:
-  - image: img20240604134754.jpg
-  - image: img20240708180243.jpg
-    caption: Views over Stockport and Manchester
-  - image: img20240708180248.jpg
-  - image: img20240708180404.jpg
-    caption: The Cage standing vigilant
+  - image: img20240804092316.jpg
+  - image: img20240804092545.jpg
+  - image: img20240804092949.jpg
+  - image: img20240804093741.jpg
+  - image: img20240804093837.jpg
+  - image: img20240804094339.jpg
+  - image: img20240804094559.jpg
+  - image: img20240804094907.jpg
+  - image: img20240804095129.jpg
+  - image: img20240804095643.jpg
+  - image: img20240804095717.jpg
+  - image: img20240804100017.jpg
+  - image: img20240804100847.jpg
+  - image: img20240804101121.jpg
+  - image: img20240804101132.jpg
+  - image: img20240804102041.jpg
+  - image: img20240804103202.jpg
 ---
 ## Route:
 
