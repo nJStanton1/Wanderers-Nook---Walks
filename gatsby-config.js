@@ -9,7 +9,7 @@ module.exports = {
     title: 'The Wanderer\'s Nook',
     author: 'Nathaniel J Stanton',
     description: 'Discover adventure in and around Manchester. Newcomers and veterans alike can find guides on exploring nature, history, and the great outdoors—all by public transport.',
-    image: './src/images/WNLogo.png', 
+    image: './src/images/WNLogo.svg', 
     siteSearch: 'nositelinkssearchbox',
   },
   plugins: [

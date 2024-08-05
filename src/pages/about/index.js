@@ -29,7 +29,7 @@ const AboutPage = () => {
                     <StaticImage 
                         className='w-full flex self-center aspect-square max-w-80 max-h-80'
                         objectFit='contain'
-                        src="../../images/WNLogo.png"
+                        src="../../images/WNLogo.svg"
                     />
                 </div>
             </div>       
