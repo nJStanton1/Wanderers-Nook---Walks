@@ -2,59 +2,61 @@
 import * as React from 'react'
 import * as PropTypes from 'prop-types'
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import { floor } from 'mathjs';
 
 // Define components
 const ImageGalleryCaptions = ({ images }) => {
-    // Do working if needed here
-    let imagesColumn1;
-    let imagesColumn2;
-    let imagesColumn3;
-    const imageCount = Object.keys(images).length
-    
-    if (imageCount < 3) {
-        // Todo - return single column
-    } else {
-        const chunkSize = floor(imageCount/3)
-        imagesColumn1 = images.slice(0, chunkSize)
-        imagesColumn2 = images.slice(chunkSize, chunkSize+chunkSize)
-        imagesColumn3 = images.slice(chunkSize+chunkSize, imageCount) // Three will be the longest one
-    }
-    
+
+    let imagesColumn1 = {height:0, images:[]};
+    let imagesColumn2 = {height:0, images:[]};
+    let imagesColumn3 = {height:0, images:[]};
+    images.forEach(image => {
+        // If imagesColumn1 is smallest
+        if (imagesColumn3.height < imagesColumn2.height && imagesColumn3.height < imagesColumn1.height) {
+            imagesColumn3.images.push(image)
+            imagesColumn3.height += image.image.childImageSharp.gatsbyImageData.height
+        } else if (imagesColumn2.height < imagesColumn1.height) { // Here imagesColumn2 or 1 or both are smaller than 3. Smallest of 2 or 1 is smallest.
+            imagesColumn2.images.push(image)
+            imagesColumn2.height += image.image.childImageSharp.gatsbyImageData.height
+        } else { // Here 1 must be <3 and < 2
+            imagesColumn1.images.push(image)
+            imagesColumn1.height += image.image.childImageSharp.gatsbyImageData.height
+        }
+    }); 
 
     //Return final layout here
     return (
-      <div className='w-full grid grid-cols-1 gap-2 md:grid-cols-3'>
-        <div className='flex flex-col col-span-1'>
-            {imagesColumn1.map(galleryImage => (
-                <div className='flex flex-col relative mb-2'>
-                    <GatsbyImage image={getImage(galleryImage.image)} className='rounded-2xl relative' />
-                    <p className='text-center absolute inset-x-0 bottom-0 rounded-b-2xl bg-gradient-to-t from-grey/60 from-50%'>{galleryImage.caption}</p>
-                </div>
-                ))
-            }
+        <div className='w-full grid grid-cols-1 gap-2 md:grid-cols-3'>
+            <div className='flex flex-col col-span-1'>
+                {imagesColumn1.images.map(galleryImage => (
+                    <div className='flex flex-col relative mb-2'>
+                        <GatsbyImage image={getImage(galleryImage.image)} className='rounded-2xl relative' />
+                        {galleryImage.caption && <p className='text-center absolute inset-x-0 bottom-0 rounded-b-2xl bg-gradient-to-t from-grey/60 from-50%'>{galleryImage.caption}</p>}
+                    </div>
+                    ))
+                }
+            </div>
+            <div className='flex flex-col col-span-1'>
+                {imagesColumn3.images.map(galleryImage => (
+                    <div className='flex flex-col relative mb-2'>
+                        <GatsbyImage image={getImage(galleryImage.image)} className='rounded-2xl relative' />
+                        {galleryImage.caption && <p className='text-center absolute inset-x-0 bottom-0 rounded-b-2xl bg-gradient-to-t from-grey/60 from-50%'>{galleryImage.caption}</p>}
+                    </div>
+                    ))
+                }
+            </div>
+            <div className='flex flex-col col-span-1'>
+                {imagesColumn2.images.map(galleryImage => (
+                    <div className='flex flex-col relative mb-2'>
+                        <GatsbyImage image={getImage(galleryImage.image)} className='rounded-2xl relative' />
+                        {galleryImage.caption && <p className='text-center absolute inset-x-0 bottom-0 rounded-b-2xl bg-gradient-to-t from-grey/60 from-50%'>{galleryImage.caption}</p>}
+                    </div>
+                    ))
+                }
+            </div>
         </div>
-        <div className='flex flex-col col-span-1'>
-            {imagesColumn3.map(galleryImage => (
-                <div className='flex flex-col relative mb-2'>
-                    <GatsbyImage image={getImage(galleryImage.image)} className='rounded-2xl relative' />
-                    <p className='text-center absolute inset-x-0 bottom-0 rounded-b-2xl bg-gradient-to-t from-grey/60 from-50%'>{galleryImage.caption}</p>
-                </div>
-                ))
-            }
-        </div>
-        <div className='flex flex-col col-span-1'>
-            {imagesColumn2.map(galleryImage => (
-                <div className='flex flex-col relative mb-2'>
-                    <GatsbyImage image={getImage(galleryImage.image)} className='rounded-2xl relative' />
-                    <p className='text-center absolute inset-x-0 bottom-0 rounded-b-2xl bg-gradient-to-t from-grey/60 from-50%'>{galleryImage.caption}</p>
-                </div>
-                ))
-            }
-        </div>
-      </div>
     )
 }
+
 
 // Define prop types
 ImageGalleryCaptions.propTypes = {
