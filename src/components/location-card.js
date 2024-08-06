@@ -19,7 +19,7 @@ export const LocationCard = ({key, linkTo, heroImage, title, types, travelTime, 
                 ))
                 }
             </div>
-            <p className='mx-2 pt-0'><span className='font-medium'>Travel time:</span> {travelTime} mins</p>
+            {(travelTime != "00:00" && travelTime != 0) && <p className='mx-2 pt-0'><span className='font-medium'>Travel time:</span> {travelTime} mins</p>}
             <p className='mx-2 text-base'>{excerpt}</p>
             </Link>
         </article>

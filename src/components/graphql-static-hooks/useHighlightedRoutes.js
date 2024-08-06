@@ -4,7 +4,10 @@ import { useHighlightedRoutesHook } from './useHighlightRoutesHook'
 export const useHighlightedRoutes = () => {
     const {allMarkdownRemark} = useStaticQuery(graphql`
     query {
-      allMarkdownRemark(filter: {frontmatter: {template: {eq: "route-template"}}}) {
+      allMarkdownRemark(
+        filter: {frontmatter: {template: {eq: "route-template"}}}
+        sort: {frontmatter: {length: ASC}}
+      ) {
         nodes {
           frontmatter {
             title

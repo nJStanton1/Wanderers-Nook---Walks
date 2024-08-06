@@ -4,6 +4,7 @@ import {Layout, Padding} from '../../components/layout'
 import Seo from '../../components/seo'
 import { graphql } from 'gatsby'
 import { RouteCard } from '../../components/route-card'
+import HighlightedRoutesGallery from '../../components/highlighted-routes-gallery'
 const {getSlug} = require('../../components/helperFunctions')
 
 // Define components
@@ -16,8 +17,9 @@ const RoutePage = ({data}) =>{
         <p>Here you are welcome to explore all the walks I have ever found.</p>
 
         <div className='w-full'>
-          <h2>Route of the Week</h2>
-          <p>I'll at some point figure this out. Sorry.</p>
+          <h2>Highlighted Routes</h2>
+          <p>These are my favourite routes. You'll find a mix of distances and places.</p>
+          <HighlightedRoutesGallery/>
         </div>
 
         <div>
@@ -60,8 +62,11 @@ export const Head = () => {
 // Query
 export const query = graphql`
   query {
-    allMarkdownRemark(filter: {frontmatter: {template: {eq: "route-template"}}}) {
-      nodes {
+    allMarkdownRemark(
+        filter: {frontmatter: {template: {eq: "route-template"}}}
+        sort: {frontmatter: {length: ASC}}
+      ) {
+        nodes {
         frontmatter {
           title
           excerpt

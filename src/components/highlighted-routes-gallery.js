@@ -7,7 +7,7 @@ import RightArrowIcon from "../../static/icons/right-arrow.svg"
 const {getSlug} = require('./helperFunctions')
 
 // Define components
-const HighlightedRoutesGallery = ({ children }) => {
+const HighlightedRoutesGallery = () => {
     // Do working if needed here
     const highlightedRoutes = useHighlightedRoutes()
     

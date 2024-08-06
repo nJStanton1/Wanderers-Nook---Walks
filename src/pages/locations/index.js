@@ -14,7 +14,7 @@ const LocationPage = ({data}) =>{
         <Padding>
           <div className='w-full'>
             <h1 className='mt-8 w-full'>Locations to explore</h1>
-            <p>Explore the various areas of Greater Manchester you can visit easily. Sleect whichever looks interesting for you to view the routes I have found nearby.</p>
+            <p>Explore the various areas of Greater Manchester you can visit easily. Select whichever looks interesting for you to view the routes I have found nearby.</p>
             <div className='w-full flex flex-wrap justify-around lg:justify-between'>
             {
                 nodes.map(location => (
@@ -56,7 +56,10 @@ export const Head = () => {
 // Query
 export const query = graphql`
   query {
-    allMarkdownRemark(filter: {frontmatter: {template: {eq: "location-template"}}}) {
+    allMarkdownRemark(
+      filter: {frontmatter: {template: {eq: "location-template"}}}
+      sort: {frontmatter: {travelTime: ASC}}
+    ) {
       nodes {
         frontmatter {
           title
