@@ -7,4 +7,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Post to webhook
-        run: curl -X POST -d {} https://api.netlify.com/build_hooks/669e31d1308b9b159294805c
+        run: curl -X POST -d {} https://api.netlify.com/build_hooks/66b2ab4ec08216159abde9a2c

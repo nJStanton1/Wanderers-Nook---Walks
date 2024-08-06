@@ -3,9 +3,8 @@ template: location-template
 title: Littleborough
 heroImage: littleborough-hero.jpg
 travelTime: "25"
-excerpt: Within easy reach of Manchester is the quaint town of Littleborough.
-  Featuring Hollingworth Lake, Rolling Moors and lovely cafes, you'd be hard
-  pressed not to have a great time.
+excerpt: The quaint town of Littleborough features Hollingworth Lake, rolling
+  moors and lovely cafes. You'd be hard pressed not to have a great time.
 type:
   - Train
   - Car
