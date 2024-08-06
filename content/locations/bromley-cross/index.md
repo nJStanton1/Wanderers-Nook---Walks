@@ -1,11 +1,10 @@
 ---
 template: location-template
 title: Bromley Cross
+heroImage: WNLogo.svg
 travelTime: "25"
-excerpt: Bromley Cross, situated near Bolton, is a village offering a mixture of
-  stunning landscapes from reservoirs, to moors and old woodland. Bromley Cross
-  is an ideal destination for those seeking a peaceful escape with plenty of
-  opportunities for both rolling hills and local history.
+excerpt: Bromley Cross offers a mixture of reservoirs and moors. A peaceful
+  escape with plenty of opportunities for both rolling hills and local history.
 type:
   - Train
   - Car
