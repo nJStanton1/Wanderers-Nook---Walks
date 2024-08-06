@@ -1,7 +1,7 @@
 ---
 template: route-template
 title: Ancoats Loop
-heroImage: geograph-4029451-by-gerald-england.jpg
+heroImage: img20240806125415.jpg
 length: 2.1
 elevation: 0
 timeAllowed: ""
@@ -9,6 +9,17 @@ osMapLink: https://explore.osmaps.com/route/22696518/wn-ancoats-loop?lat=53.4816
 startPoint: Manchester City Centre
 excerpt: A short walk round the new developments along the canals. Very nice on
   a sunny day.
+galleryImages:
+  - image: img20240806122727.jpg
+  - image: img20240806123925.jpg
+  - image: img20240806124057.jpg
+  - image: img20240806124335.jpg
+  - image: img20240806124449.jpg
+  - image: img20240806124508.jpg
+  - image: img20240806124720.jpg
+  - image: img20240806125647.jpg
+  - image: img20240806125802.jpg
+  - image: img20240806125849.jpg
 ---
 ## The Route:
 
