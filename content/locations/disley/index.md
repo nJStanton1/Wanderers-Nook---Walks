@@ -3,10 +3,9 @@ template: location-template
 title: Disley
 heroImage: disley-hero.jpg
 travelTime: "30"
-excerpt: Disley is a lively town outside of Stockport. It's prime greenspace
-  with plenty of footpaths straight from the station. National Trust's Lyme Park
-  is located 30 mins from the station. It also has plenty of local cafes and
-  bars to end any walk at.
+excerpt: Disley is prime greenspace with plenty of footpaths, cafes and
+  restaurants straight from the station. National Trust's Lyme Park is located
+  30 mins away.
 type:
   - Train
   - Bus
