@@ -69,7 +69,6 @@ export const Head = ({ data, pageContext }) => {
       />
     )
   }
-  
 }
 
 export const query = graphql`

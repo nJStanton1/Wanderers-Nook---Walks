@@ -17,7 +17,7 @@ function LocationPage ({ data, pageContext }) {
       <Layout>
         <div className="w-full flex-col">
           <div className="flex flex-col max-h-60 md:max-h-80 w-full relative">
-            <GatsbyImage image={getImage(location.frontmatter.heroImage)}/>
+            {location.frontmatter.heroImage && <GatsbyImage image={getImage(location.frontmatter.heroImage)}/>}
           </div>
           <Padding>
             <h1>{location.frontmatter.title}</h1>
@@ -53,14 +53,26 @@ export default LocationPage
 
 export const Head = ({ data, pageContext }) => {
   const location = data.markdownRemark.frontmatter
-  return(
+  const excerptToUse = location.excerpt ? location.excerpt : data.markdownRemark.excerpt
+
+  if (location.heroImage != null) {
+    return(
       <Seo 
       pageTitle={location.title} 
-      pageDescription={location.excerpt}
+      pageDescription={excerptToUse}
       pageURL={pageContext.slug}
       pageImage={location.heroImage.relativePath}
-    />
-  )
+      />
+    )
+  } else {
+    return(
+      <Seo 
+      pageTitle={location.title} 
+      pageDescription={excerptToUse}
+      pageURL={pageContext.slug}
+      />
+    )
+  }
 }
 
 export const query = graphql`
