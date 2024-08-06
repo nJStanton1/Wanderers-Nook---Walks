@@ -6,12 +6,14 @@ import ClockIcon from "../../static/icons/clock-icon.svg"
 import PinIcon from "../../static/icons/pin-icon.svg"
 import MapIcon from "../../static/icons/map-icon.svg"
 import ElevationIcon from "../../static/icons/elevation-icon.svg"
+import CircularIcon from "../../static/icons/circular-route-icon.svg"
+import EndIcon from "../../static/icons/end-icon.svg"
 import { GetLocationSlug } from './graphql-static-hooks/useLocationLinkHook'
 import { Link } from 'gatsby'
 const {timeAllowedCalculation} = require('../components/helperFunctions')
 
 // Define components
-const RouteOverviewGallery = ({ distance, elevation, time, startingPoint, osMap }) => {
+const RouteOverviewGallery = ({ distance, elevation, time, startingPoint, endPoint, osMap }) => {
     // Do working if needed here
     const timeAllowed = time ? time : timeAllowedCalculation(distance, elevation )
     
@@ -40,7 +42,7 @@ const RouteOverviewGallery = ({ distance, elevation, time, startingPoint, osMap 
 
             {timeAllowed &&
                 <div className="inline-flex items-center">
-                    <ClockIcon className='size-20 mr-4 stroke-accent-red flex'/>
+                    <ClockIcon className='size-20 mr-4 flex'/>
                     <div className="flex flex-col">
                         <h3 className="p-0 text-start">Time</h3>
                         <p className="p-0 text-start">{timeAllowed} hrs</p>
@@ -50,17 +52,35 @@ const RouteOverviewGallery = ({ distance, elevation, time, startingPoint, osMap 
 
             {startingPoint &&
                 <div className="inline-flex items-center">
-                    <PinIcon className='size-20 mr-4 stroke-accent-red flex'/>
+                    <PinIcon className='size-20 mr-4 flex'/>
                     <Link to={GetLocationSlug(startingPoint)} className="flex flex-col">
-                        <h3 className="p-0 text-start">Starting point</h3>
-                        <p className="p-0 text-start">{startingPoint}</p>
+                        <h3 className="p-0 text-start">Starts at</h3>
+                        <p className="p-0 underline text-start">{startingPoint}</p>
                     </Link>
+                </div>
+            }
+
+            {endPoint ?
+                <div className="inline-flex items-center">
+                    <EndIcon className='size-20 mr-4 flex'/>
+                    <Link to={GetLocationSlug(endPoint)} className="flex flex-col">
+                        <h3 className="p-0 text-start">Ends at</h3>
+                        <p className="p-0 underline text-start">{endPoint}</p>
+                    </Link>
+                </div>
+                :
+                <div className="inline-flex items-center">
+                    <CircularIcon className='size-20 mr-4 flex'/>
+                    <div className="flex flex-col">
+                        <h3 className="p-0 text-start">Route Type</h3>
+                        <p className="p-0 text-start">Circular</p>
+                    </div>
                 </div>
             }
 
             {osMap && 
                 <div className="inline-flex items-center">
-                    <MapIcon className='size-20 mr-4 stroke-accent-red flex'/>
+                    <MapIcon className='size-20 mr-4 flex'/>
                     <div className="flex flex-col ">
                     <h3 className="p-0 text-start">OS Map</h3>
                     <a href={osMap} className='underline text-start'>View map here</a>

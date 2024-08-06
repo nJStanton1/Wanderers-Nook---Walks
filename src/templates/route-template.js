@@ -6,9 +6,6 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import ImageGalleryCaptions from "../components/image-gallery";
 import RouteOverviewGallery from "../components/route-overview-gallery";
 
-
-// {cond && <A />}
-
 function RoutePage ({ data }) {
     const route = data.markdownRemark
 
@@ -29,6 +26,7 @@ function RoutePage ({ data }) {
             elevation={route.frontmatter.elevation}
             time={route.frontmatter.timeAllowed}
             startingPoint={route.frontmatter.startPoint}
+            endPoint={route.frontmatter.endPoint}
             osMap={route.frontmatter.osMapLink}
           />
 
@@ -87,6 +85,7 @@ export const query = graphql`
         timeAllowed
         osMapLink
         startPoint
+        endPoint
         excerpt
         galleryImages {
           image {

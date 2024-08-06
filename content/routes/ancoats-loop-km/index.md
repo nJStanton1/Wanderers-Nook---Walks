@@ -7,6 +7,7 @@ elevation: 0
 timeAllowed: ""
 osMapLink: https://explore.osmaps.com/route/22696518/wn-ancoats-loop?lat=53.481655&lon=-2.229534&zoom=15.7954&style=Standard&type=2d
 startPoint: Manchester City Centre
+endPoint: ""
 excerpt: A short walk round the new developments along the canals. Very nice on
   a sunny day.
 galleryImages:
