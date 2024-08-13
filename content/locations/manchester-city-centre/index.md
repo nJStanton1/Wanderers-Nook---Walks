@@ -23,4 +23,4 @@ type:
 * **Parking Facilities:** Convenient parking available for tourist. Most are pay and display however.
 * **Toilets:** There are public toilets in most transport hubs and shopping centres. The many food outlets also provide toilets.
 * **Hotels:** There are many hotels around the centre should you be looking to spend a weekend or a fortnight.
-* **Parks:** Though Manchester isn't London, there are plenty of parks around if you know where to look. Mostof them are recently renovated with children's play areas.
+* **Parks:** Though Manchester isn't London, there are plenty of parks around if you know where to look. Most of them are recently renovated with children's play areas.

@@ -33,11 +33,11 @@ galleryImages:
 
 This route starts and ends at Disley Train Station. The trains are normally about an hour apart, but run early and late. There are plenty of options for cafes and pubs in the local area for pre or post walk refreshments.
 
-### Hollingworth Reservoir:
+### Bollinhurst Reservoir:
 
 You'll head up a reasonable steep climb at first. The first section is a garlic grove, with most of the floor covered in wild garlic.
 
-Then, head over the bridleway path and you'll cross fields descending to Hollingworth Reservoir. A beautiful area to walk through that feels far more remote than it is. The animals in the field are friendly too.
+Then, head over the bridleway path and you'll cross fields descending to Bollinhurst Reservoir. A beautiful area to walk through that feels far more remote than it is. The animals in the field are friendly too.
 
 ### The Woods:
 

@@ -24,7 +24,7 @@ galleryImages:
 ---
 ## The Route:
 
-Starting near Piccadilly, you join the Rochdale Canal, then cros over to the Ashton Canal to come back. It's not long, and very easily walked with no preperation. It may make a nice saunter for lunch should you work in a nearby office.
+Starting near Piccadilly, you join the Rochdale Canal, then cross over to the Ashton Canal to come back. It's not long, and very easily walked with no preparation. It may make a nice saunter for lunch should you work in a nearby office.
 
 ### Finding the Rochdale Canal:
 

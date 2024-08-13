@@ -35,7 +35,7 @@ Walk down the old cobbled road, and between two of the buildings, to find a brid
 
 ### Bridgewater Canal:
 
-Bridgewater Canal is one of the frist canals in Manchester. It runs all the way out to Worsley. The canal saw the entire industrial revolution and you can see dozens of old warehouse buildings. Most of them are now converted to housing.
+Bridgewater Canal is one of the first canals in Manchester. It runs all the way out to Worsley. The canal saw the entire industrial revolution and you can see dozens of old warehouse buildings. Most of them are now converted to housing.
 
 The canal follows the Metrolink line, and old railway (or rather, they follow the canal) out towards Salford Quays. As you walk along, you are never more than a couple dozen yards from a busy road, or new development. However, it will feel much further. The canal is a small cut of nature through the metropolitan city.
 

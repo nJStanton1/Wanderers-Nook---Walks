@@ -10,6 +10,7 @@ import CircularIcon from "../../static/icons/circular-route-icon.svg"
 import EndIcon from "../../static/icons/end-icon.svg"
 import { GetLocationSlug } from './graphql-static-hooks/useLocationLinkHook'
 import { Link } from 'gatsby'
+
 const {timeAllowedCalculation} = require('../components/helperFunctions')
 
 // Define components
@@ -19,7 +20,7 @@ const RouteOverviewGallery = ({ distance, elevation, time, startingPoint, endPoi
     
     //Return final layout here
     return (
-        <div className="grid grid-cols-1 md:grid-cols-3 md:gap-2 my-9">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-y-2 md:gap-2 my-9">
             {distance &&
                 <div className="inline-flex items-center">
                     <DistanceIcon className='size-20 mr-4 flex'/>

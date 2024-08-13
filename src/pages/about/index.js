@@ -37,7 +37,7 @@ const AboutPage = () => {
             <div className='w-full flex flex-col md:flex-row gap-2 mt-7'>
                 <div className='w-full md:w-1/2'>
                     <h2>Nathaniel Stanton</h2>
-                    <p>I started the Wanderer's Nook. A passion project to help other's get into my hobby. I don't drive, and I love hiking. I always have. So when I moved to Manchester, I was annoyed at how little green space there is. Slowly, I learnt the rail lines, bus routes and Metrolink lines. I've walked hundreds of miles around Manchester. And I haven't stopped there.</p>
+                    <p>I started the Wanderers Nook. A passion project to help other's get into my hobby. I don't drive, and I love hiking. I always have. So when I moved to Manchester, I was annoyed at how little green space there is. Slowly, I learnt the rail lines, bus routes and Metrolink lines. I've walked hundreds of miles around Manchester. And I haven't stopped there.</p>
                     <p>Now, I'm trying to share everything I've learnt, and share what I learn in future.</p>
                     <Link to='/routes' className='inline-flex px-2 py-1 m-4 justify-self-center items-center rounded-full bg-accent-red'>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" className="flex size-6 stroke-white">
