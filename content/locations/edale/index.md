@@ -11,7 +11,7 @@ type:
 ---
 ## Highlights:
 
-* **Kinger Scout:** The highest spot in the Peak District. This mountain doesn't have a single point at the top, but is an expansive marshy bog. Technically Kinder Sout is a mountain, by quite some margin. With easier routes up, it's a great first mountain climb for hikers.
+* **Kinder Scout:** The highest spot in the Peak District. This mountain doesn't have a single point at the top, but is an expansive marshy bog. Technically Kinder Sout is a mountain, by quite some margin. With easier routes up, it's a great first mountain climb for hikers.
 * **The Woolpacks:** A bizarre stone formation straddling the ridgeline on Kinder Scout. Best seen in fog or low cloud, you'll feel like you are wandering an alien world with these ominous shapes looming around you.
 * **Mam Tor:** A high trig point for the peakbaggers among you. Accessible from Edale by a steep but technically easy ascent. A popular spot with tourists, walking the ridgeline presents beautiful views down the Hope Valley.
 * **Broken Road:** Below Mam Tor is an old collapsed road. An area that makes you feel like you are wandering a dystopian landscape. Well reccomended for the vibe.
