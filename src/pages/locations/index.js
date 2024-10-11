@@ -4,6 +4,7 @@ import {Layout, Padding} from '../../components/layout'
 import Seo from '../../components/seo'
 import { graphql } from 'gatsby'
 import { LocationCard } from '../../components/location-card'
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 const {getSlug} = require('../../components/helperFunctions')
 
 // Define components
@@ -15,6 +16,19 @@ const LocationPage = ({data}) =>{
           <div className='w-full'>
             <h1 className='mt-8 w-full'>Locations to explore</h1>
             <p>Explore the various areas of Greater Manchester you can visit easily. Select whichever looks interesting for you to view the routes I have found nearby.</p>
+
+            <MapContainer style={{ height: '400px' }} center={[53.47855858619753, -2.243319865628266]} zoom={13} scrollWheelZoom={true}>
+              <TileLayer
+                attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+              />
+              <Marker position={[53.47855858619753, -2.243319865628266]}>
+                <Popup>
+                  A pretty CSS3 popup. <br /> Easily customizable.
+                </Popup>
+              </Marker>
+            </MapContainer>
+
             <div className='w-full flex flex-wrap justify-around lg:justify-between'>
             {
                 nodes.map(location => (
