@@ -2,6 +2,9 @@
 template: location-template
 title: Littleborough
 heroImage: littleborough-hero.jpg
+location:
+  latitude: 53.643197923276624
+  longitude: -2.0946674357021395
 travelTime: "25"
 excerpt: The quaint town of Littleborough features Hollingworth Lake, rolling
   moors and lovely cafes. You'd be hard pressed not to have a great time.

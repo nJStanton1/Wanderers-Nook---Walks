@@ -2,6 +2,9 @@
 template: location-template
 title: Reddish Vale
 heroImage: reddish-vale-hero.jpg
+location:
+  latitude: 53.43588050564555
+  longitude: -2.158789802635039
 travelTime: "30"
 excerpt: A gorgeous country park within Stockport. Explore wide meadows, ponds
   and vast meadows along the River Tame.

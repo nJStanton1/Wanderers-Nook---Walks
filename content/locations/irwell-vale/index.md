@@ -2,6 +2,9 @@
 template: location-template
 title: Irwell Vale
 heroImage: irwell-vale-hero.jpg
+location:
+  latitude: 53.67850336654913
+  longitude: -2.3169381312150894
 travelTime: "55"
 excerpt: An old mill village that remains somewhat off the beaten track. Sat
   next to the River Irwell, you can find an old stream train in use, river walks

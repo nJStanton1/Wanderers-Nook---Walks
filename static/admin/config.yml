@@ -15,7 +15,7 @@ collections:
     create: true
     delete: true
     description: 'Database of all the routes available on the website.'
-    slug: "{{slug}}-{{distance}}km"
+    slug: "{{slug}}-{{length}}km"
     media_folder: ''
     public_folder: ''
     path: '{{slug}}/index'
@@ -56,6 +56,15 @@ collections:
       - { label: 'Template', name: 'template', widget: 'hidden', default: 'location-template'}
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Hero Image', name: 'heroImage', widget: 'image', allow_multiple: false }
+      - label: "Location"
+        name: "location"
+        widget: "object"
+        required: true
+        collapsed: true
+        summary: "{{fields.latitude}} : {{fields.longitude}}"
+        fields: 
+          - {label: "Latitude", name: "latitude", widget: "number", value_type: 'float', step: 0.000001, min: -90, max: 90}
+          - {label: "Longitude", name: "longitude", widget: "number", value_type: 'float', step: 0.000001, min: -180, max: 180}
       - { label: 'Travel time', name: 'travelTime', hint: 'Given in minutes, or hours:minutes format.', widget: 'string', pattern: ['^([\d]{1,2})([:][0-5][0-9])?$', Must be minutes up to 99 or HH:mm format.] }
       - { label: 'Excerpt', name: 'excerpt', widget: 'string', pattern: ['^(.){10,160}$', "Must have between 10 and 160 characters"]}
       - { label: 'Reachable by', name: 'type', widget: 'select', options: ["Train", "Metrolink", "Bus", "Car"], multiple: true, min: 1}

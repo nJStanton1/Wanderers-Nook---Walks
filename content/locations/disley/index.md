@@ -2,6 +2,9 @@
 template: location-template
 title: Disley
 heroImage: disley-hero.jpg
+location:
+  latitude: 53.35829293632525
+  longitude: -2.0424578278247805
 travelTime: "30"
 excerpt: Disley is prime greenspace with plenty of footpaths, cafes and
   restaurants straight from the station. National Trust's Lyme Park is located
