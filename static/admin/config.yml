@@ -24,6 +24,7 @@ collections:
     fields:
       - { label: 'Template', name: 'template', widget: 'hidden', default: 'route-template'}
       - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Featured', name: 'featured', widget: 'boolean', default: false}
       - { label: 'Hero Image', name: 'heroImage', widget: 'image', required: false, allow_multiple: false}
       - { label: 'Length (km)', name: 'length', widget: 'number', value_type: 'float', step: 0.01 }
       - { label: 'Elevation (m)', name: 'elevation', widget: 'number', value_type: 'float', step: 1, default: 0, required: false }

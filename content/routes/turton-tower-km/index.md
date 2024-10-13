@@ -1,13 +1,16 @@
 ---
 template: route-template
 title: Turton Tower
+featured: true
 heroImage: turton-tower-hero.jpg
 length: 9.7
 elevation: 246
 timeAllowed: ""
 osMapLink: https://explore.osmaps.com/route/22019512/wn-jumbles?lat=53.626168&lon=-2.427775&zoom=13.7257&style=Standard&type=2d
 startPoint: Bromley Cross
-excerpt: Reservoirs, a tudor mansion, views over Winter Hill. Everything the old mill towns can offer! An easy going walk, with a cafe serving great cakes half way.
+excerpt: Reservoirs, a tudor mansion, views over Winter Hill. Everything the old
+  mill towns can offer! An easy going walk, with a cafe serving great cakes half
+  way.
 ---
 ## The Route:
 

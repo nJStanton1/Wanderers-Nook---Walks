@@ -1,6 +1,7 @@
 ---
 template: route-template
 title: Ancoats Loop
+featured: true
 heroImage: img20240806125415.jpg
 length: 2.1
 elevation: 0

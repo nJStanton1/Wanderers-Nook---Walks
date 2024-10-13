@@ -1,13 +1,16 @@
 ---
 template: route-template
 title: Littleborough 10K Loop
+featured: false
 heroImage: littleborough-10k-loop.jpg
 length: 10.72
 elevation: 195
 timeAllowed: ""
 osMapLink: https://explore.osmaps.com/route/22284181/wn-littleborough-10k-loop?lat=53.637978&lon=-2.095931&zoom=13.2268&style=Standard&type=2d
 startPoint: Littleborough
-excerpt: A lovely route with a bit of everything. Walk up babbling brooks and over moors, past a reservoir and canal. Take in views of Rochdale and meet some cows.
+excerpt: A lovely route with a bit of everything. Walk up babbling brooks and
+  over moors, past a reservoir and canal. Take in views of Rochdale and meet
+  some cows.
 galleryImages:
   - image: img20240620115858.jpg
     caption: A peaceful valley
