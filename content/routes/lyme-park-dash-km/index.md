@@ -18,14 +18,14 @@ Aimed at getting you to Lyme Park, this route is a nice balance of directness an
 
 ### Red Lane:
 
-Hea dup through the Garlic Grove, a fairly steep start surrounded by wild garlic. At the top of the path, head forward and turn right down Red Lane. Follow the lane down to Red Lane Entrance.
+Head up through the Garlic Grove, a fairly steep start surrounded by wild garlic. At the top of the path, head forward and turn right down Red Lane. Follow the lane down to Red Lane Entrance.
 
 ### The Drive Up:
 
-Heading up the drive I suggest you head to the left. A footpath skirts the driveway and passes just below the Cage. This will give you some great views over Stockport and Manchester, and the moors the other way.
+Heading up the drive, I suggest you head to the left. A footpath skirts the driveway and passes just below the Cage. This will give you some great views over Stockport and Manchester, and the moors the other way.
 
 ### Lyme Hall:
 
-You will come out of the footpath about a hundred metres down from the Main House. From here you spend the day exploring the estate, which includes the house, gardens and deer sanctuary. The site has free toilets, and a couple different cafes.
+You will come out of the footpath about a hundred metres down from the Main House. From here you spend the day exploring the estate, which includes the house, gardens and deer sanctuary. The site has free toilets, and a couple different cafés.
 
 If you want more specifics, here is a link to the National Trust [<ins>website for Lyme Park.</ins>](https://www.nationaltrust.org.uk/visit/cheshire-greater-manchester/lyme)

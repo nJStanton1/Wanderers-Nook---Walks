@@ -32,7 +32,7 @@ galleryImages:
 ---
 ## Route:
 
-This route starts and ends at Disley Train Station. The trains are normally about an hour apart, but run early and late. There are plenty of options for cafes and pubs in the local area for pre or post walk refreshments.
+This route starts and ends at Disley Train Station. The trains are normally about an hour apart, but run early and late. There are plenty of options for cafés and pubs in the local area for pre- or post-walk refreshments.
 
 ### Bollinhurst Reservoir:
 
@@ -52,16 +52,16 @@ You'll have a choice here. Following this path takes you straight to the house. 
 
 ### The House:
 
-The house at Lyme Park is large and impressive. You can enter the forecourt and some parts of the house for free. Though the gardens and most of the house are paid entry.
+The house at Lyme Park is large and impressive. You can enter the forecourt and some parts of the house for free. However, the gardens and most of the house are paid entry.
 
-Here you'll also find the Timberyard cafe. Looking over you is the Cage. A great landmark with a striking profile overlooking the estate, the wider moors and Manchester.
+Here you'll also find the Timberyard café. Looking over you is the Cage. A great landmark with a striking profile overlooking the estate, the wider moors and Manchester.
 
 ### The West Gate:
 
-On the map you'll notice this loop brings you back to the house. It's a lovely walk through woods, fields, along the stream and part of the old main driveway to the house. It's well  worth doing if you can. It is optional however, and if you've spent time in the House or gardens, you can take the path back towards Disley.
+On the map, you'll notice this loop brings you back to the house. It's a lovely walk through woods, fields, along the stream and part of the old main driveway to the house that is well worth doing if you can. It is optional, however, and if you've spent time in the House or gardens, you can take the path back towards Disley.
 
 ### The Walk Back:
 
-Heading back towards Disley you'll descend most of the way. My route takes you through Crow Wood. It's a beautiful bit of nature, and shadows the driveway. On my journey, I saw a Mandarin Duck, and other surprisingly uncommon birds. Following the brook down, you'll have a pleasant walk along a leaf covered floor and climbing a couple styles. 
+Heading back towards Disley, you'll descend most of the way. My route takes you through Crow Wood. It's a beautiful bit of nature, and shadows the driveway. On my journey, I saw a Mandarin Duck, and other surprisingly uncommon birds. Following the brook down, you'll have a pleasant walk along a leaf covered floor and climbing a couple styles. 
 
 For an easier path, you can walk alongside the drive. There is a footpath in the grass at the side of the road.
