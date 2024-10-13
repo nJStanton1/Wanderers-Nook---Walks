@@ -22,15 +22,18 @@
     "gatsby-plugin-decap-cms": "^4.0.4",
     "gatsby-plugin-image": "^3.13.1",
     "gatsby-plugin-mdx": "^5.13.1",
+    "gatsby-plugin-react-leaflet": "^4.0.3",
     "gatsby-plugin-react-svg": "^3.3.0",
     "gatsby-plugin-sharp": "^5.13.1",
     "gatsby-source-filesystem": "^5.13.1",
     "gatsby-transformer-remark": "^6.13.1",
     "gatsby-transformer-sharp": "^5.13.1",
     "js-yaml": "^4.1.0",
+    "leaflet": "^1.9.3",
     "mathjs": "^13.0.1",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-leaflet": "^4.2.1"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.19",

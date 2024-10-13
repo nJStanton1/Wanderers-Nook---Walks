@@ -2,6 +2,9 @@
 template: location-template
 title: Manchester City Centre
 heroImage: geograph-6866152-by-david-dixon.jpg
+location:
+  latitude: 53.47848156519584
+  longitude: -2.24341453970231
 travelTime: 00:00
 excerpt: It may not seem a likely spot for walking. However with a vast array of
   canals, parks and architecture, there's plenty to see in Manchester.

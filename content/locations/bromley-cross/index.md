@@ -2,6 +2,9 @@
 template: location-template
 title: Bromley Cross
 heroImage: WNLogo.svg
+location:
+  latitude: 53.614224243648124
+  longitude: -2.410525586639659
 travelTime: "25"
 excerpt: Bromley Cross offers a mixture of reservoirs and moors. A peaceful
   escape with plenty of opportunities for both rolling hills and local history.
