@@ -1,6 +1,7 @@
 ---
 template: route-template
 title: Peak Forest Canal Loop
+featured: false
 length: 16.9
 elevation: 275
 timeAllowed: ""

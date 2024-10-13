@@ -24,6 +24,7 @@ collections:
     fields:
       - { label: 'Template', name: 'template', widget: 'hidden', default: 'route-template'}
       - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Featured', name: 'featured', widget: 'boolean', default: false}
       - { label: 'Hero Image', name: 'heroImage', widget: 'image', required: false, allow_multiple: false}
       - { label: 'Length (km)', name: 'length', widget: 'number', value_type: 'float', step: 0.01 }
       - { label: 'Elevation (m)', name: 'elevation', widget: 'number', value_type: 'float', step: 1, default: 0, required: false }
@@ -69,21 +70,6 @@ collections:
       - { label: 'Excerpt', name: 'excerpt', widget: 'string', pattern: ['^(.){10,160}$', "Must have between 10 and 160 characters"]}
       - { label: 'Reachable by', name: 'type', widget: 'select', options: ["Train", "Metrolink", "Bus", "Car"], multiple: true, min: 1}
       - { label: 'Body', name: 'body', widget: 'markdown' }
-
-  - name: 'highlightedRoutes'
-    label: 'Highlighted Routes'
-    label_singular: 'Highlighted Route'
-    folder: 'content/highlightedRoute'
-    create: true
-    delete: true
-    description: 'List of the highlighted routes to display on first page.'
-    slug: "{{slug}}"
-    media_folder: ''
-    public_folder: ''
-    path: '{{slug}}/index'
-    fields:
-      - { label: 'Route', name: 'route', widget: 'relation', collection: 'routes', value_field: 'title', search_fields: ['title']}
-      - { label: 'typeID', name: 'typeid', widget: 'hidden', default: 'highlighted-route'}
 
   - name: 'upcoming'
     label: 'Planned Routes'

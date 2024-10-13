@@ -1,13 +1,16 @@
 ---
 template: route-template
 title: Unity Mill Loop
+featured: false
 heroImage: unity-mill.jpg
 length: 10.25
 elevation: 115
 timeAllowed: 3:00
 osMapLink: https://explore.osmaps.com/route/22574937/wn-unity-mill-loop?lat=53.432929&lon=-2.138840&zoom=13.8893&style=Standard&type=2d
 startPoint: Reddish Vale
-excerpt: Take in Reddish Vale's viaduct, and walk through meadows to the Amazing Oak and a waterfall. Visit the abandoned Unity Mill, an UrbEx site with spooky vibes.
+excerpt: Take in Reddish Vale's viaduct, and walk through meadows to the Amazing
+  Oak and a waterfall. Visit the abandoned Unity Mill, an UrbEx site with spooky
+  vibes.
 galleryImages:
   - image: img20240623134925.jpg
   - image: img20240623134230.jpg

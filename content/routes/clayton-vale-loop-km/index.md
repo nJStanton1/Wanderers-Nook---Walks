@@ -1,6 +1,7 @@
 ---
 template: route-template
 title: Clayton Vale Loop
+featured: false
 length: 11
 elevation: 100
 timeAllowed: ""

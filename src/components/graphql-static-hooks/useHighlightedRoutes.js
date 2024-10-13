@@ -1,11 +1,10 @@
 import { useStaticQuery, graphql } from "gatsby"
-import { useHighlightedRoutesHook } from './useHighlightRoutesHook'
 
 export const useHighlightedRoutes = () => {
     const {allMarkdownRemark} = useStaticQuery(graphql`
     query {
       allMarkdownRemark(
-        filter: {frontmatter: {template: {eq: "route-template"}}}
+        filter: {frontmatter: {template: {eq: "route-template"}, featured: {eq: true}}}
         sort: {frontmatter: {length: ASC}}
       ) {
         nodes {
@@ -27,12 +26,9 @@ export const useHighlightedRoutes = () => {
   }
 `)
   
-    let checkList = useHighlightedRoutesHook()
     let highlightedRoutes = []
     allMarkdownRemark.nodes.forEach(route => {
-      if (checkList.includes(route.frontmatter.title)) {
-        highlightedRoutes.push(route)
-      } 
+      highlightedRoutes.push(route)
     });
 
     return highlightedRoutes

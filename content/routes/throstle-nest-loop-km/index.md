@@ -1,6 +1,7 @@
 ---
 template: route-template
 title: Throstle Nest Loop
+featured: false
 heroImage: img20240806111748.jpg
 length: 5.5
 elevation: 0

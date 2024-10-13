@@ -1,6 +1,7 @@
 ---
 template: route-template
 title: Lyme Park Big Loop
+featured: false
 heroImage: img20240519150123.jpg
 length: 11.79
 elevation: 350
