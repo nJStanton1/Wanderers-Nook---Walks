@@ -34,11 +34,11 @@ const LocationPage = ({data}) => {
         <Layout>
         <Padding>
           <div className='w-full'>
-            <h1 className='mt-8 w-full'>Locations to explore</h1>
+            <h1 className='mt-8 my-4 w-full'>Locations to explore</h1>
             <p>Explore the various areas of Greater Manchester you can visit easily on the map below. Each pin can take you to an overview of the walks at that location.</p>
             <p>Below that, you can a short overview of all the locations I have visited.</p>
 
-            <MapContainer className='my-4' style={{ height: '500px' }} scrollWheelZoom={true} bounds={[[bottom,left],[top,right]]} boundsOptions={{padding: [50, 50]}}>
+            <MapContainer className='my-4' style={{ height: '500px' }} scrollWheelZoom={true} bounds={[[bottom,left],[top,right]]} boundsOptions={{padding: [20, 20]}}>
               <TileLayer
                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -48,9 +48,9 @@ const LocationPage = ({data}) => {
                   nodes.map(location => (
                     <Marker position={[location.frontmatter.location.latitude, location.frontmatter.location.longitude]}>
                       <Popup>
-                        {location.frontmatter.title} 
+                        <span className='font-chillaxSB'>{location.frontmatter.title}</span> 
                         <br/>
-                        <Link to={"/locations/" + getSlug(location.fileAbsolutePath)} className='underline'>Click here to view</Link>
+                        <Link to={"/locations/" + getSlug(location.fileAbsolutePath)} className='underline font-chillaxR'>Click here to view</Link>
                       </Popup>
                     </Marker>
                   ))

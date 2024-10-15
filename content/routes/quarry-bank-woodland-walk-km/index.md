@@ -1,6 +1,7 @@
 ---
 template: route-template
 title: Quarry Bank Woodland Walk
+featured: false
 heroImage: img20240910133215.jpg
 length: 2.54
 elevation: 55

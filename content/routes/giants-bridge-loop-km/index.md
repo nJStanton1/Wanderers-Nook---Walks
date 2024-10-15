@@ -1,6 +1,7 @@
 ---
 template: route-template
 title: Giants Bridge Loop
+featured: false
 heroImage: hero.jpg
 length: 7.6
 elevation: 167

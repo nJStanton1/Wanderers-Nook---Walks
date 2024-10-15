@@ -2,6 +2,9 @@
 template: location-template
 title: Edale
 heroImage: edale-hero.jpg
+location:
+  longitude: -1.8173404529741866
+  latitude: 53.364742940750865
 travelTime: "45"
 excerpt: Edale is a quaint village in the Hope Valley. The ideal place to
   explore the Peak District with 2 great pubs at the end.

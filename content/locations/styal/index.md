@@ -2,6 +2,9 @@
 template: location-template
 title: Styal
 heroImage: quarry-bank-hero.jpg
+location:
+  latitude: 53.34869413339108
+  longitude: -2.240463924743351
 travelTime: 00:30
 excerpt: The surprisingly remote Styal, sandwiched between Wilmslow and the
   airport, is a village with easy access to woodlands and the historic Quarry

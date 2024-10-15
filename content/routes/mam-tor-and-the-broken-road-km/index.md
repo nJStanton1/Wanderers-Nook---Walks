@@ -1,6 +1,7 @@
 ---
 template: route-template
 title: Mam Tor and The Broken Road
+featured: false
 heroImage: img20240901131607.jpg
 length: 7.99
 elevation: 415
