@@ -1,4 +1,4 @@
-local_backend: true # Comment out when not in use
+#local_backend: true # Comment out when not in use
 
 backend:
   name: git-gateway
