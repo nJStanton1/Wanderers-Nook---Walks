@@ -1,12 +1,17 @@
 ---
+length: 16.9
+featured: false
+startPoint: Reddish Vale
+osMapLink: https://explore.osmaps.com/route/22019666/wn-peak-forest-canal-loop?lat=53.423444&lon=-2.139475&zoom=12.7797&style=Standard&type=2d
 template: route-template
 title: Peak Forest Canal Loop
-featured: false
-length: 16.9
-elevation: 275
+overview:
+  length: 16.9
+  elevation: 275
+  osMapLink: https://explore.osmaps.com/route/22019666/wn-peak-forest-canal-loop?lat=53.423444&lon=-2.139475&zoom=12.7797&style=Standard&type=2d
+  startPoint: Reddish Vale
 timeAllowed: ""
-osMapLink: https://explore.osmaps.com/route/22019666/wn-peak-forest-canal-loop?lat=53.423444&lon=-2.139475&zoom=12.7797&style=Standard&type=2d
-startPoint: Reddish Vale
+elevation: 275
 ---
 ## For your information:
 

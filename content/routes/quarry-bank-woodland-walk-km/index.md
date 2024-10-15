@@ -1,16 +1,9 @@
 ---
-template: route-template
-title: Quarry Bank Woodland Walk
+excerpt: Lovely walk through the woodlands around Quarry Bank Mill. An easy
+  stroll with beautiful brick buildings and garden.
 featured: false
 heroImage: img20240910133215.jpg
 length: 2.54
-elevation: 55
-timeAllowed: ""
-osMapLink: https://explore.osmaps.com/route/23367035/wn-quarry-bank-woodland-walk?lat=53.347110&lon=-2.251713&zoom=14.7972&style=Standard&type=2d
-startPoint: Styal
-endPoint: ""
-excerpt: Lovely walk through the woodlands around Quarry Bank Mill. An easy
-  stroll with beautiful brick buildings and garden.
 galleryImages:
   - image: img_20240914_223322-copy.jpg
   - image: img20240910131325-copy.jpg
@@ -29,6 +22,20 @@ galleryImages:
   - image: img20240910140747.jpg
     caption: Quarry Bank
   - image: img20240910133650.jpg
+startPoint: Styal
+osMapLink: https://explore.osmaps.com/route/23367035/wn-quarry-bank-woodland-walk?lat=53.347110&lon=-2.251713&zoom=14.7972&style=Standard&type=2d
+endPoint: ""
+template: route-template
+title: Quarry Bank Woodland Walk
+overview:
+  length: 2.54
+  elevation: 55
+  osMapLink: https://explore.osmaps.com/route/23367035/wn-quarry-bank-woodland-walk?lat=53.347110&lon=-2.251713&zoom=14.7972&style=Standard&type=2d
+  startPoint: Styal
+  excerpt: Lovely walk through the woodlands around Quarry Bank Mill. An easy
+    stroll with beautiful brick buildings and garden.
+timeAllowed: ""
+elevation: 55
 ---
 ## The Route:
 

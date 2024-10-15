@@ -1,15 +1,18 @@
 ---
+excerpt: A gentle walk along Bridgewater Canal and the Irwell from Castlefield.
+  See Manchester's industrial past right in front of you, watched over by swans.
 template: route-template
-title: Throstle Nest Loop
 featured: false
 heroImage: img20240806111748.jpg
 length: 5.5
-elevation: 0
-timeAllowed: ""
-osMapLink: https://explore.osmaps.com/route/22779908/wn-throstle-nest-loop?lat=53.471925&lon=-2.273851&zoom=14.2712&style=Standard&type=2d
-startPoint: Manchester City Centre
-excerpt: A gentle walk along Bridgewater Canal and the Irwell from Castlefield.
-  See Manchester's industrial past right in front of you, watched over by swans.
+overview:
+  length: 5.5
+  elevation: 0
+  osMapLink: https://explore.osmaps.com/route/22779908/wn-throstle-nest-loop?lat=53.471925&lon=-2.273851&zoom=14.2712&style=Standard&type=2d
+  startPoint: Manchester City Centre
+  excerpt: A gentle walk along Bridgewater Canal and the Irwell from Castlefield.
+    See Manchester's industrial past right in front of you, watched over by
+    swans.
 galleryImages:
   - image: img20240806103942.jpg
   - image: img20240806104126.jpg
@@ -23,6 +26,11 @@ galleryImages:
   - image: img20240806113129.jpg
   - image: img20240806114236.jpg
   - image: img20240806114859.jpg
+startPoint: Manchester City Centre
+osMapLink: https://explore.osmaps.com/route/22779908/wn-throstle-nest-loop?lat=53.471925&lon=-2.273851&zoom=14.2712&style=Standard&type=2d
+title: Throstle Nest Loop
+timeAllowed: ""
+elevation: 0
 ---
 ## The Route
 

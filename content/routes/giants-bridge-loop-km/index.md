@@ -1,17 +1,10 @@
 ---
-template: route-template
-title: Giants Bridge Loop
-featured: false
-heroImage: hero.jpg
-length: 7.6
-elevation: 167
-timeAllowed: ""
-osMapLink: https://explore.osmaps.com/route/23367121/wn-giants-bridge-loop?lat=53.347159&lon=-2.265135&zoom=14.4345&style=Standard&type=2d
-startPoint: Styal
-endPoint: ""
 excerpt: A long stroll through the woodlands around Quarry Bank Mill. Following
   the Bollin river, take in beautiful brick buildings, old woodlands and the
   airport.
+featured: false
+heroImage: hero.jpg
+length: 7.6
 galleryImages:
   - image: img_20240914_222746.jpg
   - image: img_20240914_222945.jpg
@@ -41,6 +34,21 @@ galleryImages:
     caption: Giant's Castle Bridge
   - image: img20240910160213.jpg
   - image: img20240910160559.jpg
+startPoint: Styal
+osMapLink: https://explore.osmaps.com/route/23367121/wn-giants-bridge-loop?lat=53.347159&lon=-2.265135&zoom=14.4345&style=Standard&type=2d
+endPoint: ""
+template: route-template
+title: Giants Bridge Loop
+overview:
+  length: 7.6
+  elevation: 167
+  osMapLink: https://explore.osmaps.com/route/23367121/wn-giants-bridge-loop?lat=53.347159&lon=-2.265135&zoom=14.4345&style=Standard&type=2d
+  startPoint: Styal
+  excerpt: A long stroll through the woodlands around Quarry Bank Mill. Following
+    the Bollin river, take in beautiful brick buildings, old woodlands and the
+    airport.
+timeAllowed: ""
+elevation: 167
 ---
 ## The Route:
 

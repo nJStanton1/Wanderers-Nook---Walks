@@ -20,10 +20,10 @@ const RouteOverviewGallery = ({ distance, elevation, time, startingPoint, endPoi
     
     //Return final layout here
     return (
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-y-2 md:gap-2 my-9">
+        <div className="grid grid-cols-2 gap-2 mt-2">
             {distance &&
-                <div className="inline-flex items-center">
-                    <DistanceIcon className='size-20 mr-4 flex'/>
+                <div className="inline-flex items-start">
+                    <DistanceIcon className='size-12 md:size-16 mr-2 md:mr-4'/>
                     <div className="flex flex-col items-start">
                         <h3 className="p-0 text-start">Distance</h3>
                         <p className="p-0 text-start">{distance}km</p>
@@ -32,8 +32,8 @@ const RouteOverviewGallery = ({ distance, elevation, time, startingPoint, endPoi
             }
 
             {elevation !== 0 && 
-              <div className="inline-flex items-center">
-                <ElevationIcon className='size-20 mr-4 flex'/>
+              <div className="inline-flex items-start">
+                <ElevationIcon className='size-12 md:size-16 mr-2 md:mr-4'/>
                 <div className="flex flex-col">
                   <h3 className="p-0 text-start">Elevation</h3>
                   <p className="p-0 text-start">{elevation}m</p>
@@ -42,8 +42,8 @@ const RouteOverviewGallery = ({ distance, elevation, time, startingPoint, endPoi
             }
 
             {timeAllowed &&
-                <div className="inline-flex items-center">
-                    <ClockIcon className='size-20 mr-4 flex'/>
+                <div className="inline-flex items-start">
+                    <ClockIcon className='size-12 md:size-16 mr-2 md:mr-4'/>
                     <div className="flex flex-col">
                         <h3 className="p-0 text-start">Time</h3>
                         <p className="p-0 text-start">{timeAllowed} hrs</p>
@@ -52,8 +52,8 @@ const RouteOverviewGallery = ({ distance, elevation, time, startingPoint, endPoi
             }
 
             {startingPoint &&
-                <div className="inline-flex items-center">
-                    <PinIcon className='size-20 mr-4 flex'/>
+                <div className="inline-flex items-start">
+                    <PinIcon className='size-12 md:size-16 mr-2 md:mr-4'/>
                     <Link to={GetLocationSlug(startingPoint)} className="flex flex-col">
                         <h3 className="p-0 text-start">Starts at</h3>
                         <p className="p-0 underline text-start">{startingPoint}</p>
@@ -62,16 +62,16 @@ const RouteOverviewGallery = ({ distance, elevation, time, startingPoint, endPoi
             }
 
             {endPoint ?
-                <div className="inline-flex items-center">
-                    <EndIcon className='size-20 mr-4 flex'/>
+                <div className="inline-flex items-start">
+                    <EndIcon className='size-12 md:size-16 mr-2 md:mr-4'/>
                     <Link to={GetLocationSlug(endPoint)} className="flex flex-col">
                         <h3 className="p-0 text-start">Ends at</h3>
                         <p className="p-0 underline text-start">{endPoint}</p>
                     </Link>
                 </div>
                 :
-                <div className="inline-flex items-center">
-                    <CircularIcon className='size-20 mr-4 flex'/>
+                <div className="inline-flex items-start">
+                    <CircularIcon className='size-12 md:size-16 mr-2 md:mr-4'/>
                     <div className="flex flex-col">
                         <h3 className="p-0 text-start">Route Type</h3>
                         <p className="p-0 text-start">Circular</p>
@@ -80,8 +80,8 @@ const RouteOverviewGallery = ({ distance, elevation, time, startingPoint, endPoi
             }
 
             {osMap && 
-                <div className="inline-flex items-center">
-                    <MapIcon className='size-20 mr-4 flex'/>
+                <div className="inline-flex items-start">
+                    <MapIcon className='size-12 md:size-16 mr-2 md:mr-4'/>
                     <div className="flex flex-col ">
                     <h3 className="p-0 text-start">OS Map</h3>
                     <a href={osMap} className='underline text-start'>View map here</a>

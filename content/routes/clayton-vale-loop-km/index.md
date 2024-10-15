@@ -1,12 +1,17 @@
 ---
+length: 11
+featured: false
+startPoint: Manchester City Centre
+osMapLink: https://explore.osmaps.com/route/20403015/wn-clayton-vale-loop?lat=53.485090&lon=-2.214338&zoom=13.8593&style=Standard&type=2d
 template: route-template
 title: Clayton Vale Loop
-featured: false
-length: 11
-elevation: 100
+overview:
+  length: 11
+  elevation: 100
+  osMapLink: https://explore.osmaps.com/route/20403015/wn-clayton-vale-loop?lat=53.485090&lon=-2.214338&zoom=13.8593&style=Standard&type=2d
+  startPoint: Manchester City Centre
 timeAllowed: ""
-osMapLink: https://explore.osmaps.com/route/20403015/wn-clayton-vale-loop?lat=53.485090&lon=-2.214338&zoom=13.8593&style=Standard&type=2d
-startPoint: Manchester City Centre
+elevation: 100
 ---
 ## The Route:
 

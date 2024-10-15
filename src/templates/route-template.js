@@ -11,24 +11,25 @@ function RoutePage ({ data }) {
 
     return (
       <Layout>
-        <div className="flex flex-col max-h-60 md:max-h-72 w-full relative">
+        <div className="flex flex-col max-h-72 md:max-h-96 w-full relative">
           {route.frontmatter.heroImage && <GatsbyImage image={getImage(route.frontmatter.heroImage)}/>} 
         </div>
 
         <Padding>
-          <h1>{route.frontmatter.title}</h1>
-
-          <h2 className="mt-5">Overview</h2>
-          {route.frontmatter.excerpt && <p className="w-full">{route.frontmatter.excerpt}</p>}
-
-          <RouteOverviewGallery 
-            distance={route.frontmatter.length}
-            elevation={route.frontmatter.elevation}
-            time={route.frontmatter.timeAllowed}
-            startingPoint={route.frontmatter.startPoint}
-            endPoint={route.frontmatter.endPoint}
-            osMap={route.frontmatter.osMapLink}
-          />
+          <div className="grid grid-cols-1 md:grid-cols-2 pt-3 md:pt-6">
+            <div>
+              <h1 className="text-3xl md:text-6xl lg:text-6xl pr-4">{route.frontmatter.title}</h1>
+              {route.frontmatter.overview.excerpt && <p className="w-full mb-2 md:mb-0 pr-4">{route.frontmatter.overview.excerpt}</p>}
+            </div>
+            <RouteOverviewGallery 
+              distance={route.frontmatter.overview.length}
+              elevation={route.frontmatter.overview.elevation}
+              time={route.frontmatter.overview.timeAllowed}
+              startingPoint={route.frontmatter.overview.startPoint}
+              endPoint={route.frontmatter.overview.endPoint}
+              osMap={route.frontmatter.overview.osMapLink}
+            />
+          </div>          
 
           <div dangerouslySetInnerHTML={{ __html: route.html }} />
 
@@ -47,7 +48,7 @@ export default RoutePage
 
 export const Head = ({ data, pageContext }) => {
   const route = data.markdownRemark.frontmatter
-  const excerptToUse = route.excerpt ? route.excerpt : data.markdownRemark.excerpt
+  const excerptToUse = route.overview.excerpt ? route.overview.excerpt : data.markdownRemark.excerpt
 
   if (route.heroImage != null) {
     return(
@@ -80,13 +81,14 @@ export const query = graphql`
               gatsbyImageData(placeholder: DOMINANT_COLOR, layout: CONSTRAINED)
           }
         }
-        length
-        elevation
-        timeAllowed
-        osMapLink
-        startPoint
-        endPoint
-        excerpt
+        overview {
+          length
+          elevation
+          timeAllowed
+          osMapLink
+          startPoint
+          excerpt
+        }
         galleryImages {
           image {
             childImageSharp {
@@ -97,7 +99,7 @@ export const query = graphql`
         }
         }
       html
-      excerpt
+      excerpt(pruneLength: 160)
     }
   }
 `

@@ -1,16 +1,19 @@
 ---
-template: route-template
-title: Lyme Park Big Loop
-featured: false
-heroImage: img20240519150123.jpg
-length: 11.79
-elevation: 350
-timeAllowed: ""
-osMapLink: https://explore.osmaps.com/route/21037021/disley-hike?lat=53.347513&lon=-2.054054&zoom=13.7507&style=Standard&type=2d
-startPoint: Disley
 excerpt: A long wander into the moors, through woods, and past a reservoir. Take
   in views of rolling landscapes, try to spot deer and see the majestic Lyme
   Hall.
+template: route-template
+featured: false
+heroImage: img20240519150123.jpg
+length: 11.79
+overview:
+  length: 11.79
+  elevation: 350
+  osMapLink: https://explore.osmaps.com/route/21037021/disley-hike?lat=53.347513&lon=-2.054054&zoom=13.7507&style=Standard&type=2d
+  startPoint: Disley
+  excerpt: A long wander into the moors, through woods, and past a reservoir. Take
+    in views of rolling landscapes, try to spot deer and see the majestic Lyme
+    Hall.
 galleryImages:
   - image: img20240804092316.jpg
   - image: img20240804092545.jpg
@@ -29,6 +32,11 @@ galleryImages:
   - image: img20240804101132.jpg
   - image: img20240804102041.jpg
   - image: img20240804103202.jpg
+startPoint: Disley
+osMapLink: https://explore.osmaps.com/route/21037021/disley-hike?lat=53.347513&lon=-2.054054&zoom=13.7507&style=Standard&type=2d
+title: Lyme Park Estate
+timeAllowed: ""
+elevation: 350
 ---
 ## Route:
 

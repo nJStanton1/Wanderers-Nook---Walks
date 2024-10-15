@@ -1,16 +1,9 @@
 ---
-template: route-template
-title: Ancoats Loop
+excerpt: A short walk round the new developments along the canals. Very nice on
+  a sunny day.
 featured: true
 heroImage: img20240806125415.jpg
 length: 2.1
-elevation: 0
-timeAllowed: ""
-osMapLink: https://explore.osmaps.com/route/22696518/wn-ancoats-loop?lat=53.481655&lon=-2.229534&zoom=15.7954&style=Standard&type=2d
-startPoint: Manchester City Centre
-endPoint: ""
-excerpt: A short walk round the new developments along the canals. Very nice on
-  a sunny day.
 galleryImages:
   - image: img20240806122727.jpg
   - image: img20240806123925.jpg
@@ -22,6 +15,20 @@ galleryImages:
   - image: img20240806125647.jpg
   - image: img20240806125802.jpg
   - image: img20240806125849.jpg
+startPoint: Manchester City Centre
+osMapLink: https://explore.osmaps.com/route/22696518/wn-ancoats-loop?lat=53.481655&lon=-2.229534&zoom=15.7954&style=Standard&type=2d
+endPoint: ""
+template: route-template
+title: Ancoats Loop
+overview:
+  length: 2.1
+  elevation: 0
+  osMapLink: https://explore.osmaps.com/route/22696518/wn-ancoats-loop?lat=53.481655&lon=-2.229534&zoom=15.7954&style=Standard&type=2d
+  startPoint: Manchester City Centre
+  excerpt: A short walk round the new developments along the canals. Very nice on
+    a sunny day.
+timeAllowed: ""
+elevation: 0
 ---
 ## The Route:
 
