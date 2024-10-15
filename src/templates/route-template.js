@@ -5,9 +5,11 @@ import Seo from '../components/seo'
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import ImageGalleryCaptions from "../components/image-gallery";
 import RouteOverviewGallery from "../components/route-overview-gallery";
+import {micromark} from 'micromark'
 
 function RoutePage ({ data }) {
     const route = data.markdownRemark
+    const guide = route.frontmatter.route
 
     return (
       <Layout>
@@ -29,10 +31,22 @@ function RoutePage ({ data }) {
               endPoint={route.frontmatter.overview.endPoint}
               osMap={route.frontmatter.overview.osMapLink}
             />
-          </div>          
+          </div>
 
-          <div dangerouslySetInnerHTML={{ __html: route.html }} />
-
+          <div className="mt-10">
+            <h2>The Route</h2>
+            <p className="mb-8">{guide.overview}</p>
+            {guide.sections.map( section => (
+              <div className="mb-8">
+                {section.image && <GatsbyImage image={getImage(section.image)} className="float-none md:float-right md:ml-6"/>}
+                <h3 className="md:pt-0">{section.title}</h3>
+                <div className="flex flex-col text-base md:text-xl text-center md:text-left" dangerouslySetInnerHTML={{__html: micromark(section.content)}}/>
+                <div className="w-full clear-both h-8"/>
+              </div>
+              
+              ))
+            }
+          </div>
           {route.frontmatter.galleryImages &&
           <div>
             <h2 className="mt-4 mb-6">Image Gallery</h2>
@@ -89,6 +103,23 @@ export const query = graphql`
           startPoint
           excerpt
         }
+        route {
+          overview
+          sections {
+            title
+            content
+            image {
+              childImageSharp {
+                gatsbyImageData(
+                  aspectRatio: 1.77
+                  width: 400
+                  placeholder: BLURRED
+                  layout: CONSTRAINED
+                )
+              }
+            }
+          }
+        }
         galleryImages {
           image {
             childImageSharp {
@@ -98,8 +129,6 @@ export const query = graphql`
           caption
         }
         }
-      html
-      excerpt(pruneLength: 160)
     }
   }
 `

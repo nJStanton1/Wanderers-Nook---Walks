@@ -1,6 +1,10 @@
 ---
 length: 11
 featured: false
+route:
+  overview: I haven't yet documented this route. I found it whilst exploring the
+    Etihad Campus and Phillips Park. Whilst anyone can walk it, I haven't got
+    directions or photos for you yet.
 startPoint: Manchester City Centre
 osMapLink: https://explore.osmaps.com/route/20403015/wn-clayton-vale-loop?lat=53.485090&lon=-2.214338&zoom=13.8593&style=Standard&type=2d
 template: route-template

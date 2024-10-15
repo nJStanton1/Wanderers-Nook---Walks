@@ -5,6 +5,75 @@ excerpt: A moderately difficult walk with steep ascents rewarding you with
 featured: false
 heroImage: img20240901131607.jpg
 length: 7.99
+route:
+  overview: Starting off, you will head up towards Edale. You can get snacks and
+    drinks from the café or shop here. You'll walk through the bottom of the
+    valley, then cross the Mam Tor ridgeline. This is steep but not difficult.
+    Heading down the other side, you'll pass the Broken Road and back up to Mam
+    Tor's peak. Take in the views, and then head back to Edale for a refreshing
+    alcoholic beverage.
+  sections:
+    - content: >-
+        The first stage of the walk is leaving Edale. You'll head through some
+        gentle rolling fields. Crossing the valley is a peaceful role, with some
+        old stone farm buildings dotting the landscape. The hills around you
+        rise up and are often topped with clouds, even on a dry day. 
+
+
+        The ridge you climb will loom above you but do not worry.
+      title: Heading out of Edale
+      image: img20240901124600.jpg
+    - content: >-
+        This section of the walk is steep. But the path is good, and you'll find
+        it's not difficult, just tiring. Rest often, as this is the best way to
+        take in the view. There isn't much to see if you are staring at the
+        ground in front of you!
+
+
+        Looking back will help you see how far you have already climbed, and the valley slowly unfolding beneath you. Edale will appear very small as you climb, and it gives you a great insight into the scale of the natural world.
+      title: The Ridge Climb
+      image: img20240901130520.jpg
+    - content: >-
+        At the top you have views over two valleys, either side of the ridge.
+        The ridge cuts them in to like a wall separating gardens. You'll head
+        down the other side of the ridge. Descending here, you'll pass from a
+        grassland hillside to a forest. Nestled within the forest is a beautiful
+        house hidden away from the larger world.
+
+
+        This forest is a beautiful spot to pause and take some shelter should you need some. It's a very big change of scenery from what you've experienced so far.
+      title: Topping the Ridge
+      image: img20240901131607.jpg
+    - content: >-
+        This area of the walk is potentially my favourite. An old road built on
+        poor foundations of shale and loose terrain. Nature has exerted her
+        force here and the road is broken into chunks, with a section sliding
+        down the hill, and some parts forced upwards in small cliff like
+        shapes. 
+
+
+        This area is phenomenal. Showing how delicate man's structures can be. It feels like walking through a dystopic vision of the world, with nature reclaiming the land we took for granted. For me, this is one of the highlights of this particular walk.
+      title: The Broken Road
+      image: img20240901140913.jpg
+    - content: >-
+        From the top of Broken Road, you climb to the peak of Mam Tor. This area
+        is well maintained, and the path up includes steps, and a cobbled path.
+        It's fairly easy going, if a little steep. At the top is a trig point,
+        for those of you who count the peaks you have climbed. 
+
+
+        Yet more stunning views await you here, and it is a great photo opportunity.
+      title: Climbing Mam Tor
+      image: img20240901143632.jpg
+    - content: >-
+        From here you zig and you zag back down towards Edale. Descending from
+        lofty heights and spacious views, the scenery becomes more tangible and
+        close. 
+
+
+        A small brook awaits you at the bottom, surround by wild flowers. It provides a nice moment to reflect on the walk, before moving on to Edale and either the train home, or a nice Sunday lunch in a local pub.
+      title: Descending to Edale
+      image: img20240901152107.jpg
 galleryImages:
   - image: img20240901124557.jpg
   - image: img20240901124600.jpg
