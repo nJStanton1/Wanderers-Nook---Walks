@@ -15,7 +15,7 @@ collections:
     create: true
     delete: true
     description: 'Database of all the routes available on the website.'
-    slug: "{{slug}}-{{length}}km"
+    slug: "{{slug}}"
     media_folder: ''
     public_folder: ''
     path: '{{slug}}/index'
