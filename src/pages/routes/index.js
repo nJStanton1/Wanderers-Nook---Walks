@@ -34,9 +34,9 @@ const RoutePage = ({data}) =>{
                 linkTo={"/routes/" + getSlug(route.fileAbsolutePath)} 
                 heroImage={route.frontmatter.heroImage}
                 title={route.frontmatter.title}
-                length={route.frontmatter.length}
-                startPoint={route.frontmatter.startPoint}
-                excerpt={route.frontmatter.excerpt}/>
+                length={route.frontmatter.overview.length}
+                startPoint={route.frontmatter.overview.startPoint}
+                excerpt={route.frontmatter.overview.excerpt}/>
             ))
           }
         </div>
@@ -64,18 +64,20 @@ export const query = graphql`
   query {
     allMarkdownRemark(
         filter: {frontmatter: {template: {eq: "route-template"}}}
-        sort: {frontmatter: {length: ASC}}
+        sort: {frontmatter: {overview: {length: ASC}}}
       ) {
         nodes {
         frontmatter {
           title
-          excerpt
-          length
-          startPoint
           heroImage {
             childImageSharp {
                 gatsbyImageData(aspectRatio: 1.778, placeholder: DOMINANT_COLOR, width: 300)
             }
+          }
+          overview {
+            length
+            startPoint
+            excerpt
           }
         }
         id
