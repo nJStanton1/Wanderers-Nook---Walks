@@ -5,18 +5,18 @@ export const useHighlightedRoutes = () => {
     query {
       allMarkdownRemark(
         filter: {frontmatter: {template: {eq: "route-template"}, featured: {eq: true}}}
-        sort: {frontmatter: {length: ASC}}
+        sort: {frontmatter: {overview: {length: ASC}}}
       ) {
         nodes {
           frontmatter {
             title
-            excerpt
-            length
-            startPoint
             heroImage {
               childImageSharp {
                   gatsbyImageData(placeholder: DOMINANT_COLOR, width: 384, height:256, transformOptions: {fit: COVER})
               }
+            }
+            overview {
+              length
             }
           }
           id

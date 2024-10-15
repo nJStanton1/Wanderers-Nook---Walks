@@ -22,7 +22,7 @@ const HighlightedRoutesGallery = () => {
                                 linkTo={"/routes/" + getSlug(highlight.fileAbsolutePath)}
                                 heroImage={highlight.frontmatter.heroImage}
                                 title={highlight.frontmatter.title}
-                                length={highlight.frontmatter.length}
+                                length={highlight.frontmatter.overview.length}
                                 className='snap-always snap-center' />
                         </div>
 

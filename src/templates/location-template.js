@@ -38,8 +38,8 @@ function LocationPage ({ data, pageContext }) {
                     linkTo={"/routes/"+getSlug(route.fileAbsolutePath)} 
                     heroImage={route.frontmatter.heroImage}
                     title={route.frontmatter.title}
-                    length={route.frontmatter.length}
-                    excerpt={route.frontmatter.excerpt}/>
+                    length={route.frontmatter.overview.length}
+                    excerpt={route.frontmatter.overview.excerpt}/>
                 ))
               }
               </div>
@@ -92,17 +92,19 @@ export const query = graphql`
         }
       html
     }
-    allMarkdownRemark(filter: {frontmatter: {startPoint: {eq: $location}}}) {
+    allMarkdownRemark(filter: {frontmatter: {overview: {startPoint: {eq: $location}}}}) {
       nodes {
         frontmatter {
           title
-          length
-          timeAllowed
-          excerpt
           heroImage {
             childImageSharp {
                 gatsbyImageData(aspectRatio: 1.778, placeholder: DOMINANT_COLOR, width: 300)
             }
+          }
+          overview {
+            length
+            timeAllowed
+            excerpt
           }
         }
         fileAbsolutePath
