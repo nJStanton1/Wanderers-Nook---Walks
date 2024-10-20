@@ -51,6 +51,16 @@ const RouteOverviewGallery = ({ distance, elevation, time, startingPoint, endPoi
                 </div>
             }
 
+            {osMap && 
+                <div className="inline-flex items-start">
+                    <MapIcon className='size-12 md:size-16 mr-2 md:mr-4'/>
+                    <div className="flex flex-col ">
+                    <h3 className="p-0 text-start">OS Map</h3>
+                    <a href={osMap} className='underline text-start'>View map here</a>
+                    </div>
+                </div>
+            }
+
             {startingPoint &&
                 <div className="inline-flex items-start">
                     <PinIcon className='size-12 md:size-16 mr-2 md:mr-4'/>
@@ -75,16 +85,6 @@ const RouteOverviewGallery = ({ distance, elevation, time, startingPoint, endPoi
                     <div className="flex flex-col">
                         <h3 className="p-0 text-start">Route Type</h3>
                         <p className="p-0 text-start">Circular</p>
-                    </div>
-                </div>
-            }
-
-            {osMap && 
-                <div className="inline-flex items-start">
-                    <MapIcon className='size-12 md:size-16 mr-2 md:mr-4'/>
-                    <div className="flex flex-col ">
-                    <h3 className="p-0 text-start">OS Map</h3>
-                    <a href={osMap} className='underline text-start'>View map here</a>
                     </div>
                 </div>
             }

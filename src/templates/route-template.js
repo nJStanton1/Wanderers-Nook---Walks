@@ -40,7 +40,7 @@ function RoutePage ({ data }) {
               <div className="mb-8">
                 {section.image && <GatsbyImage image={getImage(section.image)} className="float-none md:float-right md:ml-6"/>}
                 <h3 className="md:pt-0">{section.title}</h3>
-                <div className="flex flex-col text-base md:text-xl text-center md:text-left" dangerouslySetInnerHTML={{__html: micromark(section.content)}}/>
+                <div className="blog-content flex flex-col text-base md:text-xl text-center md:text-left" dangerouslySetInnerHTML={{__html: micromark(section.content)}}/>
                 <div className="w-full clear-both h-8"/>
               </div>
               
@@ -101,6 +101,7 @@ export const query = graphql`
           timeAllowed
           osMapLink
           startPoint
+          endPoint
           excerpt
         }
         route {

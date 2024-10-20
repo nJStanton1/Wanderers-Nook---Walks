@@ -15,7 +15,7 @@ collections:
     create: true
     delete: true
     description: 'Database of all the routes available on the website.'
-    slug: "{{slug}}"
+    slug: "{{fields.overview.startPoint}}-{{slug}}-{{fields.overview.length}}km"
     media_folder: ''
     public_folder: ''
     path: '{{slug}}/index'
@@ -82,7 +82,7 @@ collections:
     create: true
     delete: true
     description: 'Database of all route start points. Should be the point of public transport.'
-    slug: "{{slug}}"
+    slug: "walks-around-{{slug}}"
     media_folder: ''
     public_folder: ''
     path: '{{slug}}/index'
