@@ -91,7 +91,16 @@
         p {
             @apply text-base md:text-lg text-center md:text-start pb-2;
         }
+        a.blog-content {
+            @apply underline
+        }
 
+    }
+
+    @layer components {
+        .section-content {
+
+        }
     }
 
     @layer utilities {

@@ -44,9 +44,9 @@ route:
         a huge Tudor mansion, run by volunteers, with a lovely café. It's a
         great stop for coffee and homemade cakes. I can't really do it justice
         in my short blog, so if you're interested, you can view it at this link:
-        [<ins>Turton Tower</ins>](https://turtontower.com/)"
+        [Turton Tower](https://turtontower.com/)"
       title: Turton Tower
-    - content: "[](https://turtontower.com/)From Turton Tower, you'll walk through the
+    - content: "From Turton Tower, you'll walk through the
         gardens. It's a well maintained garden that is worth a visit by itself.
         From the end, you'll cross the railway and head up a reasonably steep
         hill. It gives magnificent views, so be sure to turn around

@@ -11,7 +11,7 @@ overview:
   osMapLink: https://explore.osmaps.com/route/23689482/wn-entwistle-to-bromley?lat=53.636669&lon=-2.439994&zoom=12.7055&style=Standard&type=2d
   startPoint: Entwistle
   excerpt: Passing the gorgeous Jumbles and Entwistle reservoirs, Turton Tower and
-    Winter Hill, this route takes in a lot of everythingthat makes hiking great
+    Winter Hill, this route takes in a lot of everything that makes hiking great
     fun.
 route:
   overview: >-
