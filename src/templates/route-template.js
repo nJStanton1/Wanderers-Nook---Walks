@@ -101,6 +101,7 @@ export const query = graphql`
           timeAllowed
           osMapLink
           startPoint
+          endPoint
           excerpt
         }
         route {

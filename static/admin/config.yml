@@ -2,7 +2,7 @@ local_backend: true # Comment out when not in use
 
 backend:
   name: git-gateway
-  branch: main # original: main
+  branch: routes-redesign # original: main
 
 media_folder: static/img
 public_folder: /img
@@ -15,7 +15,7 @@ collections:
     create: true
     delete: true
     description: 'Database of all the routes available on the website.'
-    slug: "{{slug}}-{{length}}km"
+    slug: "{{fields.overview.startPoint}}-{{slug}}-{{fields.overview.length}}km"
     media_folder: ''
     public_folder: ''
     path: '{{slug}}/index'
