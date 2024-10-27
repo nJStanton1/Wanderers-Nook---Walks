@@ -5,6 +5,7 @@ import Seo from '../components/seo'
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { RouteCard } from "../components/route-card";
 import TransportIcon from "../components/transport-icon";
+import { GoogleDirectionsButton } from "../components/button";
 const {getSlug} = require('../components/helperFunctions')
 
 function LocationPage ({ data, pageContext }) {
@@ -27,7 +28,7 @@ function LocationPage ({ data, pageContext }) {
                   ))
                 }
               </div>
-              
+              <GoogleDirectionsButton destinationLatitude={location.frontmatter.location.latitude} destinationLongitude={location.frontmatter.location.longitude} />
               <div dangerouslySetInnerHTML={{ __html: location.html }} />
               <h2>Routes around {location.frontmatter.title}</h2>
               <div className='w-full flex flex-wrap justify-around'>
@@ -89,7 +90,11 @@ export const query = graphql`
         travelTime
         type
         excerpt
+        location {
+          latitude
+          longitude
         }
+      }
       html
     }
     allMarkdownRemark(filter: {frontmatter: {overview: {startPoint: {eq: $location}}}}) {

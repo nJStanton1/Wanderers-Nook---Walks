@@ -111,9 +111,9 @@ export const GoogleDirectionsButton = ({ destinationLatitude, destinationLongitu
     const originLatitude="53.481515300969875"
     const originLongitude="-2.2370461506010977"
     // Add origin to string
-    googleMapsURL = googleMapsURL + "&origin=" + {originLatitude} + "%2C" + {originLongitude}
+    googleMapsURL = googleMapsURL + `&origin=${originLatitude}%2C${originLongitude}`
     // Add destination to string
-    googleMapsURL = googleMapsURL + "&destination=" + {destinationLatitude} + "%2C" + {destinationLongitude}
+    googleMapsURL = googleMapsURL + `&destination=${destinationLatitude}%2C${destinationLongitude}`
     // Add travel mode
     googleMapsURL = googleMapsURL + "&travelmode=transit"
     return (
