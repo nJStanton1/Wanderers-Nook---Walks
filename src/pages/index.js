@@ -3,7 +3,6 @@ import * as React from 'react'
 import { Layout, Padding } from '../components/layout'
 import { StaticImage } from 'gatsby-plugin-image'
 import Seo from '../components/seo'
-import { Link } from 'gatsby'
 import HighlightedRoutesGallery from '../components/highlighted-routes-gallery'
 import { InternalSearchButton } from '../components/button'
 
