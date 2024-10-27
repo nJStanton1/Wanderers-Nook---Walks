@@ -105,3 +105,23 @@ ExternalMapButton.propTypes = {
     text: PropTypes.string.isRequired,
     linkTo: PropTypes.string.isRequired
 }
+
+export const GoogleDirectionsButton = ({ destinationLatitude, destinationLongitude }) => {
+    let googleMapsURL = "https://www.google.com/maps/dir/?api=1"
+    const originLatitude="53.481515300969875"
+    const originLongitude="-2.2370461506010977"
+    // Add origin to string
+    googleMapsURL = googleMapsURL + "&origin=" + {originLatitude} + "%2C" + {originLongitude}
+    // Add destination to string
+    googleMapsURL = googleMapsURL + "&destination=" + {destinationLatitude} + "%2C" + {destinationLongitude}
+    // Add travel mode
+    googleMapsURL = googleMapsURL + "&travelmode=transit"
+    return (
+        <ExternalMapButton linkTo={googleMapsURL} text='Get directions here' />
+    )
+}
+
+GoogleDirectionsButton.propTypes = {
+    destinationLatitude: PropTypes.number.isRequired,
+    destinationLongitude: PropTypes.number.isRequired
+}

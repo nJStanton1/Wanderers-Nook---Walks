@@ -12,7 +12,6 @@ function LocationPage ({ data, pageContext }) {
     const routes = data.allMarkdownRemark.nodes
     const {slug} = pageContext
     
-    console.log(slug)
     return (
       <Layout>
         <div className="w-full flex-col">
@@ -28,6 +27,7 @@ function LocationPage ({ data, pageContext }) {
                   ))
                 }
               </div>
+              
               <div dangerouslySetInnerHTML={{ __html: location.html }} />
               <h2>Routes around {location.frontmatter.title}</h2>
               <div className='w-full flex flex-wrap justify-around'>
