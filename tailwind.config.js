@@ -21,7 +21,8 @@ module.exports = {
         'second-green':'#868254',
         'third-green':'#B2A769',
         'accent-red':'#AF6246',
-        'accent-purple' : '#762D6A',
+        'accent-red-dark':'#92523A',
+        'accent-purple':'#762D6A',
         'blue':'#75BBFF',
         'grey':'#75786A'
       }

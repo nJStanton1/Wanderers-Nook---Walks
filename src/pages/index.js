@@ -5,6 +5,7 @@ import { StaticImage } from 'gatsby-plugin-image'
 import Seo from '../components/seo'
 import { Link } from 'gatsby'
 import HighlightedRoutesGallery from '../components/highlighted-routes-gallery'
+import { InternalSearchButton } from '../components/button'
 
 // Define components
 const IndexPage = () => {
@@ -35,24 +36,15 @@ const IndexPage = () => {
           <p className='w-full'>All my walks are accessible by public transport, with some starting in the centre. This way, there's no fuel price, or finding parking space on summer days.</p>
           <p className='w-full'>I recommend searching by area. You can choose something close or far and see what scenery you might see.</p>
           <div className='flex flex-wrap justify-around md:justify-start md:flex-row-reverse py-4'>
-            <Link to='/routes' className='flex px-2 py-1 mb-2 md:mb-0 md:mr-2 items-center rounded-full bg-accent-red'>
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" className="flex size-6 stroke-white">
-                <path strokeLinecap="round" strokeLinejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
-              </svg>
-              <span className='flex text-left ml-2 mr-1 text-white text-base md:text-lg'>Explore all hikes</span>
-            </Link>
-            <Link to='/locations' className='flex justify-self-center px-2 py-1 md:mr-2  items-center rounded-full bg-accent-red'>
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" className="flex size-6 stroke-white">
-                <path strokeLinecap="round" strokeLinejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
-              </svg>
-              <span className='flex text-left ml-2 mr-1 text-white text-base md:text-lg'>Explore by area</span>
-            </Link>
+            <InternalSearchButton linkTo="/routes" text="Explore all hikes" />
+            <InternalSearchButton linkTo="/locations" text="Explore by area" />
           </div>
           <div className='w-full mt-1'>
             <h3 className=''>Highlighted hikes</h3>
             <HighlightedRoutesGallery />
           </div>
         </div>
+
         {/* <div className='w-full'>
           <h2 className=''>Articles</h2>
           <p className='w-full'>I have written various articles on the hikes I have done. These can be great for finding walks when you don't know what to look for.</p>
