@@ -53,7 +53,7 @@ const IndexPage = () => {
             <HighlightedRoutesGallery />
           </div>
         </div>
-        <div className='w-full'>
+        {/* <div className='w-full'>
           <h2 className=''>Articles</h2>
           <p className='w-full'>I have written various articles on the hikes I have done. These can be great for finding walks when you don't know what to look for.</p>
           <p className='w-full'>Some of these detail planning hikes. I plan to do some on gear and what to bring in future.</p>
@@ -68,7 +68,7 @@ const IndexPage = () => {
           <div className='w-full mt-1'>
             <h3 className=''>Highlighted articles</h3>
           </div>
-        </div>
+        </div> */}
       </Padding>
     </Layout>
   )

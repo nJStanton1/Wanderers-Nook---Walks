@@ -76,7 +76,7 @@ export default class Navbar extends React.Component {
                     <NavbarLink to={'/routes'} title={'Routes'} />
                     <NavbarLink to={'/locations'} title={'Locations'} />
                     <NavbarLink to={'/about'} title={'About Me'} />
-                    <NavbarLink to={'/blog'} title={'Blog'} />
+                    {/* <NavbarLink to={'/blog'} title={'Blog'} /> */}
                 </div>
                 
             </nav>
