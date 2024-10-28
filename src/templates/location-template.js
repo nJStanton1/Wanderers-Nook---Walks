@@ -29,7 +29,7 @@ function LocationPage ({ data, pageContext }) {
                 }
               </div>
               <GoogleDirectionsButton destinationLatitude={location.frontmatter.location.latitude} destinationLongitude={location.frontmatter.location.longitude} />
-              <div dangerouslySetInnerHTML={{ __html: location.html }} />
+              <div className="mt-4" dangerouslySetInnerHTML={{ __html: location.html }} />
               <h2>Routes around {location.frontmatter.title}</h2>
               <div className='w-full flex flex-wrap justify-around'>
               {
