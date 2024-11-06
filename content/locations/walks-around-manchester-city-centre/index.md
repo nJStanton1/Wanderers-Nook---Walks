@@ -13,6 +13,26 @@ type:
   - Metrolink
   - Bus
   - Car
+transportType:
+  - type: Train
+    transportDetail: Served by two main stations, Victoria and Piccadilly, the city
+      centre has regular service from all over the country.. The rail network is
+      surprisingly well spread, being a legacy from the Industrial Revolution,
+      where the outer mill towns needed regular service.
+  - type: Metrolink
+    transportDetail: The Metrolink network serves much of Greater Manchester. Its
+      best feature is its regularity. With one every 12 minutes on every line,
+      you don't even really need to plan, just turn up and one will be there
+      shortly.
+  - type: Bus
+    transportDetail: The Greater Manchester Bee Network means all buses into the
+      centre are £2 for a single, and £5 for a day rover, which gets you on any
+      bus all day. The network serves most of Manchester, and is regular during
+      peak times. Just heck ahead on a weekend as services are less common, but
+      normally at least hourly.
+  - type: Car
+    transportDetail: Driving to Manchester is easy. There is paid parking all around
+      the centre. Just follow the signs to Manchester.
 ---
 ## Best Views:
 

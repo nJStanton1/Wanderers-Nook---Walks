@@ -13,6 +13,24 @@ type:
   - Train
   - Bus
   - Car
+transportType:
+  - type: Train
+    transportDetail: Disley is reachable from **Manchester Piccadilly**. It's a half
+      hour journey, but watching the view from the window graduate from city
+      centre to countryside makes it worthwhile. The station itself has few
+      amenities, but the village centre is a couple hundred metres away with
+      cafés and micropubs. The station has several trails heading straight out
+      into the countryside.
+  - type: Bus
+    transportDetail: Going by bus will take some time. The Skyline 199 bus route
+      goes from Stockport Interchange. It's a fairly quick trip once you're on
+      this bus. Stockport Interchange is well served by buses from around
+      Manchester. Disley is within Manchester's Bee Network, and the cheap day
+      rover will get you there and back for £5.
+  - type: Car
+    transportDetail: Driving to Disley is straightforward down the A6. Parking is
+      possible around the town, but is mostly pay and display. The nearby
+      National Trust site Lyme Park has parking, but this is paid for.
 ---
 ## Best Views:
 

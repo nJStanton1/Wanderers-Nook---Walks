@@ -11,6 +11,15 @@ excerpt: The quaint town of Littleborough features Hollingworth Lake, rolling
 type:
   - Train
   - Car
+transportType:
+  - type: Train
+    transportDetail: Littleborough is reachable from **Manchester Victoria**. It's a
+      quick journey straight out through Rochdale. The trains are served fairly
+      regularly, at least once an hour, and it's a fairly cheap return ticket.
+  - type: Car
+    transportDetail: Driving out to Littleborough is an easy route. Parking there is
+      easy, as the town is big enough, and popular enough, to have public pay
+      and display car parks in the town.
 ---
 ## Overview
 

@@ -12,6 +12,17 @@ excerpt: An old mill village that remains somewhat off the beaten track. Sat
 type:
   - Bus
   - Car
+transportType:
+  - type: Bus
+    transportDetail: Irwell Vale is difficult to access. The X41 runs from the
+      centre of Manchester and takes you to the closest bus stop. It runs on
+      Manchester's Bee Network, which makes it a cheap way to get there. Make
+      sure you look up the route and directions first though, so you know what
+      direction to go.
+  - type: Car
+    transportDetail: Driving is the best way to get to Irwell Vale. It's so far off
+      the beaten path. This isn't too long a drive, as you head straight up the
+      motorway from the centre.
 ---
 ## Overview:
 

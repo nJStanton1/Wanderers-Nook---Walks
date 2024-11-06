@@ -12,6 +12,21 @@ type:
   - Train
   - Bus
   - Car
+transportType:
+  - type: Train
+    transportDetail: Served by **Manchester Piccadilly**, Reddish Vale County Park
+      is only 20 minutes from the centre. Be careful to note, though, that the
+      closest station is Brinnington (BNT). This station is surrounded by the
+      Park, and you can walk in almost any direction and end up in the middle of
+      it.
+  - type: Bus
+    transportDetail: Several bus routes reach Reddish Vale. From the centre, the 203
+      runs from Piccadilly. It leaves you a 15-minute walk from most of the
+      walks in the area.
+  - type: Car
+    transportDetail: Driving there is, one of the easiest ways. The visitor centre
+      at Mill Lane has a car park. This is the main one. There are two others,
+      one on Tiviot Way and one off Woodhall Drive.
 ---
 ## Overview
 

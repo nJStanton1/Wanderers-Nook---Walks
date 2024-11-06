@@ -12,6 +12,16 @@ excerpt: The surprisingly remote Styal, sandwiched between Wilmslow and the
 type:
   - Train
   - Car
+transportType:
+  - type: Train
+    transportDetail: The train directly to Styal is only an hourly service, running
+      from Manchester Piccadilly. It passes through Manchester Airport. Often,
+      the quickest way is to transfer trains at Manchester Airport. This can
+      make it awkward for some, but also makes it slightly cheaper and quicker.
+  - type: Car
+    transportDetail: Driving is the easiest and most convenient way to travel to
+      Styal. There is limited free parking around the Town, and a paid car park
+      at Quarry Bank Mill.
 ---
 ## Highlights:
 

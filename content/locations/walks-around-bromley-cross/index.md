@@ -1,6 +1,7 @@
 ---
 template: location-template
 title: Bromley Cross
+heroImage: logo.png
 location:
   latitude: 53.614224243648124
   longitude: -2.410525586639659
@@ -10,6 +11,17 @@ excerpt: Bromley Cross offers a mixture of reservoirs and moors. A peaceful
 type:
   - Train
   - Car
+transportType:
+  - type: Train
+    transportDetail: Bromley Cross is reachable from **Manchester Victoria**
+      station. The trip will generally take around 25–30 minutes. The route is
+      run every hour, or every half hour in peak times. It is a fairly scenic
+      journey once you pass Bolton, and my preferred method of travel for this
+      location.
+  - type: Car
+    transportDetail: The local railway station does have temporary free parking. The
+      rest of the village has some free parking and some pay and display
+      parking.
 ---
 ## Overview
 

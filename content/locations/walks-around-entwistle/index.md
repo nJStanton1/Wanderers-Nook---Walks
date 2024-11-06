@@ -12,6 +12,16 @@ excerpt: Entwistle is a small village, with one great pub and many, many great
 type:
   - Train
   - Car
+transportType:
+  - type: Train
+    transportDetail: Entwistle is reachable from **Manchester Victoria** station.
+      The trip will generally take around 30 minutes. The route is run every
+      hour, or every half hour in peak times. It is a fairly scenic journey once
+      you pass Bolton, and my preferred method of travel for this location.
+  - type: Car
+    transportDetail: There is limited parking by the station pub. The area close to
+      the station is difficult to reach. Several of the reservoirs nearby have
+      pay and display parking for visitors.
 ---
 ## Overview
 

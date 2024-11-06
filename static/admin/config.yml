@@ -1,8 +1,8 @@
-#local_backend: true # Comment out when not in use
+local_backend: true # Comment out when not in use
 
 backend:
   name: git-gateway
-  branch: main # original: main
+  branch: expand-transport-types # original: main
 
 media_folder: static/img
 public_folder: /img
@@ -89,7 +89,7 @@ collections:
     fields:
       - { label: 'Template', name: 'template', widget: 'hidden', default: 'location-template'}
       - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Hero Image', name: 'heroImage', widget: 'image', allow_multiple: false }
+      - { label: 'Hero Image', name: 'heroImage', widget: 'image', allow_multiple: false, required: false }
       - label: "Location"
         name: "location"
         widget: "object"
@@ -102,6 +102,24 @@ collections:
       - { label: 'Travel time', name: 'travelTime', hint: 'Given in minutes, or hours:minutes format.', widget: 'string', pattern: ['^([\d]{1,2})([:][0-5][0-9])?$', Must be minutes up to 99 or HH:mm format.] }
       - { label: 'Excerpt', name: 'excerpt', widget: 'string', pattern: ['^(.){10,160}$', "Must have between 10 and 160 characters"]}
       - { label: 'Reachable by', name: 'type', widget: 'select', options: ["Train", "Metrolink", "Bus", "Car"], multiple: true, min: 1}
+      - label: 'Transport Types'
+        name: 'transportType'
+        widget: 'list'
+        required: true
+        allow_add: true
+        collapsed: true
+        summary: '{{fields.type}}'
+        label_singular: 'Transport Type'
+        min: 1
+        fields:
+          - { label: 'Transportation Type', name: 'type', widget: 'select', options: ["Train", "Metrolink", "Bus", "Car"], multiple: false, required: true}
+          - label: 'Detail'
+            name: 'transportDetail'
+            widget: 'markdown'
+            minimal: true
+            buttons: ['bold', 'italic', 'link', 'bulleted-list', 'numbered-list']
+            editor_components: []
+            modes: ['rich_text']
       - { label: 'Body', name: 'body', widget: 'markdown' }
 
   - name: 'upcoming'

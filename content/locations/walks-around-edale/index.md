@@ -11,6 +11,18 @@ excerpt: Edale is a quaint village in the Hope Valley. The ideal place to
 type:
   - Train
   - Car
+transportType:
+  - type: Train
+    transportDetail: Edale is reachable by train from **Manchester Piccadilly**. It
+      is one of the most scenic train journeys through country parks and the
+      Peak District. The service is hourly, and runs early and late. There is a
+      café at the station, and it's next to a pub. It is a longer journey, at
+      about 45 mins, however the beer garden nearby is well worth getting the
+      train to enjoy.
+  - type: Car
+    transportDetail: Driving to Edale is scenic, but a long drive from Manchester
+      Centre. There is a pay and display car park just for tourists in the local
+      area.
 ---
 ## Highlights:
 
