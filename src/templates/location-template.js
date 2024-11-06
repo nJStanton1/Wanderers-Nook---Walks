@@ -6,6 +6,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { RouteCard } from "../components/route-card";
 import TransportIcon from "../components/transport-icon";
 import { GoogleDirectionsButton } from "../components/button";
+import {micromark} from 'micromark'
 const {getSlug} = require('../components/helperFunctions')
 
 function LocationPage ({ data }) {
@@ -20,29 +21,43 @@ function LocationPage ({ data }) {
           </div>
           <Padding>
             <h1>{location.frontmatter.title}</h1>
-              <div className='w-full inline-flex my-2 gap-x-3 justify-center md:justify-start'>
-                {
-                  location.frontmatter.type.map(type => (
-                    <TransportIcon type={type} size={60}/>
-                  ))
-                }
-              </div>
-              <GoogleDirectionsButton destinationLatitude={location.frontmatter.location.latitude} destinationLongitude={location.frontmatter.location.longitude} />
-              <div className="mt-4" dangerouslySetInnerHTML={{ __html: location.html }} />
-              <h2>Routes around {location.frontmatter.title}</h2>
-              <div className='w-full flex flex-wrap justify-around'>
+            <p className="pb-2">{location.frontmatter.excerpt}</p>
+            <h2>Getting there</h2>
+            <div className='w-full mt-2'>
               {
-                routes.map(route => (
-                  <RouteCard 
-                    key={route.id} 
-                    linkTo={"/routes/"+getSlug(route.fileAbsolutePath)} 
-                    heroImage={route.frontmatter.heroImage}
-                    title={route.frontmatter.title}
-                    length={route.frontmatter.overview.length}
-                    excerpt={route.frontmatter.overview.excerpt}/>
+                location.frontmatter.transportType.map(transport => (
+                  <div className="w-full mb-2">
+                    <h3 className="pt-0 pb-1">{transport.type}</h3>
+                    <div className="w-full flex flex-row">
+                      
+                      <TransportIcon type={transport.type} size={60}/>
+                      <div className="ml-4" dangerouslySetInnerHTML={{__html: micromark(transport.transportDetail)}}/>
+                    </div>
+                    
+                  </div>
+                  
                 ))
               }
-              </div>
+            </div>
+            <p className="mt-4 pb-0">To get directions from your location to {location.frontmatter.title}, click here.</p>
+            <GoogleDirectionsButton destinationLatitude={location.frontmatter.location.latitude} destinationLongitude={location.frontmatter.location.longitude} />
+            
+            <div className="mt-4" dangerouslySetInnerHTML={{ __html: location.html }} />
+            
+            <h2>Routes around {location.frontmatter.title}</h2>
+            <div className='w-full flex flex-wrap justify-around'>
+            {
+              routes.map(route => (
+                <RouteCard 
+                  key={route.id} 
+                  linkTo={"/routes/"+getSlug(route.fileAbsolutePath)} 
+                  heroImage={route.frontmatter.heroImage}
+                  title={route.frontmatter.title}
+                  length={route.frontmatter.overview.length}
+                  excerpt={route.frontmatter.overview.excerpt}/>
+              ))
+            }
+            </div>
             </Padding>
         </div>
       </Layout>
@@ -87,7 +102,10 @@ export const query = graphql`
           }
         }
         travelTime
-        type
+        transportType {
+          type
+          transportDetail
+        }
         excerpt
         location {
           latitude
