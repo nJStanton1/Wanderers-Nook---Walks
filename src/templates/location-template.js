@@ -8,10 +8,9 @@ import TransportIcon from "../components/transport-icon";
 import { GoogleDirectionsButton } from "../components/button";
 const {getSlug} = require('../components/helperFunctions')
 
-function LocationPage ({ data, pageContext }) {
+function LocationPage ({ data }) {
     const location = data.markdownRemark
     const routes = data.allMarkdownRemark.nodes
-    const {slug} = pageContext
     
     return (
       <Layout>

@@ -66,7 +66,7 @@ export default class Navbar extends React.Component {
                   className='max-w-12 md:max-w-none max-h-12 md:max-h-24 m-1'
                   objectFit='contain'
                   alt=""
-                  src="../images/WNLogo.svg">
+                  src="../../static/logos/Logo.svg">
                 </StaticImage>
                 <div className="flex flex-grow justify-end">
                     <NavbarToggle isOpen={this.state.menuOpen} callback={this.toggle} />

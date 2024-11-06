@@ -1,7 +1,6 @@
 ---
 template: location-template
 title: Bromley Cross
-heroImage: WNLogo.svg
 location:
   latitude: 53.614224243648124
   longitude: -2.410525586639659

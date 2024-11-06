@@ -16,7 +16,7 @@ const IndexPage = () => {
         <StaticImage
           className='w-full max-h-60 md:max-h-80'
           alt=""
-          src="../images/Me.jpg"
+          src="../../static/images/Me.jpg"
           object-position="50% 10%"
         />
         <h1 className='absolute bottom-0 inset-x-0 flex px-3 justify-center md:justify-start bg-gradient-to-t from-zinc-900'>

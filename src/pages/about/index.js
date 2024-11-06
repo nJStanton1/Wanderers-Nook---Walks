@@ -3,7 +3,6 @@ import * as React from 'react'
 import {Layout, Padding} from '../../components/layout'
 import Seo from '../../components/seo'
 import { StaticImage } from 'gatsby-plugin-image'
-import { Link } from 'gatsby'
 import { InternalSearchButton } from "../../components/button"
 
 // Define components
@@ -25,7 +24,7 @@ const AboutPage = () => {
                     <StaticImage 
                         className='w-full flex self-center aspect-square max-w-80 max-h-80'
                         objectFit='contain'
-                        src="../../images/WNLogo.svg"
+                        src="../../../static/logos/Logo-4x.png"
                     />
                 </div>
             </div>       
@@ -41,7 +40,7 @@ const AboutPage = () => {
                     <StaticImage 
                         className='w-full flex self-center aspect-square max-w-80 max-h-80'
                         objectFit='contain'
-                        src="../../images/about-me.jpg"
+                        src="../../../static/images/about-me.jpg"
                     />
                 </div>
             </div>
