@@ -22,16 +22,18 @@ function LocationPage ({ data }) {
           <Padding>
             <h1>{location.frontmatter.title}</h1>
             <p className="pb-2">{location.frontmatter.excerpt}</p>
-            <h2>Getting there</h2>
+            
+            <div className="mt-4" dangerouslySetInnerHTML={{ __html: location.html }} />
+            
+            <h2 className="mt-4">Getting there</h2>
             <div className='w-full mt-2'>
               {
                 location.frontmatter.transportType.map(transport => (
-                  <div className="w-full mb-2">
-                    <h3 className="pt-0 pb-1">{transport.type}</h3>
-                    <div className="w-full flex flex-row">
-                      
-                      <TransportIcon type={transport.type} size={60}/>
-                      <div className="ml-4" dangerouslySetInnerHTML={{__html: micromark(transport.transportDetail)}}/>
+                  <div className="w-full flex flex-col md:flex-row mb-2">
+                    <TransportIcon type={transport.type} size={60}/>
+                    <div className="w-full">
+                      <h3 className="ml-0 md:ml-4 pt-0 pb-1">{transport.type}</h3>
+                      <div className="ml-4 text-left" dangerouslySetInnerHTML={{__html: micromark(transport.transportDetail)}}/>
                     </div>
                     
                   </div>
@@ -39,12 +41,10 @@ function LocationPage ({ data }) {
                 ))
               }
             </div>
-            <p className="mt-4 pb-0">To get directions from your location to {location.frontmatter.title}, click here.</p>
-            <GoogleDirectionsButton destinationLatitude={location.frontmatter.location.latitude} destinationLongitude={location.frontmatter.location.longitude} />
-            
-            <div className="mt-4" dangerouslySetInnerHTML={{ __html: location.html }} />
-            
-            <h2>Routes around {location.frontmatter.title}</h2>
+            <p className="mt-4 pb-03">This button will open Google Maps directions to {location.frontmatter.title}.</p>
+            <GoogleDirectionsButton className='justify-self-end md:justify-self-auto' destinationLatitude={location.frontmatter.location.latitude} destinationLongitude={location.frontmatter.location.longitude} />
+
+            <h2 className="mt-4">Routes around {location.frontmatter.title}</h2>
             <div className='w-full flex flex-wrap justify-around'>
             {
               routes.map(route => (
