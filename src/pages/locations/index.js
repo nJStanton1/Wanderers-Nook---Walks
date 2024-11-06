@@ -66,7 +66,7 @@ const LocationPage = ({data}) => {
                       linkTo={"/locations/" + getSlug(location.fileAbsolutePath)}
                       heroImage={location.frontmatter.heroImage}
                       title={location.frontmatter.title}
-                      types={location.frontmatter.type}
+                      types={location.frontmatter.transportType.map(transportType => (transportType.type))}
                       travelTime={location.frontmatter.travelTime}
                       excerpt={location.frontmatter.excerpt}
                    />
@@ -107,7 +107,10 @@ export const query = graphql`
         frontmatter {
           title
           travelTime
-          type
+          transportType {
+            type
+            transportDetail
+          }
           excerpt
           location {
             latitude
