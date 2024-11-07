@@ -5,9 +5,7 @@ import Seo from '../components/seo'
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { RouteCard } from "../components/route-card";
 import TransportIcon from "../components/transport-icon";
-import { GoogleDirectionsButton } from "../components/button";
-import {micromark} from 'micromark'
-import { GettingThereCard } from '../components/getting-there-card'
+import GettingThereCard from '../components/getting-there-card'
 const {getSlug} = require('../components/helperFunctions')
 
 function LocationPage ({ data }) {
@@ -32,24 +30,7 @@ function LocationPage ({ data }) {
             
             <div className="mt-4" dangerouslySetInnerHTML={{ __html: location.html }} />
             
-            <h2 className="mt-4">Getting there</h2>
-            <div className='w-full mt-2'>
-              {
-                location.frontmatter.transportType.map(transport => (
-                  <div className="w-full flex flex-col md:flex-row mb-2">
-                    <TransportIcon type={transport.type} size={60}/>
-                    <div className="w-full">
-                      <h3 className="ml-0 md:ml-4 pt-0 pb-1">{transport.type}</h3>
-                      <div className="ml-4 text-left" dangerouslySetInnerHTML={{__html: micromark(transport.transportDetail)}}/>
-                    </div>
-                    
-                  </div>
-                  
-                ))
-              }
-            </div>
-            <p className="mt-4 pb-03">This button will open Google Maps directions to {location.frontmatter.title}.</p>
-            <GoogleDirectionsButton className='justify-self-end md:justify-self-auto' destinationLatitude={location.frontmatter.location.latitude} destinationLongitude={location.frontmatter.location.longitude} />
+            <GettingThereCard location={location.frontmatter.title} />
 
             <h2 className="mt-4">Routes around {location.frontmatter.title}</h2>
             <div className='w-full flex flex-wrap justify-around'>

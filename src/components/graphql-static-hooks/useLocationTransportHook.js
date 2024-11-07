@@ -21,6 +21,6 @@ export const useLocationTransportHook = (location) => {
         }
     `)
 
-    const found = allMarkdownRemark.nodes.find(({ node }) => node.title === location)
+    const found = allMarkdownRemark.nodes.find(({ frontmatter }) => frontmatter.title === location)
     return found
 }
