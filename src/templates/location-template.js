@@ -21,7 +21,13 @@ function LocationPage ({ data }) {
           </div>
           <Padding>
             <h1>{location.frontmatter.title}</h1>
-            <p className="pb-2">{location.frontmatter.excerpt}</p>
+            <p className="pb-4 text-xl">{location.frontmatter.excerpt}</p>
+            <div className="w-full gap-x-0 md:gap-x-3 flex flex-row justify-around md:justify-normal">
+              {location.frontmatter.transportType.map(transport => (
+                <TransportIcon type={transport.type} size={60}/>
+              ))}
+            </div>
+            <p className="mt-4 text-2xl font-medium">Routes available: {data.allMarkdownRemark.totalCount}</p>
             
             <div className="mt-4" dangerouslySetInnerHTML={{ __html: location.html }} />
             
@@ -131,6 +137,7 @@ export const query = graphql`
         }
         fileAbsolutePath
       }
+      totalCount
     }
   }
 `
