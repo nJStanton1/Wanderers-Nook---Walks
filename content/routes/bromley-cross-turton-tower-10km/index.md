@@ -1,6 +1,7 @@
 ---
 template: route-template
-featured: true
+title: Turton Tower
+featured: false
 heroImage: turton-tower-hero.jpg
 overview:
   length: 9.7
@@ -46,14 +47,13 @@ route:
         in my short blog, so if you're interested, you can view it at this link:
         [Turton Tower](https://turtontower.com/)"
       title: Turton Tower
-    - content: "From Turton Tower, you'll walk through the
-        gardens. It's a well maintained garden that is worth a visit by itself.
-        From the end, you'll cross the railway and head up a reasonably steep
-        hill. It gives magnificent views, so be sure to turn around
-        occasionally. I found there was a patch of woodland that felt ancient.
-        It's not huge, but the trees have a feel about them. If you've ever
-        looked into reading the environment, it's a good spot to test your
-        skills."
+    - content: From Turton Tower, you'll walk through the gardens. It's a well
+        maintained garden that is worth a visit by itself. From the end, you'll
+        cross the railway and head up a reasonably steep hill. It gives
+        magnificent views, so be sure to turn around occasionally. I found there
+        was a patch of woodland that felt ancient. It's not huge, but the trees
+        have a feel about them. If you've ever looked into reading the
+        environment, it's a good spot to test your skills.
       title: Heading into the Moors
     - content: At the top of the hill, you'll be on the moors with views down over
         Bolton, and back to Jumbles. Ahead of you is Winter Hill. A landmark for
@@ -83,5 +83,4 @@ route:
 
         And with that, you're back into Bromley Cross. Enjoy the local pub, or get the train back. The choice is yours.
       title: The Posh Bit
-title: Turton Tower
 ---
