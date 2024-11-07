@@ -7,6 +7,7 @@ import { RouteCard } from "../components/route-card";
 import TransportIcon from "../components/transport-icon";
 import { GoogleDirectionsButton } from "../components/button";
 import {micromark} from 'micromark'
+import { GettingThereCard } from '../components/getting-there-card'
 const {getSlug} = require('../components/helperFunctions')
 
 function LocationPage ({ data }) {
