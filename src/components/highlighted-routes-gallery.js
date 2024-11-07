@@ -25,7 +25,6 @@ const HighlightedRoutesGallery = () => {
                                 length={highlight.frontmatter.overview.length}
                                 className='snap-always snap-center' />
                         </div>
-
                     ))}
                 </div>
             </div>
@@ -37,29 +36,24 @@ const HighlightedRoutesGallery = () => {
 }
 
   // Define prop types
-HighlightedRoutesGallery.propTypes = {
-    example: PropTypes.string.isRequired,
-}
+HighlightedRoutesGallery.propTypes = {}
 
 const HighlightRouteCard = ({ linkTo, heroImage, title, length }) => {
     return(
         <Link to={linkTo} className='overflow-hidden max-w-xs md:max-w-none m-3 w-96 relative h-64 border-2 border-accent-red'>
             {heroImage && <GatsbyImage className='absolute min-h-full min-w-full inset-0' image={getImage(heroImage)} alt=''/> }
-            <h3 className='absolute bottom-0 left-0 px-2 py-0'>{title}</h3>
-            {length && <p className='absolute bottom-0 right-0 px-2 py-0'>{length}km</p>}
+            <h3 className='absolute bottom-0 left-0 pb-1 pl-2 pt-0 w-4/5 leading-none'>{title}</h3>
+            {length && <p className='absolute bottom-0 right-0 pr-2 pb-1 w-1/5 text-right font-medium'>{length}km</p>}
         </Link>
         
     )
 }
 
 HighlightRouteCard.propTypes = {
-    key: PropTypes.string.isRequired,
     linkTo: PropTypes.string.isRequired,
     heroImage: PropTypes.string,
     title: PropTypes.string.isRequired,
     length: PropTypes.string,
-    startPoint: PropTypes.string,
-    excerpt: PropTypes.string.isRequired,
 }
 
   // Exports
