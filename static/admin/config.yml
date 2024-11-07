@@ -1,8 +1,8 @@
-local_backend: true # Comment out when not in use
+# local_backend: true # Comment out when not in use
 
 backend:
   name: git-gateway
-  branch: expand-transport-types # original: main
+  branch: main # original: main
 
 media_folder: static/img
 public_folder: /img
@@ -101,7 +101,6 @@ collections:
           - {label: "Longitude", name: "longitude", widget: "number", value_type: 'float', step: 0.000001, min: -180, max: 180}
       - { label: 'Travel time', name: 'travelTime', hint: 'Given in minutes, or hours:minutes format.', widget: 'string', pattern: ['^([\d]{1,2})([:][0-5][0-9])?$', Must be minutes up to 99 or HH:mm format.] }
       - { label: 'Excerpt', name: 'excerpt', widget: 'string', pattern: ['^(.){10,160}$', "Must have between 10 and 160 characters"]}
-      - { label: 'Reachable by', name: 'type', widget: 'select', options: ["Train", "Metrolink", "Bus", "Car"], multiple: true, min: 1}
       - label: 'Transport Types'
         name: 'transportType'
         widget: 'list'
