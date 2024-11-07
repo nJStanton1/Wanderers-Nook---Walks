@@ -6,6 +6,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import ImageGalleryCaptions from "../components/image-gallery";
 import RouteOverviewGallery from "../components/route-overview-gallery";
 import {micromark} from 'micromark'
+import GettingThereCard from '../components/getting-there-card'
 
 function RoutePage ({ data }) {
     const route = data.markdownRemark
@@ -52,6 +53,8 @@ function RoutePage ({ data }) {
             <h2 className="mt-4 mb-6">Image Gallery</h2>
             <ImageGalleryCaptions images={route.frontmatter.galleryImages}/>
           </div>}
+
+          <GettingThereCard location={route.frontmatter.overview.startPoint} title="Getting to the start"/>
         
         </Padding>
       </Layout>
