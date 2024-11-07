@@ -92,13 +92,8 @@ export const query = graphql`
         travelTime
         transportType {
           type
-          transportDetail
         }
         excerpt
-        location {
-          latitude
-          longitude
-        }
       }
       html
     }
