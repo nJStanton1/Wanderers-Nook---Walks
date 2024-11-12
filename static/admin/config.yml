@@ -1,11 +1,16 @@
-# local_backend: true # Comment out when not in use
+local_backend: true # Comment out when not in use
 
 backend:
   name: git-gateway
-  branch: main # original: main
+  branch: decap-revisions # original: main
+  
+publish_mode: editorial_workflow
+display_url: https://wanderersnook.co.uk/
 
 media_folder: static/img
 public_folder: /img
+editor:
+  preview: false
 
 collections:
   - name: 'routes'
@@ -19,8 +24,14 @@ collections:
     media_folder: ''
     public_folder: ''
     path: '{{slug}}/index'
-    editor:
-      preview: true
+    sortable_fields: ['title', 'overview.length', 'overview.timeAllowed', 'overview.elevation']
+    view_groups:
+      - label: Location
+        field: overview.startPoint
+    view_filters:
+      - label: 'Highlighted'
+        field: featured
+        pattern: true
     fields:
       - { label: 'Template', name: 'template', widget: 'hidden', default: 'route-template'}
       - { label: 'Title', name: 'title', widget: 'string' }
@@ -86,6 +97,7 @@ collections:
     media_folder: ''
     public_folder: ''
     path: '{{slug}}/index'
+    sortable_fields: ['title', 'travelTime']
     fields:
       - { label: 'Template', name: 'template', widget: 'hidden', default: 'location-template'}
       - { label: 'Title', name: 'title', widget: 'string' }
