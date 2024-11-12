@@ -7,7 +7,7 @@ const NotFoundPage = () => {
     <Layout>
       <h1 className="mt-10">Oops. The dreaded 404.</h1>
       <p>Sorry, this page doesn't exist. The button below takes you back home.</p>
-      <InternalButton text='Go home' linkTo=""/>
+      <InternalButton text='Go home' linkTo="/"/>
     </Layout>
   )
 }
