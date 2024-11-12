@@ -9,6 +9,8 @@ display_url: https://wanderersnook.co.uk/
 
 media_folder: static/img
 public_folder: /img
+editor:
+  preview: false
 
 collections:
   - name: 'routes'
@@ -22,8 +24,6 @@ collections:
     media_folder: ''
     public_folder: ''
     path: '{{slug}}/index'
-    editor:
-      preview: false
     fields:
       - { label: 'Template', name: 'template', widget: 'hidden', default: 'route-template'}
       - { label: 'Title', name: 'title', widget: 'string' }
@@ -89,8 +89,6 @@ collections:
     media_folder: ''
     public_folder: ''
     path: '{{slug}}/index'
-    editor:
-      preview: false
     fields:
       - { label: 'Template', name: 'template', widget: 'hidden', default: 'location-template'}
       - { label: 'Title', name: 'title', widget: 'string' }
@@ -137,8 +135,6 @@ collections:
     media_folder: ''
     public_folder: ''
     path: '{{slug}}/index'
-    editor:
-      preview: false
     fields:
       - { label: 'Template', name: 'template', widget: 'hidden', default: 'upcoming-template'}
       - { label: 'Title', name: 'title', widget: 'string' }
@@ -177,8 +173,6 @@ collections:
     media_folder: ''
     public_folder: ''
     path: '{{slug}}/index'
-    editor:
-      preview: false
     fields:
       - { label: 'Template', name: 'template', widget: 'hidden', default: 'article-template'}
       - { label: 'Title', name: 'title', widget: 'string' }
