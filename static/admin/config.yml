@@ -1,8 +1,8 @@
-local_backend: true # Comment out when not in use
+# local_backend: true # Comment out when not in use
 
 backend:
   name: git-gateway
-  branch: decap-revisions # original: main
+  branch: main # original: main
   
 publish_mode: editorial_workflow
 display_url: https://wanderersnook.co.uk/
