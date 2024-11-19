@@ -97,7 +97,7 @@ const RouteOverviewGallery = ({ distance, elevation, time, startingPoint, endPoi
                 <div className="flex flex-col">
                   <h3 className="p-0 leading-none text-start">Terrain</h3>
                   <p className="p-0 text-start">{terrain}
-                    <button type='button' className="relative inline-flex justify-center">
+                    <button type='button' ontouchstart="" className="relative inline-flex justify-center">
                         <TooltipIcon className='inline-block flex-none size-4 ml-1 peer'/>
                         <span className="absolute w-60 top-5 text-center rounded z-10 bg-blue border border-white p-1 text-sm leading-tight text-white scale-0 transition-transform duration-500 peer-active:scale-100">{TerrainDescriptions[terrain]}</span>
                     </button>
