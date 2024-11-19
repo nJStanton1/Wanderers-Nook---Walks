@@ -95,7 +95,7 @@ const RouteOverviewGallery = ({ distance, elevation, time, startingPoint, endPoi
                     <MapIcon className='flex-none size-10 md:size-14 mr-3 md:mr-4'/>
                     <div className="flex flex-col ">
                     <h3 className="p-0 leading-none text-start">OS Map</h3>
-                    <a href={osMap} className='underline text-start'>View map here</a>
+                    <a href={osMap} className='underline text-start'>View here</a>
                     </div>
                 </div>
             }
