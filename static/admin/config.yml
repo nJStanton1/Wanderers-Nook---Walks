@@ -187,4 +187,11 @@ collections:
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Hero Image', name: 'heroImage', widget: 'image', allow_multiple: false }
       - { label: 'Featured', name: 'featured', widget: 'boolean', default: false}
-      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - label: 'Content'
+        name: 'body'
+        required: true
+        widget: 'markdown'
+        minimal: true
+        buttons: ['bold', 'italic', 'link', 'quote', 'bulleted-list', 'numbered-list', 'heading-two', 'heading-three', 'heading-four', 'heading-five', 'heading-six']
+        editor_components: ['image']
+        modes: ['rich_text']
