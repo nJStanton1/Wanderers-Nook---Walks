@@ -8,16 +8,18 @@ import MapIcon from "../../static/icons/map-icon.svg"
 import ElevationIcon from "../../static/icons/elevation-icon.svg"
 import CircularIcon from "../../static/icons/circular-route-icon.svg"
 import EndIcon from "../../static/icons/end-icon.svg"
+import TerrainIcon from "../../static/icons/terrain-icon.svg"
 import { GetLocationSlug } from './graphql-static-hooks/useLocationLinkHook'
 import { Link } from 'gatsby'
 
 const {timeAllowedCalculation} = require('../components/helperFunctions')
 
 // Define components
-const RouteOverviewGallery = ({ distance, elevation, time, startingPoint, endPoint, osMap }) => {
+const RouteOverviewGallery = ({ distance, elevation, time, startingPoint, endPoint, osMap, terrain }) => {
     // Do working if needed here
     const timeAllowed = time ? time : timeAllowedCalculation(distance, elevation)
 
+    // Steepness calculations
     const gradientConstant = 0.1 // Constant for finding gradient from 
     const gradientBreakpoint = 1.75 // Breakpoints for gradient 
     const gradientRating = Math.ceil(gradientConstant * elevation / (distance * gradientBreakpoint))
@@ -56,6 +58,14 @@ const RouteOverviewGallery = ({ distance, elevation, time, startingPoint, endPoi
             break;
     }
     
+    // Terrain information
+    const TerrainDescriptions = {
+        'Paved': "Predominantly paved paths or boardwalks, featuring well-defined stairs or ramps for elevation changes, ensuring a smooth and accessible hiking experience.",
+        'Trail': "Primarily composed of dirt and gravel, these trails are even underfoot with distinct paths that may be slightly rough. Steep sections are equipped with steps for easier navigation.",
+        'Natural': "Clear but unmaintained trails made of dirt, rock, or sand. While generally firm, they lack stairs for elevation and may include some off-trail hiking.",
+        'Rugged': "Characterized by uneven terrain that may require navigation skills, this category includes steep inclines with loose or slippery surfaces, making for a challenging hike.",
+        'Scramble': "Largely off-trail, these routes require self-navigation and may involve using hands and feet to traverse steep, challenging terrain."
+    };
     
     //Return final layout here
     return (
@@ -76,6 +86,16 @@ const RouteOverviewGallery = ({ distance, elevation, time, startingPoint, endPoi
                 <div className="flex flex-col">
                   <h3 className="p-0 leading-none text-start">Elevation</h3>
                   <p className="p-0 text-start">{steepness}</p>
+                </div>
+              </div>
+            }
+
+            {terrain && 
+              <div className="inline-flex items-start">
+                <TerrainIcon className='flex-none size-10 md:size-14 mr-3 md:mr-4'/>
+                <div className="flex flex-col">
+                  <h3 className="p-0 leading-none text-start">Terrain</h3>
+                  <p className="p-0 text-start">{terrain}</p>
                 </div>
               </div>
             }
