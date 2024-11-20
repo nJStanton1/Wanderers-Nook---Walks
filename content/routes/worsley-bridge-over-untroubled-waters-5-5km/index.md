@@ -10,6 +10,7 @@ overview:
   length: 5.5
   osMapLink: https://explore.osmaps.com/route/23998452/wn-bridge-over-untroubled-waters?lat=53.498190&lon=-2.402710&zoom=14.5753&style=Standard&type=2d
   startPoint: Worsley
+  terrain: "Paved"
   excerpt: A leafy, pleasant walk alongside Bridgewater Canal. Take a gulp of
     fresh air, spot herons and swans, and learn a little about Worsley's
     industrial heritage.

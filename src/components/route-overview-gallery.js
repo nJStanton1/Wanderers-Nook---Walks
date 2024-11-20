@@ -8,44 +8,112 @@ import MapIcon from "../../static/icons/map-icon.svg"
 import ElevationIcon from "../../static/icons/elevation-icon.svg"
 import CircularIcon from "../../static/icons/circular-route-icon.svg"
 import EndIcon from "../../static/icons/end-icon.svg"
+import TerrainIcon from "../../static/icons/terrain-icon.svg"
+import TooltipIcon from "../../static/icons/tooltip-icon.svg"
 import { GetLocationSlug } from './graphql-static-hooks/useLocationLinkHook'
 import { Link } from 'gatsby'
 
 const {timeAllowedCalculation} = require('../components/helperFunctions')
 
 // Define components
-const RouteOverviewGallery = ({ distance, elevation, time, startingPoint, endPoint, osMap }) => {
+const RouteOverviewGallery = ({ distance, elevation, time, startingPoint, endPoint, osMap, terrain }) => {
     // Do working if needed here
-    const timeAllowed = time ? time : timeAllowedCalculation(distance, elevation )
+    const timeAllowed = time ? time : timeAllowedCalculation(distance, elevation)
+
+    // Steepness calculations
+    const gradientConstant = 0.1 // Constant for finding gradient from 
+    const gradientBreakpoint = 1.75 // Breakpoints for gradient 
+    const gradientRating = Math.ceil(gradientConstant * elevation / (distance * gradientBreakpoint))
+    let steepness = ""
+    switch (gradientRating) {
+        case 0:
+        case 1:
+            steepness = "Flat"
+            break;
+        case 2:
+        case 3:
+            steepness = "Gentle"
+            break;
+        case 4:
+        case 5:
+        case 6:
+            steepness = "Small Hills"
+            break;
+        case 7:
+        case 8:
+        case 9:
+        case 10:
+            steepness = "Steep"
+            break;
+        case 11:
+        case 12:
+        case 13:
+        case 14:
+        case 15:
+        case 16:
+        case 17:
+            steepness = "Challenging"
+            break;
+        default:
+            steepness = "Well 'ard"
+            break;
+    }
+    
+    // Terrain information
+    const TerrainDescriptions = {
+        'Paved': "Predominantly paved paths or boardwalks, featuring well-defined stairs or ramps for elevation changes, ensuring a smooth and accessible hiking experience.",
+        'Trail': "Primarily composed of dirt and gravel, these trails are even underfoot with distinct paths that may be slightly rough. Steep sections are equipped with steps for easier navigation.",
+        'Natural': "Clear but unmaintained trails made of dirt, rock, or sand. While generally firm, they lack stairs for elevation and may include some off-trail hiking.",
+        'Rugged': "Characterized by uneven terrain that may require navigation skills, this category includes steep inclines with loose or slippery surfaces, making for a challenging hike.",
+        'Scramble': "Largely off-trail, these routes require self-navigation and may involve using hands and feet to traverse steep, challenging terrain."
+    };
     
     //Return final layout here
     return (
-        <div className="grid grid-cols-2 gap-2 mt-2">
+        <div className="grid grid-cols-2 gap-x-2 gap-y-4 md:gap-y-2 mt-2">
             {distance &&
                 <div className="inline-flex items-start">
-                    <DistanceIcon className='size-12 md:size-16 mr-2 md:mr-4'/>
+                    <DistanceIcon className='flex-none size-10 md:size-14 mr-3 md:mr-4'/>
                     <div className="flex flex-col items-start">
-                        <h3 className="p-0 text-start">Distance</h3>
+                        <h3 className="p-0 leading-none text-start">Distance</h3>
                         <p className="p-0 text-start">{distance}km</p>
                     </div>
                 </div>
             }
 
-            {elevation !== 0 && 
+            {steepness !== "" && 
               <div className="inline-flex items-start">
-                <ElevationIcon className='size-12 md:size-16 mr-2 md:mr-4'/>
+                <ElevationIcon className='flex-none size-10 md:size-14 mr-3 md:mr-4'/>
                 <div className="flex flex-col">
-                  <h3 className="p-0 text-start">Elevation</h3>
-                  <p className="p-0 text-start">{elevation}m</p>
+                  <h3 className="p-0 leading-none text-start">Elevation</h3>
+                  <p className="p-0 text-start">{steepness}
+                    <Link to='/info/elevation-difficulty/'>
+                        <TooltipIcon className='inline-block flex-none size-4 ml-1'/>
+                    </Link>
+                  </p>
+                </div>
+              </div>
+            }
+
+            {terrain && 
+              <div className="inline-flex items-start">
+                <TerrainIcon className='flex-none size-10 md:size-14 mr-3 md:mr-4'/>
+                <div className="flex flex-col">
+                  <h3 className="p-0 leading-none text-start">Terrain</h3>
+                  <p className="p-0 text-start">{terrain}
+                    <Link to='/info/terrain-difficulty/'>
+                        <TooltipIcon className='inline-block flex-none size-4 ml-1'/>
+                    </Link>
+                  </p>
                 </div>
               </div>
             }
 
             {timeAllowed &&
                 <div className="inline-flex items-start">
-                    <ClockIcon className='size-12 md:size-16 mr-2 md:mr-4'/>
+                    <ClockIcon className='flex-none size-10 md:size-14 mr-3 md:mr-4'/>
                     <div className="flex flex-col">
-                        <h3 className="p-0 text-start">Time</h3>
+                        <h3 className="p-0 leading-none text-start">Time</h3>
                         <p className="p-0 text-start">{timeAllowed} hrs</p>
                     </div>
                 </div>
@@ -53,19 +121,19 @@ const RouteOverviewGallery = ({ distance, elevation, time, startingPoint, endPoi
 
             {osMap && 
                 <div className="inline-flex items-start">
-                    <MapIcon className='size-12 md:size-16 mr-2 md:mr-4'/>
+                    <MapIcon className='flex-none size-10 md:size-14 mr-3 md:mr-4'/>
                     <div className="flex flex-col ">
-                    <h3 className="p-0 text-start">OS Map</h3>
-                    <a href={osMap} className='underline text-start'>View map here</a>
+                    <h3 className="p-0 leading-none text-start">OS Map</h3>
+                    <a href={osMap} className='underline text-start'>View here</a>
                     </div>
                 </div>
             }
 
             {startingPoint &&
                 <div className="inline-flex items-start">
-                    <PinIcon className='size-12 md:size-16 mr-2 md:mr-4'/>
+                    <PinIcon className='flex-none size-10 md:size-14 mr-3 md:mr-4'/>
                     <Link to={GetLocationSlug(startingPoint)} className="flex flex-col">
-                        <h3 className="p-0 text-start">Starts at</h3>
+                        <h3 className="p-0 leading-none text-start">Starts at</h3>
                         <p className="p-0 underline text-start">{startingPoint}</p>
                     </Link>
                 </div>
@@ -73,17 +141,17 @@ const RouteOverviewGallery = ({ distance, elevation, time, startingPoint, endPoi
 
             {endPoint ?
                 <div className="inline-flex items-start">
-                    <EndIcon className='size-12 md:size-16 mr-2 md:mr-4'/>
+                    <EndIcon className='flex-none size-10 md:size-14 mr-3 md:mr-4'/>
                     <Link to={GetLocationSlug(endPoint)} className="flex flex-col">
-                        <h3 className="p-0 text-start">Ends at</h3>
+                        <h3 className="p-0 leading-none text-start">Ends at</h3>
                         <p className="p-0 underline text-start">{endPoint}</p>
                     </Link>
                 </div>
                 :
                 <div className="inline-flex items-start">
-                    <CircularIcon className='size-12 md:size-16 mr-2 md:mr-4'/>
+                    <CircularIcon className='flex-none size-10 md:size-14 mr-3 md:mr-4'/>
                     <div className="flex flex-col">
-                        <h3 className="p-0 text-start">Route Type</h3>
+                        <h3 className="p-0 leading-none text-start">Route Type</h3>
                         <p className="p-0 text-start">Circular</p>
                     </div>
                 </div>

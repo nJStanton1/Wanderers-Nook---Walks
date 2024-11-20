@@ -44,11 +44,12 @@ collections:
         hint: 'This is information for the overview of the route page and SEO.'
         collapsed: true
         fields:
-          - { label: 'Length (km)', name: 'length', widget: 'number', value_type: 'float', step: 0.01 }
-          - { label: 'Elevation (m)', name: 'elevation', widget: 'number', value_type: 'float', step: 1, default: 0, required: false }
+          - { label: 'Length (km)', name: 'length', widget: 'number', value_type: 'float', step: 0.01, required: true }
+          - { label: 'Elevation (m)', name: 'elevation', widget: 'number', value_type: 'float', step: 1, default: 0, required: true }
+          - { label: 'Terrain', name: 'terrain', widget: 'select', options: ['Paved', 'Trail', 'Natural', 'Rugged', 'Scramble'], multiple: false, required: false }
           - { label: 'Time Allowed (Hrs)', name: 'timeAllowed', hint: 'Given hours:minutes format.', widget: 'string', pattern: ['^([\d]{1,2})([:][0-5][0-9]){1}$', Must be H:mm or HH:mm format.], required: false, default: "" }
           - { label: 'OS Map', name: 'osMapLink', widget: 'string', required: false }
-          - { label: 'Start Point', name: 'startPoint', widget: 'relation', collection: 'locations', value_field: 'title', search_fields: ['title']}
+          - { label: 'Start Point', name: 'startPoint', widget: 'relation', collection: 'locations', value_field: 'title', search_fields: ['title'], required: true}
           - { label: 'End Point', name: 'endPoint', widget: 'relation', collection: 'locations', value_field: 'title', search_fields: ['title'], hint: 'Not required. Use only for point to point walks.', required: false, default: ""}
           - { label: 'Brief description', name: 'excerpt', widget: 'string', pattern: ['^(.){10,160}$', "Must have between 10 and 160 characters"], required: false}
       - label: 'Route'

@@ -8,6 +8,7 @@ overview:
   elevation: 246
   osMapLink: https://explore.osmaps.com/route/22019512/wn-jumbles?lat=53.626168&lon=-2.427775&zoom=13.7257&style=Standard&type=2d
   startPoint: Bromley Cross
+  terrain: ""
   excerpt: Reservoirs, a tudor mansion, views over Winter Hill. Everything the old
     mill towns can offer! An easy going walk, with a cafe serving great cakes
     half way.

@@ -31,6 +31,7 @@ function RoutePage ({ data }) {
               startingPoint={route.frontmatter.overview.startPoint}
               endPoint={route.frontmatter.overview.endPoint}
               osMap={route.frontmatter.overview.osMapLink}
+              terrain={route.frontmatter.overview.terrain}
             />
           </div>
 
@@ -105,6 +106,7 @@ export const query = graphql`
           osMapLink
           startPoint
           endPoint
+          terrain
           excerpt
         }
         route {
