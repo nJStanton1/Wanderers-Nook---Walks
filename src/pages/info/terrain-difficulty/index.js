@@ -3,7 +3,7 @@ import * as React from 'react'
 import {Layout, Padding} from '../../../components/layout'
 import Seo from '../../../components/seo'
 import TerrainIcon from "../../../../static/icons/terrain-icon.svg"
-import { InternalButton } from '../../../components/button'
+import { InternalButton, BackButton } from '../../../components/button'
 
 // Define components
 const ElevationInfoPage = () => {
@@ -34,7 +34,8 @@ const ElevationInfoPage = () => {
             <p>Largely off-trail, these routes require self-navigation and may involve using hands and feet to traverse steep, challenging terrain.</p>
 
             <div className='w-full flex flex-row justify-center mt-6 md:mt-20'>
-                <InternalButton text='Return home' linkTo='/' />
+                <BackButton text='Previous page' />
+                <InternalButton text='Go to home' linkTo='/' />
             </div>
         </Padding>
         </Layout>

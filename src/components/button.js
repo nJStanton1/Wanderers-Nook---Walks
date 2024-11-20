@@ -1,6 +1,6 @@
 import React from 'react'
 import * as PropTypes from 'prop-types'
-import { Link } from 'gatsby'
+import { Link, navigate } from 'gatsby'
 import SearchIcon from "../../static/icons/search-button-icon.svg"
 import GoogleMapIcon from "../../static/icons/google-map-icon.svg"
 
@@ -34,6 +34,16 @@ export const ExternalButton = ({ text, linkTo }) => (
 ExternalButton.propTypes = {
     text: PropTypes.string.isRequired,
     linkTo: PropTypes.string.isRequired
+}
+
+export const BackButton = ({ text }) => (
+    <button onClick={() => navigate(-1)} className='inline-block px-3 py-1 m-2 text-base md:text-lg rounded-full bg-accent-red hover:bg-accent-red-dark'>
+        {text ? text : 'Go back'}
+    </button>
+)
+
+BackButton.propTypes = {
+    text: PropTypes.string,
 }
 
 export const PlaceholderSearchButton = ({ text }) => (

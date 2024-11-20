@@ -11,7 +11,7 @@ import EndIcon from "../../static/icons/end-icon.svg"
 import TerrainIcon from "../../static/icons/terrain-icon.svg"
 import TooltipIcon from "../../static/icons/tooltip-icon.svg"
 import { GetLocationSlug } from './graphql-static-hooks/useLocationLinkHook'
-import { Link,  } from 'gatsby'
+import { Link } from 'gatsby'
 
 const {timeAllowedCalculation} = require('../components/helperFunctions')
 

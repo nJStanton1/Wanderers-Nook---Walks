@@ -3,7 +3,7 @@ import * as React from 'react'
 import {Layout, Padding} from '../../../components/layout'
 import Seo from '../../../components/seo'
 import ElevationIcon from "../../../../static/icons/elevation-icon.svg"
-import { InternalButton } from '../../../components/button'
+import { InternalButton, BackButton } from '../../../components/button'
 
 // Define components
 const ElevationInfoPage = () => {
@@ -34,7 +34,8 @@ const ElevationInfoPage = () => {
             <p>Strenuous trails with steep inclines and challenging terrain that often require scrambling, promising a demanding workout.</p>
 
             <div className='w-full flex flex-row justify-center mt-6 md:mt-20'>
-                <InternalButton text='Return home' linkTo='/' />
+                <BackButton text='Previous page' />
+                <InternalButton text='Go to home' linkTo='/' />
             </div>
         </Padding>
         </Layout>
@@ -43,4 +44,4 @@ const ElevationInfoPage = () => {
 
 // Export component
 export default ElevationInfoPage
-export const Head = () => <Seo pageTitle="About Me" pageDescription={"Evaluating the elevation of hikes can be difficult. Here are my categories for evaluating walks."}/>
+export const Head = () => <Seo pageTitle="About Me" pageDescription={"Evaluating the terrain of hikes can be difficult. Here are my categories for evaluating walks."}/>
