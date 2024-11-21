@@ -8,7 +8,7 @@ const Seo = ({ pageTitle, pageDescription, pageURL, pageImage }) => {
   const metaTitle = pageTitle ? `${pageTitle} | ${siteMetadata.title}` : `${siteMetadata.title}`
   const metaDescription = pageDescription ? `${pageDescription}` : `${siteMetadata.description}`
   const metaImageAbsoluteURL = pageImage ? `${siteMetadata.siteUrl}/${pageImage}` : `${siteMetadata.siteUrl}/${siteMetadata.image}`
-  const metaPageUrl = pageURL ? `${siteMetadata.siteUrl}${pageURL}` : ``
+  const metaPageUrl = pageURL ? `${siteMetadata.siteUrl}${pageURL}/` : ``
 
   return (
     <>
