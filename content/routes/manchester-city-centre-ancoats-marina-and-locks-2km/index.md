@@ -10,6 +10,7 @@ overview:
   startPoint: Manchester City Centre
   excerpt: A short walk round the new developments along the canals of Islington
     and Ancoats. Very nice on a sunny day.
+  terrain: Paved
 route:
   overview: Starting near Piccadilly, you join the Rochdale Canal, then cross over
     to the Ashton Canal to come back. It's not long, and very easily walked with
