@@ -13,6 +13,7 @@ overview:
   excerpt: Passing the gorgeous Jumbles and Entwistle reservoirs, Turton Tower and
     Winter Hill, this route takes in a lot of everything that makes hiking great
     fun.
+  terrain: Natural
 route:
   overview: >-
     Starting at Entwistle Station, this route takes you to Bromley Cross
