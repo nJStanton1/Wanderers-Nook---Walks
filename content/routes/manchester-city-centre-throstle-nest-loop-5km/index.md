@@ -1,6 +1,17 @@
 ---
+template: route-template
+title: Throstle Nest Loop
 featured: false
 heroImage: img20240806111748.jpg
+overview:
+  length: 5.5
+  elevation: 0
+  osMapLink: https://explore.osmaps.com/route/22779908/wn-throstle-nest-loop?lat=53.471925&lon=-2.273851&zoom=14.2712&style=Standard&type=2d
+  startPoint: Manchester City Centre
+  excerpt: A gentle walk along Bridgewater Canal and the Irwell from Castlefield.
+    See Manchester's industrial past right in front of you, watched over by
+    swans.
+  terrain: Paved
 route:
   overview: This route starts and ends near Castlefield bowl. The nearby museum
     and Factory International have café outlets. This route makes a great and
@@ -77,14 +88,4 @@ galleryImages:
   - image: img20240806113129.jpg
   - image: img20240806114236.jpg
   - image: img20240806114859.jpg
-template: route-template
-title: Throstle Nest Loop
-overview:
-  length: 5.5
-  elevation: 0
-  osMapLink: https://explore.osmaps.com/route/22779908/wn-throstle-nest-loop?lat=53.471925&lon=-2.273851&zoom=14.2712&style=Standard&type=2d
-  startPoint: Manchester City Centre
-  excerpt: A gentle walk along Bridgewater Canal and the Irwell from Castlefield.
-    See Manchester's industrial past right in front of you, watched over by
-    swans.
 ---
