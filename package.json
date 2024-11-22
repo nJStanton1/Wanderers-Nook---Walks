@@ -28,6 +28,7 @@
     "gatsby-source-filesystem": "^5.13.1",
     "gatsby-transformer-remark": "^6.13.1",
     "gatsby-transformer-sharp": "^5.13.1",
+    "html-react-parser": "^5.1.18",
     "js-yaml": "^4.1.0",
     "leaflet": "^1.9.3",
     "mathjs": "^13.0.1",

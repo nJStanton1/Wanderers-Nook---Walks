@@ -25,7 +25,7 @@ const ImageGalleryCaptions = ({ images }) => {
 
     //Return final layout here
     return (
-        <div className='w-full grid grid-cols-1 gap-2 md:grid-cols-3'>
+        <div className='w-full grid grid-cols-1 md:gap-2 md:grid-cols-3'>
             <div className='flex flex-col col-span-1'>
                 {imagesColumn1.images.map(galleryImage => (
                     <div className='flex flex-col relative mb-2'>

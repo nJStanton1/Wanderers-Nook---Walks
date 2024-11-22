@@ -59,15 +59,6 @@ const RouteOverviewGallery = ({ distance, elevation, time, startingPoint, endPoi
             break;
     }
     
-    // Terrain information
-    const TerrainDescriptions = {
-        'Paved': "Predominantly paved paths or boardwalks, featuring well-defined stairs or ramps for elevation changes, ensuring a smooth and accessible hiking experience.",
-        'Trail': "Primarily composed of dirt and gravel, these trails are even underfoot with distinct paths that may be slightly rough. Steep sections are equipped with steps for easier navigation.",
-        'Natural': "Clear but unmaintained trails made of dirt, rock, or sand. While generally firm, they lack stairs for elevation and may include some off-trail hiking.",
-        'Rugged': "Characterized by uneven terrain that may require navigation skills, this category includes steep inclines with loose or slippery surfaces, making for a challenging hike.",
-        'Scramble': "Largely off-trail, these routes require self-navigation and may involve using hands and feet to traverse steep, challenging terrain."
-    };
-    
     //Return final layout here
     return (
         <div className="grid grid-cols-2 gap-x-2 gap-y-4 md:gap-y-2 mt-2">
