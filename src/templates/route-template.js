@@ -17,7 +17,7 @@ function RoutePage ({ data }) {
     return (
       <Layout>
         <div className="flex flex-col max-h-72 md:max-h-96 w-full relative">
-          {route.frontmatter.heroImage && <GatsbyImage image={getImage(route.frontmatter.heroImage)}/>} 
+          {route.frontmatter.heroImage && <GatsbyImage image={getImage(route.frontmatter.heroImage)} alt=""/>} 
         </div>
 
         <Padding>
@@ -40,9 +40,9 @@ function RoutePage ({ data }) {
           <div className="mt-10">
             <h2>The Route</h2>
             <p className="mb-8">{guide.overview}</p>
-            {guide.sections && guide.sections.map( section => (
-              <div className="mb-8">
-                {section.image && <GatsbyImage image={getImage(section.image)} className="float-none md:float-right md:ml-6"/>}
+            {guide.sections && guide.sections.map( (section, i) => (
+              <div key={section + "-" + i} className="mb-8">
+                {section.image && <GatsbyImage image={getImage(section.image)} alt="" className="float-none md:float-right md:ml-6"/>}
                 <h3 className="md:pt-0">{section.title}</h3>
                 {parse(micromark(section.content).replaceAll("<a", `<a classname="underline"`))}
                 <div className="w-full clear-both h-8"/>

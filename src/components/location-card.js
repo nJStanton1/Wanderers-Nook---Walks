@@ -14,8 +14,8 @@ export const LocationCard = ({key, linkTo, heroImage, title, types, travelTime, 
             <h2 className='mx-2 text-3xl'>{title}</h2>
             <div className='px-2 w-full inline-flex'>
                 {
-                types.map(type => (
-                    <TransportIcon type={type} size={30}/>
+                types.map( (type, i) => (
+                    <TransportIcon key={i} type={type} size={30}/>
                 ))
                 }
             </div>

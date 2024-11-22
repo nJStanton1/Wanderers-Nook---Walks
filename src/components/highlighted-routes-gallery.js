@@ -3,7 +3,7 @@ import * as React from 'react'
 import * as PropTypes from 'prop-types'
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { Link } from 'gatsby'
-import RightArrowIcon from "../../static/icons/right-arrow.svg"
+import {ReactComponent as RightArrowIcon} from "../../static/icons/right-arrow.svg"
 const {getSlug} = require('./helperFunctions')
 
 // Define components
@@ -16,8 +16,8 @@ const HighlightedRoutesGallery = () => {
         <div className="mb-10">
             <div className="flex overflow-x-scroll snap-x snap-proximity hide-scrollbar">
                 <div className="flex flex-nowrap">
-                    {highlightedRoutes.map(highlight => (
-                        <div className="flex snap-center">
+                    {highlightedRoutes.map( (highlight, i) => (
+                        <div key={highlight + "-" + i} className="flex snap-center">
                             <HighlightRouteCard
                                 linkTo={"/routes/" + getSlug(highlight.fileAbsolutePath)}
                                 heroImage={highlight.frontmatter.heroImage}

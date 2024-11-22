@@ -45,8 +45,8 @@ const LocationPage = ({data}) => {
               />
               <FeatureGroup>
                 {
-                  nodes.map(location => (
-                    <Marker position={[location.frontmatter.location.latitude, location.frontmatter.location.longitude]}>
+                  nodes.map( (location, i) => (
+                    <Marker key={i} position={[location.frontmatter.location.latitude, location.frontmatter.location.longitude]}>
                       <Popup>
                         <span className='font-chillaxSB'>{location.frontmatter.title}</span> 
                         <br/>

@@ -21,6 +21,14 @@ module.exports = {
     "gatsby-transformer-sharp",
     "gatsby-plugin-decap-cms",
     {
+      resolve: "gatsby-plugin-svgr",
+      options: {
+        rule: {
+          include: /static/
+        }
+      }
+    },
+    {
       resolve: "gatsby-source-filesystem",
       options: {
         name: `decap-content`,
@@ -44,14 +52,6 @@ module.exports = {
           }
         }
       },
-    },
-    {
-      resolve: "gatsby-plugin-react-svg",
-      options: {
-        rule: {
-          include: /static/ // See below to configure properly
-        }
-      }
     },
     {
       resolve: 'gatsby-plugin-react-leaflet',

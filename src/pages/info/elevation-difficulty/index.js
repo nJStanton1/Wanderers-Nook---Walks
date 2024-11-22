@@ -2,7 +2,7 @@
 import * as React from 'react'
 import {Layout, Padding} from '../../../components/layout'
 import Seo from '../../../components/seo'
-import ElevationIcon from "../../../../static/icons/elevation-icon.svg"
+import {ReactComponent as ElevationIcon} from "../../../../static/icons/elevation-icon.svg"
 import { InternalButton, BackButton } from '../../../components/button'
 
 // Define components
