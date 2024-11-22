@@ -2,11 +2,13 @@ import { Layout, Padding } from "../components/layout"
 import { graphql } from "gatsby"
 import * as React from 'react'
 import Seo from '../components/seo'
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import ImageGalleryCaptions from "../components/image-gallery";
-import RouteOverviewGallery from "../components/route-overview-gallery";
-import {micromark} from 'micromark'
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import ImageGalleryCaptions from "../components/image-gallery"
+import RouteOverviewGallery from "../components/route-overview-gallery"
 import GettingThereCard from '../components/getting-there-card'
+import {micromark} from 'micromark'
+import parse from 'html-react-parser'
+
 
 function RoutePage ({ data }) {
     const route = data.markdownRemark
@@ -42,7 +44,7 @@ function RoutePage ({ data }) {
               <div className="mb-8">
                 {section.image && <GatsbyImage image={getImage(section.image)} className="float-none md:float-right md:ml-6"/>}
                 <h3 className="md:pt-0">{section.title}</h3>
-                <div className="blog-content flex flex-col text-base md:text-xl text-center md:text-left" dangerouslySetInnerHTML={{__html: micromark(section.content)}}/>
+                {parse(micromark(section.content))}
                 <div className="w-full clear-both h-8"/>
               </div>
               
