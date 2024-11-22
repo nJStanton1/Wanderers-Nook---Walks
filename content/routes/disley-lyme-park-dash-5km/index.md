@@ -1,5 +1,6 @@
 ---
 template: route-template
+title: Lyme Park Dash
 featured: true
 heroImage: img20240519150123.jpg
 overview:
@@ -10,6 +11,7 @@ overview:
   excerpt: The quick saunter to Lyme Park. For those who just want to get to Lyme
     Park without using the roads. An easy path with a chance of seeing deer near
     The Cage.
+  terrain: Trail
 route:
   overview: Aimed at getting you to Lyme Park, this route is a nice balance of
     directness and using footpaths.
@@ -31,5 +33,4 @@ route:
 
 
         If you want more specifics, here is a link to the National Trust website for Lyme Park.[](https://www.nationaltrust.org.uk/visit/cheshire-greater-manchester/lyme)
-title: Lyme Park Dash
 ---
