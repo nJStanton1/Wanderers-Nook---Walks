@@ -8,7 +8,12 @@ const Seo = ({ pageTitle, pageDescription, pageURL, pageImage }) => {
   const metaTitle = pageTitle ? `${pageTitle} | ${siteMetadata.title}` : `${siteMetadata.title}`
   const metaDescription = pageDescription ? `${pageDescription}` : `${siteMetadata.description}`
   const metaImageAbsoluteURL = pageImage ? `${siteMetadata.siteUrl}/${pageImage}` : `${siteMetadata.siteUrl}/${siteMetadata.image}`
-  const metaPageUrl = pageURL ? `${siteMetadata.siteUrl}${pageURL}/` : ``
+  let metaPageUrl = null
+  if (pageURL === "/") {
+    metaPageUrl = `${siteMetadata.siteUrl}`
+  } else {
+    metaPageUrl = pageURL ? `${siteMetadata.siteUrl}${pageURL}/` : ``
+  }
 
   return (
     <>
@@ -18,25 +23,25 @@ const Seo = ({ pageTitle, pageDescription, pageURL, pageImage }) => {
       <meta name="author" content={siteMetadata.author}/>
       <meta httpEquiv="Content-Language" content="en"/> 
       <meta name="google" content={siteMetadata.siteSearch}/>
+      <link rel='icon' type='image/png' href={`${siteMetadata.siteUrl}/${siteMetadata.favicon}`}/>
 
       {/* Page specidic tags */}
       <title>{metaTitle}</title>
       <meta name="description" content={metaDescription} />
       {/* Canonical link is just the page's URL. Must be injected on page creation */}
-      <link rel="canonical" href={metaPageUrl} />    
+      {metaPageUrl && <link rel="canonical" href={metaPageUrl} />}    
 
       {/* Open Graph Tags */}
       <meta property="og:title" content={metaTitle} />
       <meta property="og:description" content={metaDescription} />
       {metaImageAbsoluteURL && <meta property="og:image" content={metaImageAbsoluteURL} />}
-      <meta property="og:url" content={metaPageUrl} />
+      {metaPageUrl && <meta property="og:url" content={metaPageUrl} />}
 
       {/* Twitter Card Tags */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={metaTitle}/>
       <meta name="twitter:description" content={metaDescription}/>
       {metaImageAbsoluteURL && <meta name="twitter:image" content={metaImageAbsoluteURL}/>}
-
     </>
   )
 }

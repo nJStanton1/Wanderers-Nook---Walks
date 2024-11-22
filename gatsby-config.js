@@ -10,6 +10,7 @@ module.exports = {
     author: 'Nathaniel J Stanton',
     description: 'Discover adventure in and around Manchester. Newcomers and veterans alike can find guides on exploring nature, history, and the great outdoors—all by public transport.',
     image: './static/logos/Logo.png', 
+    favicon: './static/logos/favicon.png',
     siteSearch: 'nositelinkssearchbox',
   },
   plugins: [
