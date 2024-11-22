@@ -29,7 +29,7 @@ const ImageGalleryCaptions = ({ images }) => {
             <div className='flex flex-col col-span-1'>
                 {imagesColumn1.images.map(galleryImage => (
                     <div className='flex flex-col relative mb-2'>
-                        <GatsbyImage image={getImage(galleryImage.image)} className='rounded-2xl relative' />
+                        <GatsbyImage image={getImage(galleryImage.image)} alt="" className='rounded-2xl relative' />
                         {galleryImage.caption && <p className='text-center absolute inset-x-0 bottom-0 rounded-b-2xl bg-gradient-to-t from-grey/60 from-50%'>{galleryImage.caption}</p>}
                     </div>
                     ))
@@ -38,7 +38,7 @@ const ImageGalleryCaptions = ({ images }) => {
             <div className='flex flex-col col-span-1'>
                 {imagesColumn3.images.map(galleryImage => (
                     <div className='flex flex-col relative mb-2'>
-                        <GatsbyImage image={getImage(galleryImage.image)} className='rounded-2xl relative' />
+                        <GatsbyImage image={getImage(galleryImage.image)} alt="" className='rounded-2xl relative' />
                         {galleryImage.caption && <p className='text-center absolute inset-x-0 bottom-0 rounded-b-2xl bg-gradient-to-t from-grey/60 from-50%'>{galleryImage.caption}</p>}
                     </div>
                     ))
@@ -47,7 +47,7 @@ const ImageGalleryCaptions = ({ images }) => {
             <div className='flex flex-col col-span-1'>
                 {imagesColumn2.images.map(galleryImage => (
                     <div className='flex flex-col relative mb-2'>
-                        <GatsbyImage image={getImage(galleryImage.image)} className='rounded-2xl relative' />
+                        <GatsbyImage image={getImage(galleryImage.image)} alt="" className='rounded-2xl relative' />
                         {galleryImage.caption && <p className='text-center absolute inset-x-0 bottom-0 rounded-b-2xl bg-gradient-to-t from-grey/60 from-50%'>{galleryImage.caption}</p>}
                     </div>
                     ))
