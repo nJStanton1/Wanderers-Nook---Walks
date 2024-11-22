@@ -16,8 +16,8 @@ const HighlightedRoutesGallery = () => {
         <div className="mb-10">
             <div className="flex overflow-x-scroll snap-x snap-proximity hide-scrollbar">
                 <div className="flex flex-nowrap">
-                    {highlightedRoutes.map(highlight => (
-                        <div className="flex snap-center">
+                    {highlightedRoutes.map( (highlight, i) => (
+                        <div key={highlight + "-" + i} className="flex snap-center">
                             <HighlightRouteCard
                                 linkTo={"/routes/" + getSlug(highlight.fileAbsolutePath)}
                                 heroImage={highlight.frontmatter.heroImage}

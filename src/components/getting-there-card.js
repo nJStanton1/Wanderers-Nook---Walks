@@ -16,8 +16,8 @@ const GettingThereCard = ({ location, title }) => {
         {title ? <h2 className="mt-4">{title}</h2> : <h2 className="mt-4">Getting there</h2>}
         <div className='w-full mt-2'>
             {
-            locationData.frontmatter.transportType.map(transport => (
-                <div className="w-full flex flex-col md:flex-row mb-2">
+            locationData.frontmatter.transportType.map( (transport, i) => (
+                <div key={transport.type + "-" + i} className="w-full flex flex-col md:flex-row mb-2">
                     <TransportIcon type={transport.type} size={60}/>
                     <div className="w-full">
                         <h3 className="ml-0 md:ml-4 pt-0 pb-1">{transport.type}</h3>

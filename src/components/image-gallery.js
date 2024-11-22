@@ -27,8 +27,8 @@ const ImageGalleryCaptions = ({ images }) => {
     return (
         <div className='w-full grid grid-cols-1 md:gap-2 md:grid-cols-3'>
             <div className='flex flex-col col-span-1'>
-                {imagesColumn1.images.map(galleryImage => (
-                    <div className='flex flex-col relative mb-2'>
+                {imagesColumn1.images.map( (galleryImage, i) => (
+                    <div key={"c1-" + i} className='flex flex-col relative mb-2'>
                         <GatsbyImage image={getImage(galleryImage.image)} alt="" className='rounded-2xl relative' />
                         {galleryImage.caption && <p className='text-center absolute inset-x-0 bottom-0 rounded-b-2xl bg-gradient-to-t from-grey/60 from-50%'>{galleryImage.caption}</p>}
                     </div>
@@ -36,8 +36,8 @@ const ImageGalleryCaptions = ({ images }) => {
                 }
             </div>
             <div className='flex flex-col col-span-1'>
-                {imagesColumn3.images.map(galleryImage => (
-                    <div className='flex flex-col relative mb-2'>
+                {imagesColumn3.images.map( (galleryImage, i) => (
+                    <div key={"c1-" + i} className='flex flex-col relative mb-2'>
                         <GatsbyImage image={getImage(galleryImage.image)} alt="" className='rounded-2xl relative' />
                         {galleryImage.caption && <p className='text-center absolute inset-x-0 bottom-0 rounded-b-2xl bg-gradient-to-t from-grey/60 from-50%'>{galleryImage.caption}</p>}
                     </div>
@@ -45,8 +45,8 @@ const ImageGalleryCaptions = ({ images }) => {
                 }
             </div>
             <div className='flex flex-col col-span-1'>
-                {imagesColumn2.images.map(galleryImage => (
-                    <div className='flex flex-col relative mb-2'>
+                {imagesColumn2.images.map( (galleryImage, i) => (
+                    <div key={"c1-" + i} className='flex flex-col relative mb-2'>
                         <GatsbyImage image={getImage(galleryImage.image)} alt="" className='rounded-2xl relative' />
                         {galleryImage.caption && <p className='text-center absolute inset-x-0 bottom-0 rounded-b-2xl bg-gradient-to-t from-grey/60 from-50%'>{galleryImage.caption}</p>}
                     </div>

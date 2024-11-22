@@ -40,8 +40,8 @@ function RoutePage ({ data }) {
           <div className="mt-10">
             <h2>The Route</h2>
             <p className="mb-8">{guide.overview}</p>
-            {guide.sections && guide.sections.map( section => (
-              <div className="mb-8">
+            {guide.sections && guide.sections.map( (section, i) => (
+              <div key={section + "-" + i} className="mb-8">
                 {section.image && <GatsbyImage image={getImage(section.image)} alt="" className="float-none md:float-right md:ml-6"/>}
                 <h3 className="md:pt-0">{section.title}</h3>
                 {parse(micromark(section.content))}

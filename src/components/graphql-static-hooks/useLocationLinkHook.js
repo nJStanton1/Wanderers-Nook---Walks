@@ -14,9 +14,6 @@ export const useLocationHook = () => {
         }
     }
   `)
-  
-//   let routes = []
-//   allMarkdownRemark.nodes.map(route => routes.push(route.frontmatter.route))
   return allMarkdownRemark.nodes
 }
 
