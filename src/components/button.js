@@ -1,8 +1,8 @@
 import React from 'react'
 import * as PropTypes from 'prop-types'
 import { Link, navigate } from 'gatsby'
-import SearchIcon from "../../static/icons/search-button-icon.svg"
-import GoogleMapIcon from "../../static/icons/google-map-icon.svg"
+import {ReactComponent as SearchIcon} from "../../static/icons/search-button-icon.svg"
+import {ReactComponent as GoogleMapIcon} from "../../static/icons/google-map-icon.svg"
 
 export const PlaceholderButton = ({ text }) => (
     <div className='inline-block px-3 py-1 m-2 text-base md:text-lg rounded-full bg-accent-red hover:bg-accent-red-dark'>

@@ -1,9 +1,9 @@
 import React from 'react'
 import * as PropTypes from 'prop-types'
-import MetrolinkIcon from "../../static/icons/metrolink-icon.svg"
-import TrainIcon from "../../static/icons/train-icon.svg"
-import BusIcon from "../../static/icons/bus-icon.svg"
-import CarIcon from "../../static/icons/car-icon.svg"
+import {ReactComponent as MetrolinkIcon} from "../../static/icons/metrolink-icon.svg"
+import {ReactComponent as TrainIcon} from "../../static/icons/train-icon.svg"
+import {ReactComponent as BusIcon} from "../../static/icons/bus-icon.svg"
+import {ReactComponent as CarIcon} from "../../static/icons/car-icon.svg"
 
 const TransportIcon = ({type, size}) => {
     const SVGMapper = {

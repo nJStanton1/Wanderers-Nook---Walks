@@ -3,7 +3,7 @@ import * as React from 'react'
 import * as PropTypes from 'prop-types'
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { Link } from 'gatsby'
-import RightArrowIcon from "../../static/icons/right-arrow.svg"
+import {ReactComponent as RightArrowIcon} from "../../static/icons/right-arrow.svg"
 const {getSlug} = require('./helperFunctions')
 
 // Define components

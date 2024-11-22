@@ -2,7 +2,7 @@
 import * as React from 'react'
 import {Layout, Padding} from '../../../components/layout'
 import Seo from '../../../components/seo'
-import TerrainIcon from "../../../../static/icons/terrain-icon.svg"
+import {ReactComponent as TerrainIcon} from "../../../../static/icons/terrain-icon.svg"
 import { InternalButton, BackButton } from '../../../components/button'
 
 // Define components

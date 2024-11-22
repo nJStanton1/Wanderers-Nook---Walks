@@ -1,15 +1,15 @@
 // Imports
 import * as React from 'react'
 import * as PropTypes from 'prop-types'
-import DistanceIcon from "../../static/icons/distance-icon.svg"
-import ClockIcon from "../../static/icons/clock-icon.svg"
-import PinIcon from "../../static/icons/pin-icon.svg"
-import MapIcon from "../../static/icons/map-icon.svg"
-import ElevationIcon from "../../static/icons/elevation-icon.svg"
-import CircularIcon from "../../static/icons/circular-route-icon.svg"
-import EndIcon from "../../static/icons/end-icon.svg"
-import TerrainIcon from "../../static/icons/terrain-icon.svg"
-import TooltipIcon from "../../static/icons/tooltip-icon.svg"
+import {ReactComponent as DistanceIcon} from "../../static/icons/distance-icon.svg"
+import {ReactComponent as ClockIcon} from "../../static/icons/clock-icon.svg"
+import {ReactComponent as PinIcon} from "../../static/icons/pin-icon.svg"
+import {ReactComponent as MapIcon} from "../../static/icons/map-icon.svg"
+import {ReactComponent as ElevationIcon} from "../../static/icons/elevation-icon.svg"
+import {ReactComponent as CircularIcon} from "../../static/icons/circular-route-icon.svg"
+import {ReactComponent as EndIcon} from "../../static/icons/end-icon.svg"
+import {ReactComponent as TerrainIcon} from "../../static/icons/terrain-icon.svg"
+import {ReactComponent as TooltipIcon} from "../../static/icons/tooltip-icon.svg"
 import { GetLocationSlug } from './graphql-static-hooks/useLocationLinkHook'
 import { Link } from 'gatsby'
 
