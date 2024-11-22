@@ -1,6 +1,17 @@
 ---
+template: route-template
+title: Lyme Park Estate
 featured: false
 heroImage: img20240519150123.jpg
+overview:
+  length: 11.79
+  elevation: 350
+  osMapLink: https://explore.osmaps.com/route/21037021/disley-hike?lat=53.347513&lon=-2.054054&zoom=13.7507&style=Standard&type=2d
+  startPoint: Disley
+  excerpt: A long wander into the moors, through woods, and past a reservoir. Take
+    in views of rolling landscapes, try to spot deer and see the majestic Lyme
+    Hall.
+  terrain: Trail
 route:
   overview: This route starts and ends at Disley Train Station. The trains are
     normally about an hour apart, but run early and late. There are plenty of
@@ -76,14 +87,4 @@ galleryImages:
   - image: img20240804101132.jpg
   - image: img20240804102041.jpg
   - image: img20240804103202.jpg
-template: route-template
-title: Lyme Park Estate
-overview:
-  length: 11.79
-  elevation: 350
-  osMapLink: https://explore.osmaps.com/route/21037021/disley-hike?lat=53.347513&lon=-2.054054&zoom=13.7507&style=Standard&type=2d
-  startPoint: Disley
-  excerpt: A long wander into the moors, through woods, and past a reservoir. Take
-    in views of rolling landscapes, try to spot deer and see the majestic Lyme
-    Hall.
 ---
