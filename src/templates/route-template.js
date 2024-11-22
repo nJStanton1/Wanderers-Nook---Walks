@@ -44,7 +44,7 @@ function RoutePage ({ data }) {
               <div className="mb-8">
                 {section.image && <GatsbyImage image={getImage(section.image)} className="float-none md:float-right md:ml-6"/>}
                 <h3 className="md:pt-0">{section.title}</h3>
-                {parse(micromark(section.content))}
+                {parse(micromark(section.content).replaceAll("<a", `<a classname="underline"`))}
                 <div className="w-full clear-both h-8"/>
               </div>
               

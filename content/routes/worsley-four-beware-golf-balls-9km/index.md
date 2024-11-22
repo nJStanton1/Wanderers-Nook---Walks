@@ -1,6 +1,6 @@
 ---
 template: route-template
-title: FOUR! Beware golf balls
+title: FOUR! Beware Golf Balls
 featured: false
 heroImage: hero.jpg
 overview:
