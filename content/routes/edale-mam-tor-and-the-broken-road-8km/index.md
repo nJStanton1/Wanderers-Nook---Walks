@@ -1,6 +1,18 @@
 ---
+template: route-template
+title: Mam Tor and The Broken Road
 featured: false
 heroImage: img20240901131607.jpg
+overview:
+  length: 8
+  elevation: 415
+  timeAllowed: 3:00
+  osMapLink: https://explore.osmaps.com/route/23145280/wn-mam-tor-and-the-broken-road?lat=53.357962&lon=-1.819394&zoom=13.5745&style=Standard&type=2d
+  startPoint: Edale
+  excerpt: A moderately difficult walk with steep ascents rewarding you with
+    breathtaking views over the Hope Valley and the surreal area of The Broken
+    Road.
+  terrain: Natural
 route:
   overview: Starting off, you will head up towards Edale. You can get snacks and
     drinks from the café or shop here. You'll walk through the bottom of the
@@ -84,15 +96,4 @@ galleryImages:
   - image: img20240901143639.jpg
   - image: img20240901151309.jpg
   - image: img20240901152107.jpg
-template: route-template
-title: Mam Tor and The Broken Road
-overview:
-  length: 8
-  elevation: 415
-  timeAllowed: 3:00
-  osMapLink: https://explore.osmaps.com/route/23145280/wn-mam-tor-and-the-broken-road?lat=53.357962&lon=-1.819394&zoom=13.5745&style=Standard&type=2d
-  startPoint: Edale
-  excerpt: A moderately difficult walk with steep ascents rewarding you with
-    breathtaking views over the Hope Valley and the surreal area of The Broken
-    Road.
 ---
