@@ -48,7 +48,7 @@ BackButton.propTypes = {
 
 export const PlaceholderSearchButton = ({ text }) => (
     <div className='inline-flex px-3 py-1 m-2 text-base md:text-lg items-center rounded-full bg-accent-red hover:bg-accent-red-dark'>
-        <SearchIcon alt="Search icon" width="24px" height="24px"/>
+        <SearchIcon alt="Search icon" className="size-6"/>
         <span className='pl-1'>{text}</span>
     </div>
 )
@@ -59,7 +59,7 @@ PlaceholderSearchButton.propTypes = {
 
 export const InternalSearchButton = ({ text, linkTo }) => (
     <Link to={linkTo} className='inline-flex px-3 py-1 m-2 text-base md:text-lg items-center rounded-full bg-accent-red hover:bg-accent-red-dark'>
-        <SearchIcon alt="Search icon" width="24px" height="24px"/>
+        <SearchIcon alt="Search icon" className="size-6"/>
         <span className='pl-1'>{text}</span>
     </Link>
 )
@@ -71,7 +71,7 @@ InternalSearchButton.propTypes = {
 
 export const ExternalSearchButton = ({ text, linkTo }) => (
     <a href={linkTo} target="_blank" rel="noreferrer" className='inline-flex px-3 py-1 m-2 text-base md:text-lg items-center rounded-full bg-accent-red hover:bg-accent-red-dark'>
-        <SearchIcon alt="Search icon" width="24px" height="24px"/>
+        <SearchIcon alt="Search icon" className="size-6"/>
         <span className='pl-1'>{text}</span>
     </a>
 )
