@@ -1,6 +1,16 @@
 ---
+template: route-template
+title: Quarry Bank Woodland Walk
 featured: false
 heroImage: img20240910133215.jpg
+overview:
+  length: 2.54
+  elevation: 55
+  osMapLink: https://explore.osmaps.com/route/23367035/wn-quarry-bank-woodland-walk?lat=53.347110&lon=-2.251713&zoom=14.7972&style=Standard&type=2d
+  startPoint: Styal
+  excerpt: Lovely walk through the woodlands around Quarry Bank Mill. An easy
+    stroll with beautiful brick buildings and garden.
+  terrain: Trail
 route:
   overview: "Starting at Styal train station, this walk takes you through the old
     village, built in the 1820s. Through woodlands, over ornamental bridges and
@@ -81,13 +91,4 @@ galleryImages:
   - image: img20240910140747.jpg
     caption: Quarry Bank
   - image: img20240910133650.jpg
-template: route-template
-title: Quarry Bank Woodland Walk
-overview:
-  length: 2.54
-  elevation: 55
-  osMapLink: https://explore.osmaps.com/route/23367035/wn-quarry-bank-woodland-walk?lat=53.347110&lon=-2.251713&zoom=14.7972&style=Standard&type=2d
-  startPoint: Styal
-  excerpt: Lovely walk through the woodlands around Quarry Bank Mill. An easy
-    stroll with beautiful brick buildings and garden.
 ---
