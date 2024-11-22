@@ -39,7 +39,7 @@ const IndexPage = () => {
             <InternalSearchButton linkTo="/locations" text="Explore by area" />
           </div>
           <div className='w-full mt-1'>
-            <h3 className=''>Highlighted hikes</h3>
+            <h3 className=''>Highlighted Hikes</h3>
             <HighlightedRoutesGallery />
           </div>
         </div>
@@ -57,7 +57,7 @@ const IndexPage = () => {
             </Link>
           </div>
           <div className='w-full mt-1'>
-            <h3 className=''>Highlighted articles</h3>
+            <h3 className=''>Highlighted Articles</h3>
           </div>
         </div> */}
       </Padding>
