@@ -42,7 +42,7 @@ const HighlightRouteCard = ({ linkTo, heroImage, title, length }) => {
     return(
         <Link to={linkTo} className='overflow-hidden max-w-xs md:max-w-none m-3 w-96 relative h-64 border-2 border-accent-red'>
             {heroImage && <GatsbyImage className='absolute min-h-full min-w-full inset-0' image={getImage(heroImage)} alt=''/> }
-            <h3 className='absolute bottom-0 left-0 pb-1 pl-2 pt-0 w-4/5 leading-none'>{title}</h3>
+            <h3 className='absolute bottom-0 left-0 pb-1 pl-2 pt-0 w-4/5 text-left leading-none'>{title}</h3>
             {length && <p className='absolute bottom-0 right-0 pr-2 pb-1 w-1/5 text-right font-medium'>{length}km</p>}
         </Link>
         
