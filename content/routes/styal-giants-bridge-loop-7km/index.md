@@ -1,6 +1,17 @@
 ---
+template: route-template
+title: Giants Bridge Loop
 featured: false
 heroImage: hero.jpg
+overview:
+  length: 7.6
+  elevation: 167
+  osMapLink: https://explore.osmaps.com/route/23367121/wn-giants-bridge-loop?lat=53.347159&lon=-2.265135&zoom=14.4345&style=Standard&type=2d
+  startPoint: Styal
+  excerpt: A long stroll through the woodlands around Quarry Bank Mill. Following
+    the Bollin river, take in beautiful brick buildings, old woodlands and the
+    airport.
+  terrain: Trail
 route:
   overview: Starting at Styal train station, this walk takes you through the old
     village, built in the 1820s. Through woodlands, over ornamental bridges and
@@ -122,14 +133,4 @@ galleryImages:
     caption: Giant's Castle Bridge
   - image: img20240910160213.jpg
   - image: img20240910160559.jpg
-template: route-template
-title: Giants Bridge Loop
-overview:
-  length: 7.6
-  elevation: 167
-  osMapLink: https://explore.osmaps.com/route/23367121/wn-giants-bridge-loop?lat=53.347159&lon=-2.265135&zoom=14.4345&style=Standard&type=2d
-  startPoint: Styal
-  excerpt: A long stroll through the woodlands around Quarry Bank Mill. Following
-    the Bollin river, take in beautiful brick buildings, old woodlands and the
-    airport.
 ---
