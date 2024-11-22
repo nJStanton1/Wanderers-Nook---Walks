@@ -13,6 +13,7 @@ overview:
   excerpt: Worsley, the heart of the industrial revolution. See rejuvenated train
     lines, walk the golf course gauntlet, and absorb the serenity of Bridgewater
     Canal.
+  terrain: Trail
 route:
   overview: Worsley, the self-proclaimed heart of the industrial revolution.
     There's plenty of living history, Worsley have worked hard to preserve what
