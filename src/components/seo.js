@@ -23,7 +23,6 @@ const Seo = ({ pageTitle, pageDescription, pageURL, pageImage }) => {
       <meta name="author" content={siteMetadata.author}/>
       <meta httpEquiv="Content-Language" content="en"/> 
       <meta name="google" content={siteMetadata.siteSearch}/>
-      <link rel='icon' type='image/png' href={`${siteMetadata.siteUrl}/${siteMetadata.favicon}`}/>
 
       {/* Page specidic tags */}
       <title>{metaTitle}</title>
