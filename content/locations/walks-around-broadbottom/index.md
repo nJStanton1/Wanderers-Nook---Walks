@@ -22,6 +22,11 @@ transportType:
       nearby garden centre, which are pay and display. Broadbottom is not as far
       as you may expect, but the route to Broadbottom goes along a bust commuter
       route, so be prepared for some traffic at busy hours.
+  - type: Bus
+    transportDetail: The Manchester Bee Network does reach Broadbottom though it
+      can't be reached directly from the city centre. The best route from
+      Manchester city centre is to take the **201** to Hattersley. Then walk for
+      about half an hour, or catch the **341** from Hattersley to Broadbottom.
 ---
 ## Best Views:
 
