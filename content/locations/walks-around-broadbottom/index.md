@@ -11,12 +11,8 @@ excerpt: Broadbottom is a sleepy village with old mills, excellent viaducts,
   breathtaking views.
 transportType:
   - type: Train
-    transportDetail: >-
-      The train to Glossop and Hadfield passes through Broadbottom. It departs
-      from **Piccadilly** every half an hour most days.
-
-
-      View [train times here](traintimes.org.uk/Manchester/Broadbottom/09:00).
+    transportDetail: The train to Glossop and Hadfield passes through Broadbottom.
+      It departs from **Piccadilly** every half an hour most days.
   - type: Car
     transportDetail: There is a car park near the train station, and one at the
       nearby garden centre, which are pay and display. Broadbottom is not as far
@@ -32,7 +28,7 @@ transportType:
 
 * **Broadbottom Viaduct:** An increedibly tall viaduct that spans a steep ravine, that creates a striking landscape.
 * **Broadbottom Mills:** An old mill sits at the bottom of Broadbottom by the river. It has a small trail around it which walks you through the area's rich industrial heritage. It's quite an interesting stop for anyone in the area.
-* **Etherow Country Park:** A large country park south of Broadbottom which is a beautiful area to e
+* **Etherow Country Park:** A large country park south of Broadbottom which is a beautiful area to explore
 * **Ardotalia Roman Fort:** An ancient ruin that was excavated, it is one for the history nerds, that provides good views of the whole valley below.
 * **Abandoned Railway:** A bridleway running along the railway towards Glossop traces old rail lines that are still there in places, grown over by trees and vegetation. A nice, easy path that lets people explore the native area.
 
