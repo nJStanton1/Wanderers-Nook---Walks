@@ -4,6 +4,7 @@ import { Layout, Padding } from '../components/layout'
 import { StaticImage } from 'gatsby-plugin-image'
 import Seo from '../components/seo'
 import HighlightedRoutesGallery from '../components/highlighted-routes-gallery'
+import LocationMap from '../components/location-map'
 import { InternalSearchButton } from '../components/button'
 
 // Define components
@@ -29,19 +30,30 @@ const IndexPage = () => {
           <p className='w-full'>Welcome to the Nook! Here you'll find walks and adventures around Greater Manchester.</p>
           <p className='w-full'>I hope exploring my site will help you explore the outdoors.</p>
         </div>
+
         <div className='w-full'>
           <h2 className=''>Hikes</h2>
           <p className='w-full'>Are you a veteran hiker looking for new places to wander? A new hiker, who's always wanted to go outside more but never quite known where to go? You'll find a walk to suit you here.</p>
-          <p className='w-full'>All my walks are accessible by public transport, with some starting in the centre. This way, there's no fuel price, or finding parking space on summer days.</p>
-          <p className='w-full'>I recommend searching by area. You can choose something close or far and see what scenery you might see.</p>
+          <p className='w-full'>All my walks are accessible by public transport, with some starting in the centre. Travel details are included in all my walks.</p>
+          <p className='w-full'>Some of my favourite walks are below. Or you can view all my walks through the button.</p>
           <div className='flex flex-wrap justify-around md:justify-start md:flex-row-reverse py-4'>
             <InternalSearchButton linkTo="/routes" text="Explore all hikes" />
-            <InternalSearchButton linkTo="/locations" text="Explore by area" />
           </div>
           <div className='w-full mt-1'>
             <h3 className=''>Highlighted Hikes</h3>
             <HighlightedRoutesGallery />
           </div>
+        </div>
+
+        <div className='w-full'>
+          <h2 className=''>Locations</h2>
+          <p className='w-full'>If you are looking for a specific area to explore, you can see the different areas I have been to here.</p>
+          <p className='w-full'>Each location will have a few walks for you to check out, and details for how to get there are included.</p>
+          <p className='w-full'>Each pin will take you to see that location, or you can see all locations in a bit more detail.</p>
+          <div className='flex flex-wrap justify-around md:justify-start md:flex-row-reverse py-4'>
+            <InternalSearchButton linkTo="/locations" text="Explore all areas" />
+          </div>
+          <LocationMap/>
         </div>
 
         {/* <div className='w-full'>
