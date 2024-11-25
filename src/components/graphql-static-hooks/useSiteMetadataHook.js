@@ -9,7 +9,6 @@ export const useSiteMetadataHook = () => {
               description
               author
               image
-              favicon
               siteSearch
               siteUrl
             }
