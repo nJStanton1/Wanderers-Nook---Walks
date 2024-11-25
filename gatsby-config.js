@@ -20,6 +20,18 @@ module.exports = {
     "gatsby-transformer-sharp",
     "gatsby-plugin-decap-cms",
     {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: 'The Wanderer\'s Nook',
+        short_name: `The Nook`,
+        start_url: `/`,
+        background_color: `#5e5c3b`,
+        theme_color: `#868254`,
+        icon: "static/logos/favicon-32.png",
+        display: `standalone`,
+      }
+    },
+    {
       resolve: "gatsby-plugin-svgr",
       options: {
         rule: {
