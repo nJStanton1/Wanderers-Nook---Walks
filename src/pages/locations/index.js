@@ -2,9 +2,9 @@
 import * as React from 'react'
 import {Layout, Padding} from '../../components/layout'
 import Seo from '../../components/seo'
-import { graphql, Link } from 'gatsby'
+import { graphql } from 'gatsby'
 import { LocationCard } from '../../components/location-card'
-import { MapContainer, TileLayer, Marker, Popup, FeatureGroup } from 'react-leaflet'
+import LocationMap from '../../components/location-map'
 const {getSlug} = require('../../components/helperFunctions')
 
 // Define components
@@ -38,25 +38,7 @@ const LocationPage = ({data}) => {
             <p>Explore the various areas of Greater Manchester you can visit easily on the map below. Each pin can take you to an overview of the walks at that location.</p>
             <p>Below that, you can a short overview of all the locations I have visited.</p>
 
-            <MapContainer className='my-4' style={{ height: '500px' }} scrollWheelZoom={true} bounds={[[bottom,left],[top,right]]} boundsOptions={{padding: [20, 20]}}>
-              <TileLayer
-                attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-              />
-              <FeatureGroup>
-                {
-                  nodes.map( (location, i) => (
-                    <Marker key={i} position={[location.frontmatter.location.latitude, location.frontmatter.location.longitude]}>
-                      <Popup>
-                        <span className='font-chillaxSB'>{location.frontmatter.title}</span> 
-                        <br/>
-                        <Link to={"/locations/" + getSlug(location.fileAbsolutePath)} className='underline font-chillaxR'>Click here to view</Link>
-                      </Popup>
-                    </Marker>
-                  ))
-                }
-              </FeatureGroup>
-            </MapContainer>
+            <LocationMap />
 
             <div className='w-full flex flex-wrap justify-around lg:justify-between'>
             {
