@@ -68,7 +68,7 @@ route:
 
 
         Why this area is called The Hague, I do not know. But some of the cottages here are beautiful, and have great views over the farmland around the River Etherow.
-    - image: img20241123130332.jpg
+    - image: 1000024719.jpg
       title: Melandra Fort
       content: >-
         Turn left at the road you meet and follow it round till you see the old
