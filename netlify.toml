@@ -1,0 +1,8 @@
+[[plugins]]
+package = "@netlify/plugin-sitemap"
+    [plugins.inputs]
+    exclude = [
+        './static/admin/index.html'
+    ]
+    prettyURLs = true
+    trailingSlash = true
