@@ -13,7 +13,7 @@ function LocationPage ({ data }) {
   const routeCount = circularRoutes.totalCount + routesArriving.totalCount + routesLeaving.totalCount
   
   return (
-    <Layout>
+    <Layout subdomain="walks">
       <div className="w-full flex-col">
         <div className="flex flex-col max-h-60 md:max-h-80 w-full relative">
           {location.frontmatter.heroImage && <GatsbyImage image={getImage(location.frontmatter.heroImage)}/>}

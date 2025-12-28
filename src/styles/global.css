@@ -4,60 +4,6 @@
 
 @layer base {
     @font-face {
-        font-family: 'Chillax-Extralight';
-        src: url('../../static/fonts/Chillax-Extralight.woff2') format('woff2'),
-             url('../../static/fonts/Chillax-Extralight.woff') format('woff'),
-             url('../../static/fonts/Chillax-Extralight.ttf') format('truetype');
-        font-weight: 200;
-        font-display: swap;
-        font-style: normal;
-    }
-    @font-face {
-        font-family: 'Chillax-Light';
-        src: url('../../static/fonts/Chillax-Light.woff2') format('woff2'),
-             url('../../static/fonts/Chillax-Light.woff') format('woff'),
-             url('../../static/fonts/Chillax-Light.ttf') format('truetype');
-        font-weight: 300;
-        font-display: swap;
-        font-style: normal;
-    }
-    @font-face {
-        font-family: 'Chillax-Regular';
-        src: url('../../static/fonts/Chillax-Regular.woff2') format('woff2'),
-             url('../../static/fonts/Chillax-Regular.woff') format('woff'),
-             url('../../static/fonts/Chillax-Regular.ttf') format('truetype');
-        font-weight: 400;
-        font-display: swap;
-        font-style: normal;
-    }
-    @font-face {
-        font-family: 'Chillax-Medium';
-        src: url('../../static/fonts/Chillax-Medium.woff2') format('woff2'),
-             url('../../static/fonts/Chillax-Medium.woff') format('woff'),
-             url('../../static/fonts/Chillax-Medium.ttf') format('truetype');
-        font-weight: 500;
-        font-display: swap;
-        font-style: normal;
-    }
-    @font-face {
-        font-family: 'Chillax-Semibold';
-        src: url('../../static/fonts/Chillax-Semibold.woff2') format('woff2'),
-             url('../../static/fonts/Chillax-Semibold.woff') format('woff'),
-             url('../../static/fonts/Chillax-Semibold.ttf') format('truetype');
-        font-weight: 600;
-        font-display: swap;
-        font-style: normal;
-    }
-    @font-face {
-        font-family: 'Chillax-Bold';
-        src: url('../../static/fonts/Chillax-Bold.woff2') format('woff2'),
-             url('../../static/fonts/Chillax-Bold.woff') format('woff'),
-             url('../../static/fonts/Chillax-Bold.ttf') format('truetype');
-        font-weight: 700;
-        font-display: swap;
-        font-style: normal;
-    }
-    @font-face {
         font-family: 'Chillax-Variable';
         src: url('../../static/fonts/Chillax-Variable.woff2') format('woff2'),
              url('../../static/fonts/Chillax-Variable.woff') format('woff'),
@@ -69,50 +15,122 @@
     
 
     html {
-        @apply text-white
+        @apply text-white font-sans;
     }
 
-    @layer base {
-        h1 {
-            @apply text-3xl md:text-4xl lg:text-6xl text-center md:text-start py-2
-        }
-        h2 {
-            @apply text-2xl md:text-2xl lg:text-4xl text-center md:text-start py-2
-        }
-        h3 {
-            @apply text-lg md:text-xl lg:text-2xl font-medium text-center md:text-start py-2
-        }
-        ul {
-            @apply pl-5
-        }
-        li {
-            @apply py-1 text-sm md:text-lg
-        }
-        p {
-            @apply text-base md:text-lg text-center md:text-start pb-2;
-        }
-        a.blog-content {
-            @apply underline
-        }
-
+    h1 {
+        @apply 
+            text-heading-hero
+            md:text-heading-hero-md
+            lg:text-heading-hero-lg
+            font-thin
+            text-center
+            md:text-start
+            py-2;
     }
-
-    @layer components {
-        .section-content {
-
-        }
+    h2 {
+        @apply 
+            text-heading-lg
+            md:text-heading-lg-md
+            md:text-heading-lg-lg
+            text-center
+            md:text-start
+            py-2;
     }
-
-    @layer utilities {
-        /* Chrome, Safari and Opera */
-        .hide-scrollbar::-webkit-scrollbar {
-          display: none;
-        }
+    h3 {
+        @apply 
+            text-heading-md
+            md:text-heading-md-md
+            lg:text-heading-md-lg
+            font-medium
+            text-center
+            md:text-start
+            py-2;
+    }
+    p {
+        @apply 
+            text-body
+            md:text-body-lg
+            font-normal
+            text-center
+            md:text-start
+            pb-2;
+    }
+    ul {
+        @apply 
+            pl-5;
+    }
+    li {
+        @apply 
+            py-1 
+            text-body;
+    }
     
-        .hide-scrollbar {
-          -ms-overflow-style: none; /* IE and Edge */
-          scrollbar-width: none; /* Firefox */
-        }
+    a.blog-content {
+        @apply underline;
     }
 
+    /* ACCENT COLOURS */
+    /* Generic accent classes for background/text */
+    .accent-background {
+        /* background/text set via body subdomain */
+    }
+    .accent-dark-background {
+        /* hover/dark background set via body subdomain */
+    }
+
+    /* Generic accent classes for borders */
+    .accent-border {
+        /* border color set via body subdomain */
+    }
+    .accent-border-dark {
+        /* hover/dark border color set via body subdomain */
+    }
+
+    /* Subdomain overrides */
+    /* WALKS */
+    body.walks .accent-background {
+        @apply bg-accent-walks text-white;
+    }
+    body.walks .accent-dark-background {
+        @apply bg-accent-walks-dark;
+    }
+    body.walks .accent-border {
+        @apply border-accent-walks;
+    }
+    body.walks .accent-border-dark {
+        @apply border-accent-walks-dark;
+    }
+
+    /* TREES */
+    body.trees .accent-background {
+        @apply bg-accent-trees text-white;
+    }
+    body.trees .accent-dark-background {
+        @apply bg-accent-trees-dark;
+    }
+    body.trees .accent-border {
+        @apply border-accent-trees;
+    }
+    body.trees .accent-border-dark {
+        @apply border-accent-trees-dark;
+    }
+}
+
+@layer components {
+    .section-content {
+
+    }
+}
+
+@layer utilities {
+    /* Chrome, Safari and Opera */
+    .hide-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+
+    .hide-scrollbar {
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+    }
 }

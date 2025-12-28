@@ -11,7 +11,7 @@ const {getSlug} = require('../../components/helperFunctions')
 const RoutePage = ({data}) =>{
     const {nodes} = data.allMarkdownRemark;
     return (
-      <Layout>
+      <Layout subdomain="walks">
       <Padding>
         <h1 className='pt-3 mt-8 w-full'>Routes</h1>
         <p>Here you are welcome to explore all the walks I have ever found.</p>

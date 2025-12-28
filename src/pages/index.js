@@ -12,7 +12,7 @@ const IndexPage = () => {
 
   // Calculate highlighted routes
   return(
-    <Layout>
+    <Layout subdomain="walks">
       <div className='flex flex-col relative'>
         <StaticImage
           className='w-full max-h-60 md:max-h-80'
@@ -61,7 +61,7 @@ const IndexPage = () => {
           <p className='w-full'>I have written various articles on the hikes I have done. These can be great for finding walks when you don't know what to look for.</p>
           <p className='w-full'>Some of these detail planning hikes. I plan to do some on gear and what to bring in future.</p>
           <div className='inline-flex w-full justify-around md:justify-end py-4'>
-            <Link to='/blog' className='inline-flex px-2 py-1 mr-2 items-center rounded-full bg-accent-red'>
+            <Link to='/blog' className='inline-flex px-2 py-1 mr-2 items-center rounded-full bg-accent-walks'>
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" className="flex size-6 stroke-white">
                 <path strokeLinecap="round" strokeLinejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
               </svg>

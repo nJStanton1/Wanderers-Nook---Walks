@@ -8,7 +8,7 @@ import { InternalButton, BackButton } from '../../../components/button'
 // Define components
 const ElevationInfoPage = () => {
     return (
-        <Layout>
+        <Layout subdomain="walks">
         <Padding>
             <div className='w-full flex justify-center mt-6 md:mt-20'>
                 <TerrainIcon className='flex size-32 md:size-52'/>

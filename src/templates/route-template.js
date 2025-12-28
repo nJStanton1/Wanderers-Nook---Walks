@@ -15,7 +15,7 @@ function RoutePage ({ data }) {
     const guide = route.frontmatter.route
 
     return (
-      <Layout>
+      <Layout subdomain="walks">
         <div className="flex flex-col max-h-72 md:max-h-96 w-full relative">
           {route.frontmatter.heroImage && <GatsbyImage image={getImage(route.frontmatter.heroImage)} alt=""/>} 
         </div>

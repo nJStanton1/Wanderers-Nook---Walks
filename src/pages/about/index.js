@@ -8,7 +8,7 @@ import { InternalSearchButton } from "../../components/button"
 // Define components
 const AboutPage = () => {
     return (
-        <Layout>
+        <Layout subdomain="walks">
         <Padding>
             <h1 className='text-center mt-8 w-full'>Wanderers Nook</h1>
             <p className='w-full text-center'>Enabling anyone in Manchester to access the great outdoors easily, cheaply and with confidence.</p>

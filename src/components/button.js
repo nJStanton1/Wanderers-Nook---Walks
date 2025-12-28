@@ -5,7 +5,7 @@ import {ReactComponent as SearchIcon} from "../../static/icons/search-button-ico
 import {ReactComponent as GoogleMapIcon} from "../../static/icons/google-map-icon.svg"
 
 export const PlaceholderButton = ({ text }) => (
-    <div className='inline-block px-3 py-1 m-2 text-base md:text-lg rounded-full bg-accent-red hover:bg-accent-red-dark'>
+    <div className='inline-block px-3 py-1 m-2 text-base md:text-lg rounded-full accent-background hover:accent-dark-background'>
         {text}
     </div>
 )
@@ -15,7 +15,7 @@ PlaceholderButton.propTypes = {
 }
 
 export const InternalButton = ({ text, linkTo }) => (
-    <Link to={linkTo} className='inline-block px-3 py-1 m-2 text-base md:text-lg rounded-full bg-accent-red hover:bg-accent-red-dark'>
+    <Link to={linkTo} className='inline-block px-3 py-1 m-2 text-base md:text-lg rounded-full accent-background hover:accent-dark-background'>
         {text}
     </Link>
 )
@@ -26,7 +26,7 @@ InternalButton.propTypes = {
 }
 
 export const ExternalButton = ({ text, linkTo }) => (
-    <a href={linkTo} target="_blank" rel="noreferrer" className='inline-block px-3 py-1 m-2 text-base md:text-lg rounded-full bg-accent-red hover:bg-accent-red-dark'>
+    <a href={linkTo} target="_blank" rel="noreferrer" className='inline-block px-3 py-1 m-2 text-base md:text-lg rounded-full accent-background hover:accent-dark-background'>
         {text}
     </a>
 )
@@ -37,7 +37,7 @@ ExternalButton.propTypes = {
 }
 
 export const BackButton = ({ text }) => (
-    <button onClick={() => navigate(-1)} className='inline-block px-3 py-1 m-2 text-base md:text-lg rounded-full bg-accent-red hover:bg-accent-red-dark'>
+    <button onClick={() => navigate(-1)} className='inline-block px-3 py-1 m-2 text-base md:text-lg rounded-full accent-background hover:accent-dark-background'>
         {text ? text : 'Go back'}
     </button>
 )
@@ -47,7 +47,7 @@ BackButton.propTypes = {
 }
 
 export const PlaceholderSearchButton = ({ text }) => (
-    <div className='inline-flex px-3 py-1 m-2 text-base md:text-lg items-center rounded-full bg-accent-red hover:bg-accent-red-dark'>
+    <div className='inline-flex px-3 py-1 m-2 text-base md:text-lg items-center rounded-full accent-background hover:accent-dark-background'>
         <SearchIcon alt="Search icon" className="size-6"/>
         <span className='pl-1'>{text}</span>
     </div>
@@ -58,7 +58,7 @@ PlaceholderSearchButton.propTypes = {
 }
 
 export const InternalSearchButton = ({ text, linkTo }) => (
-    <Link to={linkTo} className='inline-flex px-3 py-1 m-2 text-base md:text-lg items-center rounded-full bg-accent-red hover:bg-accent-red-dark'>
+    <Link to={linkTo} className='inline-flex px-3 py-1 m-2 text-base md:text-lg items-center rounded-full accent-background hover:accent-dark-background'>
         <SearchIcon alt="Search icon" className="size-6"/>
         <span className='pl-1'>{text}</span>
     </Link>
@@ -70,7 +70,7 @@ InternalSearchButton.propTypes = {
 }
 
 export const ExternalSearchButton = ({ text, linkTo }) => (
-    <a href={linkTo} target="_blank" rel="noreferrer" className='inline-flex px-3 py-1 m-2 text-base md:text-lg items-center rounded-full bg-accent-red hover:bg-accent-red-dark'>
+    <a href={linkTo} target="_blank" rel="noreferrer" className='inline-flex px-3 py-1 m-2 text-base md:text-lg items-center rounded-full accent-background hover:accent-dark-background'>
         <SearchIcon alt="Search icon" className="size-6"/>
         <span className='pl-1'>{text}</span>
     </a>
@@ -82,7 +82,7 @@ ExternalSearchButton.propTypes = {
 }
 
 export const PlaceholderMapButton = ({ text }) => (
-    <div className='inline-flex px-3 py-1 m-2 text-base md:text-lg items-center rounded-full bg-accent-red hover:bg-accent-red-dark'>
+    <div className='inline-flex px-3 py-1 m-2 text-base md:text-lg items-center rounded-full accent-background hover:accent-dark-background'>
         <GoogleMapIcon alt="Map icon" width="24px" height="24px"/>
         <span className='pl-1'>{text}</span>
     </div>
@@ -93,7 +93,7 @@ PlaceholderMapButton.propTypes = {
 }
 
 export const InternalMapButton = ({ text, linkTo }) => (
-    <Link to={linkTo} className='inline-flex px-3 py-1 m-2 text-base md:text-lg items-center rounded-full bg-accent-red hover:bg-accent-red-dark'>
+    <Link to={linkTo} className='inline-flex px-3 py-1 m-2 text-base md:text-lg items-center rounded-full accent-background hover:accent-dark-background'>
         <GoogleMapIcon alt="Search icon" width="24px" height="24px"/>
         <span className='pl-1'>{text}</span>
     </Link>
@@ -105,7 +105,7 @@ InternalMapButton.propTypes = {
 }
 
 export const ExternalMapButton = ({ text, linkTo }) => (
-    <a href={linkTo} target="_blank" rel="noreferrer" className='inline-flex px-3 py-1 m-2 text-base md:text-lg items-center rounded-full bg-accent-red hover:bg-accent-red-dark'>
+    <a href={linkTo} target="_blank" rel="noreferrer" className='inline-flex px-3 py-1 m-2 text-base md:text-lg items-center rounded-full accent-background hover:accent-dark-background'>
         <GoogleMapIcon alt="Search icon" width="24px" height="24px"/>
         <span className='pl-1'>{text}</span>
     </a>

@@ -31,7 +31,7 @@ const LocationPage = ({data}) => {
     });
 
     return (
-        <Layout>
+        <Layout subdomain="walks">
         <Padding>
           <div className='w-full'>
             <h1 className='mt-8 my-4 w-full'>Locations to explore</h1>

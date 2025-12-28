@@ -40,7 +40,7 @@ HighlightedRoutesGallery.propTypes = {}
 
 const HighlightRouteCard = ({ linkTo, heroImage, title, length }) => {
     return(
-        <Link to={linkTo} className='overflow-hidden max-w-xs md:max-w-none m-3 w-96 relative h-64 border-2 border-accent-red'>
+        <Link to={linkTo} className='overflow-hidden max-w-xs md:max-w-none m-3 w-96 relative h-64 border-2 accent-border'>
             {heroImage && <GatsbyImage className='absolute min-h-full min-w-full inset-0' image={getImage(heroImage)} alt=''/> }
             <div className="absolute bottom-0 w-full flex flex-row pb-1 px-2 pt-0 items-end bg-gradient-to-t from-zinc-700/40 from-70%">
                 <h3 className='w-3/4 py-0 text-left leading-none'>{title}</h3>

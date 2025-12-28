@@ -8,7 +8,7 @@ import { StaticImage } from 'gatsby-plugin-image'
 
 export const LocationCard = ({key, linkTo, heroImage, title, types, travelTime, excerpt}) => {
     return(
-        <article key={key} className='w-full pb-2 my-2 max-w-72 border-2 border-accent-red'>
+        <article key={key} className='w-full pb-2 my-2 max-w-72 border-2 accent-border'>
             <Link to={linkTo} className='w-full'>
             {heroImage ? <GatsbyImage className='' image={getImage(heroImage)} alt=''/> : <StaticImage width='300' height='169' className='max-h-72' src={"../../static/logos/Logo.png"}/>}
             <h2 className='mx-2 text-3xl'>{title}</h2>
