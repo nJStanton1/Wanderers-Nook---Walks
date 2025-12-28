@@ -44,4 +44,4 @@ const ElevationInfoPage = () => {
 
 // Export component
 export default ElevationInfoPage
-export const Head = () => <Seo pageTitle="About Me" pageDescription={"Evaluating the terrain of hikes can be difficult. Here are my categories for evaluating walks."}/>
+export const Head = () => <Seo pageTitle="Elevation Difficulty" pageDescription={"Evaluating the elevation of hikes can be difficult. Here are my categories for evaluating walks."}/>

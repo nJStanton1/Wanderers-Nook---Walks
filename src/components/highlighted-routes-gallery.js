@@ -45,11 +45,8 @@ const HighlightRouteCard = ({ linkTo, heroImage, title, length }) => {
             <div className="absolute bottom-0 w-full flex flex-row pb-1 px-2 pt-0 items-end bg-gradient-to-t from-zinc-700/40 from-70%">
                 <h3 className='w-3/4 py-0 text-left leading-none'>{title}</h3>
                 {length && <p className='w-1/5 h-min text-right pb-0 align-text-bottom font-medium leading-none'>{length}km</p>}
-            </div>
-            
-            
+            </div>            
         </Link>
-        
     )
 }
 
