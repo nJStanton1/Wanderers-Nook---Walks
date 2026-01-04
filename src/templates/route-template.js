@@ -8,6 +8,7 @@ import RouteOverviewGallery from "../components/route-overview-gallery"
 import GettingThereCard from '../components/getting-there-card'
 import {micromark} from 'micromark'
 import parse from 'html-react-parser'
+import { AnchorMenu, AnchorButton } from "../components/anchor-menu"
 
 
 function RoutePage ({ data }) {
@@ -37,7 +38,13 @@ function RoutePage ({ data }) {
             />
           </div>
 
-          <div className="mt-10">
+          <AnchorMenu>
+            <AnchorButton text={'The Route'} link={'#route-overview'}/>
+            <AnchorButton text={'Image Gallery'} link={'#image-gallery'}/>
+            <AnchorButton text={'Getting There'} link={'#getting-there'}/>
+          </AnchorMenu>
+
+          <div id="route-overview" className="mt-10">
             <h2>The Route</h2>
             <p className="mb-8">{guide.overview}</p>
             {guide.sections && guide.sections.map( (section, i) => (
@@ -52,12 +59,14 @@ function RoutePage ({ data }) {
             }
           </div>
           {route.frontmatter.galleryImages &&
-          <div>
+          <div id="image-gallery">
             <h2 className="mt-4 mb-6">Image Gallery</h2>
             <ImageGalleryCaptions images={route.frontmatter.galleryImages}/>
           </div>}
 
-          <GettingThereCard location={route.frontmatter.overview.startPoint} title="Getting to the start"/>
+          <div id="getting-there">
+            <GettingThereCard location={route.frontmatter.overview.startPoint} title="Getting to the start"/>
+          </div>
         
         </Padding>
       </Layout>
