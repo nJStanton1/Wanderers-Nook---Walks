@@ -87,10 +87,18 @@
         /* hover/dark border color set via body subdomain */
     }
 
+    /* Generic accent classes for text */
+    .accent-text {
+        /* text colour set via body subdomain */
+    }
+    .accent-text-dark {
+        /* hover/dark text colour set via body subdomain */
+    }
+
     /* Subdomain overrides */
     /* WALKS */
     body.walks .accent-background {
-        @apply bg-accent-walks text-white;
+        @apply bg-accent-walks;
     }
     body.walks .accent-dark-background {
         @apply bg-accent-walks-dark;
@@ -101,10 +109,16 @@
     body.walks .accent-border-dark {
         @apply border-accent-walks-dark;
     }
+    body.walks .accent-text {
+        @apply text-accent-walks;
+    }
+    body.walks .accent-text-dark {
+        @apply text-accent-walks-dark;
+    }
 
     /* TREES */
     body.trees .accent-background {
-        @apply bg-accent-trees text-white;
+        @apply bg-accent-trees;
     }
     body.trees .accent-dark-background {
         @apply bg-accent-trees-dark;
@@ -114,6 +128,12 @@
     }
     body.trees .accent-border-dark {
         @apply border-accent-trees-dark;
+    }
+    body.trees .accent-text {
+        @apply text-accent-trees;
+    }
+    body.trees .accent-text-dark {
+        @apply text-accent-trees-dark;
     }
 }
 
